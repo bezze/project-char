@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"50a61d60f7","applicationID":"1985886","transactionName":"cl0MRkRXVFxdFBZqW19TFkBXF3tfVRZcV1ZYRw8dcX1sEAIEVlZZX1MPVxkCSFFfA0pVR1Y=","queueTime":0,"applicationTime":195,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	
+	<title>Monk | D&amp;D 5th Edition on Roll20 Compendium</title>
+	
+
+	
+
+	<link rel="stylesheet" href="/assets/v2.css?1519751058" type="text/css" />
+	<link rel="stylesheet" href="/v2/css/compendium.css?1522337769" type="text/css" />
+	<link rel="stylesheet" href="/css/themes/bootstrap/jquery-ui-1.8.16.custom.css?1452029247" type="text/css" />
+
+	<script type="text/javascript" src="/assets/v2.js?1519751058"></script>
+	<script type="text/javascript" src="/v2/js/typeahead.js?1452029248"></script>
+	<script type="text/javascript" src="/js/d20/compendium.js?1527035203"></script>
+	<script type="text/javascript" src="/v2/js/compendium.js?1527035203"></script>
+	<script type="text/javascript" src="/js/jquery-ui.1.11.2.min.js?1452029248"></script>
+
+	
+	<link rel="canonical" href="https://roll20.net/compendium/dnd5e/Monk" />
+	
+
+	
+	<meta name="description" content="As a monk, you gain the following class features.   Hit Points Hit Dice: 1d8 per monk level Hit Points at 1st Level: 8 + your Constitution modifier Hit Points at Higher Levels: 1d8 (or 5) + your Constitution modifier per monk level after 1st   Starting Proficiencies You are proficient with the following items, in addition to any proficiencies provided by your race or background.  Armor: none Weapons: simple weapons, shortswords Tools: any one type of artisan's tools or any one musical instrument of your choice Skills: Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth   Starting Equipment You start with the following items, plus anything provided by your background.  • (a) a shortsword or (b) any simple weapon • (a) a dungeoneer's pack or (b) an explorer's pack • 10 darts  Alternatively, you may start with 5d4 gp to buy your own equipment" />
+	
+
+	<meta name="viewport" content="width=device-width" />
+
+	<script type="text/javascript">
+		$(function() { $.jqotetag( '$' ); });
+	</script>
+
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+	environment = "production";
+	</script>
+
+	<script type="text/javascript">
+	 if (window.self != window.top) {
+    	$(document.body).addClass("in-iframe");
+ 	 }
+ 	 
+ 	</script>
+
+	<div class="container topbar">
+
+	
+
+	
+
+	<div class="row" style="background-color: white; position: relative; z-index: 10000; padding-top: 20px; padding-bottom: 10px; margin-right: 0px;">
+
+		<div class="col-md-8 logo" style="width: 275px;">
+			<a href="https://app.roll20.net">
+				<img src="https://app.roll20.net/v2/images/roll20-logo.png?v=2" alt="Roll20 logo" class="withoutad" />
+			</a>
+		</div>
+	</div>
+
+	<div class="row mobilemenu">
+
+		<div class="col-md-12 btn-row">
+
+			<div class="menu-hider"></div>
+
+			<div class="btn-group">
+				<a class="menutoggler btn btn-default" href="#" class="btn btn-default" role="button">Menu<span class="caret"></span></a>
+
+				<div class="fullmobilemenu">
+
+					<ul class="nav nav-pills nav-stacked">
+
+						<li><a href="https://roll20.net/">Home</a></li>
+						<li><a href="https://app.roll20.net/campaigns/search">My Games</a></li>
+						<li><a href="https://app.roll20.net/lfg">Join a Game</a></li>
+						<li><a href="https://marketplace.roll20.net/">Marketplace</a></li>
+						<li><a href="https://roll20.net/compendium">Compendium</a></li>
+						<li><a href="https://app.roll20.net/forum">Forums</a></li>
+						<li><a href="https://wiki.roll20.net/">Wiki</a></li>
+						<li><a href="http://blog.roll20.net">Blog</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="simplecontainer right topbarlogin">
+				<!-- Filled in by AJAX JS -->
+			</div>		
+
+			<div class="simplecontainer right topbarnotifications">
+				<!-- This is filled in by AJAX JS -->
+			</div>
+		</div>
+	</div>
+
+	<div class="row desktopmenu">
+
+		<div class="col-md-12 btn-row">
+
+			<div class="menu-hider"></div>
+
+			
+				<div class="btn-group">
+					<a href="https://app.roll20.net/" class="btn btn-default" role="button">Play Now</a>
+				</div>
+				<div class="btn-group">
+					<a href="https://app.roll20.net/lfg" class="btn btn-default" role="button">Join a Game</a>
+				</div>
+			
+
+			<div class="btn-group drop">
+				<a href="https://marketplace.roll20.net" class="btn btn-default" role="button" data-toggle="dropdown" aria-expanded="false" data-hover="dropdown">Marketplace</a>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-hover="dropdown" id="marketplace">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full" role="menu" area-labelledby="marketplace">
+				<div class="menu">
+					<a href="https://marketplace.roll20.net">What's New</a>
+					<a href="https://marketplace.roll20.net/browse">Browse</a>
+					
+					<a href="https://marketplace.roll20.net/gift/">Give a Gift</a>
+					<a href="https://merchoforr.com/">Merchandise</a>
+				</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/compendiumexpansion/4/mordenkainens-tome-of-foes"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/505602/JBzl1PfCGzw6Q0ZCwCBHuA/med.jpg" /></a>
+							<div class="desc"><em>Mordenkainen's Tome of Foes</em><br />by Wizards of the Coast</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/set/2524/mansion-of-mystery"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/538552/QDjc9uYoJz8v6KePvk0N4g/med.jpg?1527632550" /></a>
+							<div class="desc"><em>Mansion of Mystery</em><br />by David Hemenway</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/set/2516/field-effect-icons"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/538543/RbGTB0oPk2f5mj9WKbhYlA/med.jpg?1527632513" /></a>
+							<div class="desc"><em>Field Effect Icons</em><br />by The Wizard Fuu</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/bundle/28/wotbs-the-scouring-of-gate-pass"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/539002/2RYxxnNCniMyH_SqKNbgeg/med.jpg?1527639941501" /></a>
+							<div class="desc"><em>WotBS: The Scouring of Gate Pass</em><br />by Ancris IT</div>
+						</div>
+					</div>
+				
+			</div>
+
+			<div class="btn-group drop">
+				<a href="https://roll20.net/compendium/" class="btn btn-default" role="button" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Tools</a>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" id="digitaltools">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full" role="menu" aria-labelledby="digitaltools">
+				<div class="menu">
+					<a href="https://roll20.net/compendium/">Compendium</a>
+					<a href="https://app.roll20.net/vault/">Character Vault</a>
+					<a href="https://wiki.roll20.net/Roll20_for_iPad_and_Android">Roll20 for iPad and Android</a>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://app.roll20.net/vault/">
+							<img src="/images/CharacterVault.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://app.roll20.net/vault/">Character Vault</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Any Concept / Any System</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://roll20.net/compendium/">
+							<img src="/images/Compendium.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://roll20.net/compendium/">Compendium</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Your System Come To Life</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&hl=en">
+							<img src="/images/forAndroid.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&hl=en">Roll20 for Android</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Streamlined for your Tablet</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">
+							<img src="/images/foriPad.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">Roll20 for iPad</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Streamlined for your Tablet</span>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="btn-group drop">
+				<a href="https://app.roll20.net/forum/" class="btn btn-default community-toggler" role="button" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Community</a>
+				<button type="button" class="btn btn-default dropdown-toggle community community-toggler" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" id="community">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full community" role="menu" area-labeledby="community">
+				<div class="menu">
+					<a href="https://app.roll20.net/forum/">Forums</a>
+					<a href="https://wiki.roll20.net/Main_Page">Help Wiki</a>
+					<a href="http://blog.roll20.net">Blog</a>
+					<a href="http://www.twitch.tv/roll20app">Live Stream</a>
+					<a href="https://www.youtube.com/user/MsRoll20">VODs</a>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://youtu.be/z2WlO_W8kxs"><img src="https://s3.amazonaws.com/files.d20.io/images/44959266/9g6k8DtmsEiBum1-ouhWNg/original.png?1515043470415" /></a>
+					</div>
+					<p class="snippet"><a href="https://youtu.be/z2WlO_W8kxs">[YouTube] Roll20 Presents: Burning Wheel Series 3</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://www.twitch.tv/dnd"><img src="https://s3.amazonaws.com/files.d20.io/images/38822157/__M8exgNMHVCmpFeQFji1Q/original.png?1504896244917" /></a>
+					</div>
+					<p class="snippet"><a href="https://www.twitch.tv/dnd">[Twitch] Roll20 Presents: Tomb of Annihilation - Live Fridays at 1pm PT</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://wiki.roll20.net/Main_Page"><img src="https://s3.amazonaws.com/files.d20.io/images/44959300/iUVi7Tgr7dDvQ2XQ9sF4Qg/original.png?1515043539134" /></a>
+					</div>
+					<p class="snippet"><a href="https://wiki.roll20.net/Main_Page">[Wiki] Tips, Tricks, & Guides for Roll20</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live"><img src="https://s3.amazonaws.com/files.d20.io/images/48828110/LU_SDiurgcsB585Cy9K36Q/original.png?1519848823728" /></a>
+					</div>
+					<p class="snippet"><a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live">[Blog] 3 Million Users Update!</a></p>
+				</div>
+				
+			</div>
+
+			
+
+			<div class="simplecontainer right topbarlogin">
+				<!-- Filled in by AJAX JS -->
+			</div>
+
+			<div class="simplecontainer right topbarnotifications">
+				<!-- This is filled in by AJAX JS -->
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+$(".signin input").click(function() {
+		return false;
+});
+
+$("body, .simplecontainer").on("click", ".full, .simplecontainer .simple", function(e) {
+	e.stopPropagation();
+});	
+
+$(".menutoggler").on("click", function() {
+	$(".mobilemenu").addClass("open");
+	return false;
+});
+
+$(document).on("click", function() {
+	$(".mobilemenu").removeClass("open");
+})
+
+if('ontouchstart' in document) {
+	//touch-compatible
+}
+else {
+	//mouse-compatible
+	$(".topbar .btn-group a.btn[data-toggle=dropdown]").removeAttr("data-toggle");
+	$('[data-hover="dropdown"]').dropdownHover({hoverDelay: 100, delay: 300});
+}
+
+var trackOutboundLink = function(url) {
+	ga('send', 'event', 'outbound', 'obsAdvert', '', {
+		'transport': 'beacon',
+		'hitCallback': function(){document.location = url;}
+	});
+}
+$(function() {  
+	setTimeout(function(){
+		if($(".obs_container").length > 0) {
+			// GA Event Tracking
+			ga('send', {
+				'hitType': 'event',
+				'eventCategory': 'obsAdvert',
+				'eventAction': 'topbar',
+				'eventLabel': ''
+			});
+		}
+	}, 0)
+});
+</script>
+
+	<div class="container primarycontentcontainer">
+
+		<div class='row'>
+  <div class='col-md-12'>
+    <div class='searchcontainer' data-bookid='dnd5e'>
+      <h1>D&D 5th Edition</h1>
+      <h2>Compendium</h2>
+      <p class='region_description' dir='auto'>Type to search for a spell, item, class &mdash; anything!</p>
+      <div class='region_search'>
+        <div class='define-search'>
+          <input autocomplete='off' class='define-search-input' data-bookname='dnd5e' dir='auto' id='homesearch' placeholder='searching for...' spellcheck='false' type='text'>
+          <div id='searchwarning'>
+            Searches must be at least 3 characters.
+            <span>*</span>
+          </div>
+          <div class='submit-search'>
+            <input class='btn btn-primary submit' dir='auto' id='homesearchbutton' type='submit' value='Search'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+<div class='col-md-4 toccol'>
+<div style='width: 100%;'>
+<div class='uploadpageslot pageupload' data-current-image=''>
+<div class='avatar'></div>
+</div>
+</div>
+<div class='content-text'>
+<div id='tableofcontents'></div>
+</div>
+</div>
+<div class='col-md-8'>
+<a name='content'></a>
+<a name='h-Monk'></a>
+<div class='content-text' data-bookid='dnd5e'>
+<ol class='breadcrumb'>
+<li>
+<a href='/compendium/dnd5e/BookIndex'>Home</a>
+</li>
+<li>
+<a href='/compendium/dnd5e/CategoryIndex%3AClasses'>Classes</a>
+</li>
+<li>
+Monk
+</li>
+</ol>
+<div class='pull-right' style='background-color: white; font-size: 0.9em; position: relative; top: 20px; text-align: right;'>
+<a href='#attributes'>&darr; Attributes</a>
+</div>
+<h1 class='page-title'>Monk</h1>
+<p>
+<a class='editPageContent' href='javascript:void(0);'>Edit Page Content</a>
+</p>
+<div data-pageid='5202' id='pagecontent'>As a monk, you gain the following <a class="autolink" href="/compendium/dnd5e/Character%20Advancement#h-Class%20Features">Class Features</a>.<br><br><a name="h-Hit%20Points"></a><h2>Hit Points</h2>
+<strong>Hit Dice</strong>: 1d8 per monk level<br><strong>Hit Points at 1st Level</strong>: 8 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier<br><strong>Hit Points at Higher Levels</strong>: 1d8 (or 5) + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier per monk level after 1st<br><br><a name="h-Starting%20Proficiencies"></a><h2>Starting Proficiencies</h2>You are proficient with the following items, in addition to any proficiencies provided by your race or background.<br><br><strong><a class="autolink" href="/compendium/dnd5e/Armor#h-Armor">Armor</a></strong>: none<br><strong>Weapons:</strong> simple <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>, shortswords<br><strong>Tools:</strong> any one type of artisan's tools or any one musical instrument of your choice<br><strong>Skills:</strong> Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth<br><br><a name="h-Starting%20Equipment"></a><h2>Starting <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a>
+</h2>You start with the following items, plus anything provided by your background.<br><br>• (a) a <a class="autolink" href="/compendium/dnd5e/Shortsword#h-Shortsword">Shortsword</a> or (b) any simple weapon<br>• (a) a <a class="autolink" href="/compendium/dnd5e/Dungeoneer%27s%20Pack#h-Dungeoneer%27s%20Pack">Dungeoneer's Pack</a> or (b) an <a class="autolink" href="/compendium/dnd5e/Explorer%27s%20Pack#h-Explorer%27s%20Pack">Explorer's Pack</a><br>• 10 darts<br><br>Alternatively, you may start with 5d4 gp to buy your own <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a>.<br><br><table>
+<caption>Table: The Monk</caption>
+<thead><tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Proficiency Bonus</th>
+<th style="text-align:center">Martial Arts</th>
+<th style="text-align:center">
+<em>Ki</em> Points</th>
+<th style="text-align:center">Unarmored <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>
+</th>
+<th style="text-align:center">Features</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">—</td>
+<td style="text-align:center">—</td>
+<td>Unarmored Defense, Martial Arts</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Ki, Unarmored <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Monastic Tradition, Deflect Missiles</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Ability Score Improvement, <a class="autolink" href="/compendium/dnd5e/Slow#h-Slow">Slow</a> Fall</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Extra <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>, Stunning Strike</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Ki-­Empowered Strikes, Monastic Tradition feature</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Evasion, Stillness of Mind</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Unarmored <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a> improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Purity of Body</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Monastic Tradition feature</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Tongue of the Sun and Moon</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Diamond Soul</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Timeless Body</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Monastic Tradition feature</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">+30 ft.</td>
+<td>Empty Body</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">+30 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">+30 ft.</td>
+<td>Perfect Self</td>
+</tr>
+</tbody>
+</table>
+<br><br><a name="h-Unarmored%20Defense"></a><h2>Unarmored Defense</h2>Beginning at 1st level, while you are wearing no armor and not wielding a <a class="autolink" href="/compendium/dnd5e/Shield#h-Shield"></a><a class="autolink" href="/compendium/dnd5e/Shield#h-Shield">Shield</a>, your AC equals 10 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> modifier + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier.<br><br><a name="h-Martial%20Arts"></a><h2>Martial Arts</h2>Your practice of martial arts gives you mastery of <a class="autolink" href="/compendium/dnd5e/Combat#h-Combat">Combat</a> styles that use unarmed strikes and monk <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>, which are shortswords and any simple <a class="autolink" href="/compendium/dnd5e/Melee%20Weapons#h-Melee%20Weapons">Melee Weapons</a> that don't have the <a class="autolink" href="/compendium/dnd5e/Weapons#h-Two-Handed">Two-Handed</a> or heavy property.<br><br>    You gain the following benefits while you are unarmed or wielding only monk <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a> and you aren't wearing armor or wielding a <a class="autolink" href="/compendium/dnd5e/Shield#h-Shield"></a><a class="autolink" href="/compendium/dnd5e/Shield#h-Shield">Shield</a>.<br><br>• You can use <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> instead of <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> for the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> and <a class="autolink" href="/compendium/dnd5e/Combat#h-Damage%20Rolls">Damage Rolls</a> of your unarmed strikes and monk <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>.<br><br>• You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon.<br><br>• When you use the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> action with an unarmed strike or a monk weapon on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>, you can make one unarmed strike as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a>. For example, if you take the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> action and <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> with a <a class="autolink" href="/compendium/dnd5e/Quarterstaff#h-Quarterstaff">Quarterstaff</a>, you can also make an unarmed strike as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a>, assuming you haven't already taken a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a> this turn.<br><br>    Certain monasteries use specialized forms of the monk <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a <a class="autolink" href="/compendium/dnd5e/Sickle#h-Sickle">Sickle</a> with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game <a class="autolink" href="/compendium/dnd5e/Monsters#h-Statistics">Statistics</a> provided for the weapon.<br><br><a name="h-Ki"></a><h2>Ki</h2>Starting at 2nd level, your <a class="autolink" href="/compendium/dnd5e/Resting#h-Training">Training</a> allows you to harness the mystic energy of ki. Your access to this energy is represented by a number of ki points. Your monk level determines the number of points you have, as shown in the Ki Points column of the Monk table.<br><br>    You can spend these points to fuel various ki features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind. You learn more ki features as you gain levels in this class.<br><br>    When you spend a ki point, it is unavailable until you finish a short or <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>, at the end of which you draw all of your expended ki back into yourself. You must spend at least 30 minutes of the rest meditating to regain your ki points.<br><br>    Some of your ki features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows: <br><br><div style="margin-left: 20px;">
+<strong>Ki save DC</strong> = 8 + your proficiency bonus + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier</div>
+<br><a name="h-Flurry%20of%20Blows"></a><h3>Flurry of Blows</h3>Immediately after you take the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> action on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>, you can spend 1 ki point to make two unarmed strikes as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a>.<br><br><a name="h-Patient%20Defense"></a><h3>Patient Defense</h3>You can spend 1 ki point to take the <a class="autolink" href="/compendium/dnd5e/Combat#h-Dodge">Dodge</a> action as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a> on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>.<br><br><a name="h-Step%20of%20the%20Wind"></a><h3>Step of the Wind</h3>You can spend 1 ki point to take the <a class="autolink" href="/compendium/dnd5e/Combat#h-Disengage">Disengage</a> or <a class="autolink" href="/compendium/dnd5e/Combat#h-Dash">Dash</a> action as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a> on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>, and your jump distance is doubled for the turn.<br><br><a name="h-Unarmored%20Movement"></a><h2>Unarmored <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>
+</h2>Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a <a class="autolink" href="/compendium/dnd5e/Shield#h-Shield"></a><a class="autolink" href="/compendium/dnd5e/Shield#h-Shield">Shield</a>. This bonus increases when you reach certain monk levels, as shown in the Monk table.<br><br>    At 9th level, you gain the ability to move along vertical surfaces and across liquids on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a> without <a class="autolink" href="/compendium/dnd5e/The%20Environment#h-Falling">Falling</a> during the move.<br><br><a name="h-Monastic%20Tradition"></a><h2>Monastic Tradition</h2>When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.<br><br><a name="h-Deflect%20Missiles"></a><h2>Deflect Missiles</h2>Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>. When you do so, the damage you take from the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> is reduced by 1d 10 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> modifier + your monk level.<br><br>    If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 ki point to make a ranged <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> (range 20 feet/60 feet) with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>.<br><br><a name="h-Ability%20Score%20Improvement"></a><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Ability%20Scores">Ability Scores</a> of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><a name="h-Slow%20Fall"></a><h2>
+<a class="autolink" href="/compendium/dnd5e/Slow#h-Slow">Slow</a> Fall</h2>Beginning at 4th level, you can use your reaction when you fall to reduce any <a class="autolink" href="/compendium/dnd5e/The%20Environment#h-Falling">Falling</a> damage you take by an amount equal to five times your monk level.<br><br><a name="h-Extra%20Attack"></a><h2>Extra <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>
+</h2>Beginning at 5th level, you can <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> twice, instead of once, whenever you take the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> action on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>.<br><br><a name="h-Stunning%20Strike"></a><h2>Stunning Strike</h2>Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> saving throw or be <a class="autolink" href="/compendium/dnd5e/Conditions#h-Stunned">Stunned</a> until the end of your next turn.<br><br><a name="h-Ki-Empowered%20Strikes"></a><h2>Ki-Empowered Strikes</h2>Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming <a class="autolink" href="/compendium/dnd5e/Resistance#h-Resistance">Resistance</a> and immunity to nonmagical attacks and damage.<br><br><a name="h-Stillness%20of%20Mind"></a><h2>Stillness of Mind</h2>Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be <a class="autolink" href="/compendium/dnd5e/Conditions#h-Charmed">Charmed</a> or <a class="autolink" href="/compendium/dnd5e/Conditions#h-Frightened">Frightened</a>.<br><br><a name="h-Evasion"></a><h2>Evasion</h2>At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a <a class="autolink" href="/compendium/dnd5e/Fireball#h-Fireball">Fireball</a> spell. When you are subjected to an effect that allows you to make a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.<br><br><a name="h-Purity%20of%20Body"></a><h2>Purity of Body</h2>At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison.<br><br><a name="h-Tongue%20of%20the%20Sun%20and%20Moon"></a><h2>Tongue of the Sun and Moon</h2>Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a <a class="autolink" href="/compendium/dnd5e/Gnolls#h-Language">Language</a> can understand what you say.<br><br><a name="h-Diamond%20Soul"></a><h2>Diamond Soul</h2>Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.<br><br>    Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.<br><br><a name="h-Timeless%20Body"></a><h2>Timeless Body</h2>At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water.<br><br><a name="h-Empty%20Body"></a><h2>Empty Body</h2>Beginning at 18th level, you can use your action to spend 4 ki points to become <a class="autolink" href="/compendium/dnd5e/Conditions#h-Invisible">Invisible</a> for 1 minute. During that time, you also have <a class="autolink" href="/compendium/dnd5e/Resistance#h-Resistance">Resistance</a> to all damage but force damage.<br><br>    Additionally, you can spend 8 ki points to cast the <a class="autolink" href="/compendium/dnd5e/Astral%20Projection#h-Astral%20Projection">Astral Projection</a> spell, without needing material <a class="autolink" href="/compendium/dnd5e/Spells#h-Components">Components</a>. When you do so, you can't take any other creatures with you.<br><br><a name="h-Perfect%20Soul"></a><h2>Perfect Soul</h2>At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.<br><a name="h-Monastic%20Traditions"></a><h2>Monastic Traditions</h2>Three traditions of monastic pursuit are common in the monasteries scattered across the multiverse.<br><br>Most monasteries practice one tradition exclusively, but a few honor the three traditions and instruct each monk according to his or her aptitude and interest. All three traditions rely on the same basic techniques, diverging as the student grows more adept. Thus, a monk need choose a tradition only upon reaching 3rd level.<br><br><a name="h-Way%20of%20the%20Open%20Hand"></a><h3>Way of the Open Hand</h3>Monks of the Way of the Open Hand are the ultimate masters of martial arts <a class="autolink" href="/compendium/dnd5e/Combat#h-Combat">Combat</a>, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate <em>ki</em> to heal damage to their bodies, and practice advanced meditation that can protect them from harm.<br><br><a name="h-Open%20Hand%20Technique"></a><h4>Open Hand Technique</h4>Starting when you choose this tradition at 3rd level, you can manipulate your enemy’s <em>ki</em> when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:<br><ul>
+<li>It must succeed on a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> saving throw or be knocked prone.</li>
+<li>It must make a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> saving throw. If it fails, you can push it up to 15 feet away from you.</li>
+<li>It can’t take reactions until the end of your next turn.</li>
+</ul>
+<br><a name="h-Wholeness%20of%20Body"></a><h4>Wholeness of Body</h4>At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a> before you can use this feature again.<br><br><a name="h-Tranquility"></a><h4>Tranquility</h4>Beginning at 11th level, you can enter a <a class="autolink" href="/compendium/dnd5e/Weapons#h-Special">Special</a> meditation that surrounds you with an aura of peace. At the end of a <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>, you gain the effect of a <em><a class="autolink" href="/compendium/dnd5e/Sanctuary#h-Sanctuary">Sanctuary</a></em> spell that lasts until the start of your next <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a> (the spell can end early as normal). The saving throw DC for the spell equals 8 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier + your proficiency bonus.<br><br><a name="h-Quivering%20Palm"></a><h4>Quivering Palm</h4>At 17th level, you gain the ability to set up lethal vibrations in someone’s body. When you hit a creature with an unarmed strike, you can spend 3 <em>ki</em> points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.<br><br>You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.<br><br></div>
+<script id='origpagecontent' type='text/html'>As a monk, you gain the following class features.<br><br><h2>Hit Points</h2><strong>Hit Dice</strong>: 1d8 per monk level<br><strong>Hit Points at 1st Level</strong>: 8 + your Constitution modifier<br><strong>Hit Points at Higher Levels</strong>: 1d8 (or 5) + your Constitution modifier per monk level after 1st<br><br><h2>Starting Proficiencies</h2>You are proficient with the following items, in addition to any proficiencies provided by your race or background.<br><br><strong>Armor</strong>: none<br><strong>Weapons:</strong> simple weapons, shortswords<br><strong>Tools:</strong> any one type of artisan's tools or any one musical instrument of your choice<br><strong>Skills:</strong> Choose two from Acrobatics, Athletics, History, Insight, Religion, and Stealth<br><br><h2>Starting Equipment</h2>You start with the following items, plus anything provided by your background.<br><br>• (a) a shortsword or (b) any simple weapon<br>• (a) a dungeoneer's pack or (b) an explorer's pack<br>• 10 darts<br><br>Alternatively, you may start with 5d4 gp to buy your own equipment.<br><br><table>
+<caption>Table: The Monk</caption>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Proficiency Bonus</th>
+<th style="text-align:center">Martial Arts</th>
+<th style="text-align:center"><em>Ki</em> Points</th>
+<th style="text-align:center">Unarmored Movement</th>
+<th style="text-align:center">Features</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">—</td>
+<td style="text-align:center">—</td>
+<td>Unarmored Defense, Martial Arts</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Ki, Unarmored Movement</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Monastic Tradition, Deflect Missiles</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">1d4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Ability Score Improvement, Slow Fall</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+10 ft.</td>
+<td>Extra Attack, Stunning Strike</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Ki-­Empowered Strikes, Monastic Tradition feature</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Evasion, Stillness of Mind</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">+15 ft.</td>
+<td>Unarmored Movement improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d6</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Purity of Body</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Monastic Tradition feature</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">+20 ft.</td>
+<td>Tongue of the Sun and Moon</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Diamond Soul</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Timeless Body</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">1d8</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">+25 ft.</td>
+<td>Monastic Tradition feature</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">+30 ft.</td>
+<td>Empty Body</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">+30 ft.</td>
+<td>Ability Score Improvement</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">1d10</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">+30 ft.</td>
+<td>Perfect Self</td>
+</tr>
+</tbody>
+</table><br><br><h2>Unarmored Defense</h2>Beginning at 1st level, while you are wearing no armor and not wielding a shield, your AC equals 10 + your Dexterity modifier + your Wisdom modifier.<br><br><h2>Martial Arts</h2>Your practice of martial arts gives you mastery of combat styles that use unarmed strikes and monk weapons, which are shortswords and any simple melee weapons that don't have the two-handed or heavy property.<br><br>    You gain the following benefits while you are unarmed or wielding only monk weapons and you aren't wearing armor or wielding a shield.<br><br>• You can use Dexterity instead of Strength for the attack and damage rolls of your unarmed strikes and monk weapons.<br><br>• You can roll a d4 in place of the normal damage of your unarmed strike or monk weapon.<br><br>• When you use the Attack action with an unarmed strike or a monk weapon on your turn, you can make one unarmed strike as a bonus action. For example, if you take the Attack action and attack with a quarterstaff, you can also make an unarmed strike as a bonus action, assuming you haven't already taken a bonus action this turn.<br><br>    Certain monasteries use specialized forms of the monk weapons. For example, you might use a club that is two lengths of wood connected by a short chain (called a nunchaku) or a sickle with a shorter, straighter blade (called a kama). Whatever name you use for a monk weapon, you can use the game statistics provided for the weapon.<br><br><h2>Ki</h2>Starting at 2nd level, your training allows you to harness the mystic energy of ki. Your access to this energy is represented by a number of ki points. Your monk level determines the number of points you have, as shown in the Ki Points column of the Monk table.<br><br>    You can spend these points to fuel various ki features. You start knowing three such features: Flurry of Blows, Patient Defense, and Step of the Wind. You learn more ki features as you gain levels in this class.<br><br>    When you spend a ki point, it is unavailable until you finish a short or long rest, at the end of which you draw all of your expended ki back into yourself. You must spend at least 30 minutes of the rest meditating to regain your ki points.<br><br>    Some of your ki features require your target to make a saving throw to resist the feature's effects. The saving throw DC is calculated as follows: <br><br><div style="margin-left: 20px;"><strong>Ki save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</div><br><h3>Flurry of Blows</h3>Immediately after you take the Attack action on your turn, you can spend 1 ki point to make two unarmed strikes as a bonus action.<br><br><h3>Patient Defense</h3>You can spend 1 ki point to take the Dodge action as a bonus action on your turn.<br><br><h3>Step of the Wind</h3>You can spend 1 ki point to take the Disengage or Dash action as a bonus action on your turn, and your jump distance is doubled for the turn.<br><br><h2>Unarmored Movement</h2>Starting at 2nd level, your speed increases by 10 feet while you are not wearing armor or wielding a shield. This bonus increases when you reach certain monk levels, as shown in the Monk table.<br><br>    At 9th level, you gain the ability to move along vertical surfaces and across liquids on your turn without falling during the move.<br><br><h2>Monastic Tradition</h2>When you reach 3rd level, you commit yourself to a monastic tradition, such as the Way of the Open Hand. Your tradition grants you features at 3rd level and again at 6th, 11th, and 17th level.<br><br><h2>Deflect Missiles</h2>Starting at 3rd level, you can use your reaction to deflect or catch the missile when you are hit by a ranged weapon attack. When you do so, the damage you take from the attack is reduced by 1d 10 + your Dexterity modifier + your monk level.<br><br>    If you reduce the damage to 0, you can catch the missile if it is small enough for you to hold in one hand and you have at least one hand free. If you catch a missile in this way, you can spend 1 ki point to make a ranged attack (range 20 feet/60 feet) with the weapon or piece of ammunition you just caught, as part of the same reaction. You make this attack with proficiency, regardless of your weapon proficiencies, and the missile counts as a monk weapon for the attack.<br><br><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><h2>Slow Fall</h2>Beginning at 4th level, you can use your reaction when you fall to reduce any falling damage you take by an amount equal to five times your monk level.<br><br><h2>Extra Attack</h2>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.<br><br><h2>Stunning Strike</h2>Starting at 5th level, you can interfere with the flow of ki in an opponent's body. When you hit another creature with a melee weapon attack, you can spend 1 ki point to attempt a stunning strike. The target must succeed on a Constitution saving throw or be stunned until the end of your next turn.<br><br><h2>Ki-Empowered Strikes</h2>Starting at 6th level, your unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.<br><br><h2>Stillness of Mind</h2>Starting at 7th level, you can use your action to end one effect on yourself that is causing you to be charmed or frightened.<br><br><h2>Evasion</h2>At 7th level, your instinctive agility lets you dodge out of the way of certain area effects, such as a blue dragon's lightning breath or a fireball spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.<br><br><h2>Purity of Body</h2>At 10th level, your mastery of the ki flowing through you makes you immune to disease and poison.<br><br><h2>Tongue of the Sun and Moon</h2>Starting at 13th level, you learn to touch the ki of other minds so that you understand all spoken languages. Moreover, any creature that can understand a language can understand what you say.<br><br><h2>Diamond Soul</h2>Beginning at 14th level, your mastery of ki grants you proficiency in all saving throws.<br><br>    Additionally, whenever you make a saving throw and fail, you can spend 1 ki point to reroll it and take the second result.<br><br><h2>Timeless Body</h2>At 15th level, your ki sustains you so that you suffer none of the frailty of old age, and you can't be aged magically. You can still die of old age, however. In addition, you no longer need food or water.<br><br><h2>Empty Body</h2>Beginning at 18th level, you can use your action to spend 4 ki points to become invisible for 1 minute. During that time, you also have resistance to all damage but force damage.<br><br>    Additionally, you can spend 8 ki points to cast the Astral Projection spell, without needing material components. When you do so, you can't take any other creatures with you.<br><br><h2>Perfect Soul</h2>At 20th level, when you roll for initiative and have no ki points remaining, you regain 4 ki points.<br><h2>Monastic Traditions</h2>Three traditions of monastic pursuit are common in the monasteries scattered across the multiverse.<br><br>Most monasteries practice one tradition exclusively, but a few honor the three traditions and instruct each monk according to his or her aptitude and interest. All three traditions rely on the same basic techniques, diverging as the student grows more adept. Thus, a monk need choose a tradition only upon reaching 3rd level.<br><br><h3>Way of the Open Hand</h3>Monks of the Way of the Open Hand are the ultimate masters of martial arts combat, whether armed or unarmed. They learn techniques to push and trip their opponents, manipulate <em>ki</em> to heal damage to their bodies, and practice advanced meditation that can protect them from harm.<br><br><h4>Open Hand Technique</h4>Starting when you choose this tradition at 3rd level, you can manipulate your enemy’s <em>ki</em> when you harness your own. Whenever you hit a creature with one of the attacks granted by your Flurry of Blows, you can impose one of the following effects on that target:<br><ul><li>It must succeed on a Dexterity saving throw or be knocked prone.</li><li>It must make a Strength saving throw. If it fails, you can push it up to 15 feet away from you.</li><li>It can’t take reactions until the end of your next turn.</li></ul><br><h4>Wholeness of Body</h4>At 6th level, you gain the ability to heal yourself. As an action, you can regain hit points equal to three times your monk level. You must finish a long rest before you can use this feature again.<br><br><h4>Tranquility</h4>Beginning at 11th level, you can enter a special meditation that surrounds you with an aura of peace. At the end of a long rest, you gain the effect of a <em>sanctuary</em> spell that lasts until the start of your next long rest (the spell can end early as normal). The saving throw DC for the spell equals 8 + your Wisdom modifier + your proficiency bonus.<br><br><h4>Quivering Palm</h4>At 17th level, you gain the ability to set up lethal vibrations in someone’s body. When you hit a creature with an unarmed strike, you can spend 3 <em>ki</em> points to start these imperceptible vibrations, which last for a number of days equal to your monk level. The vibrations are harmless unless you use your action to end them. To do so, you and the target must be on the same plane of existence. When you use this action, the creature must make a Constitution saving throw. If it fails, it is reduced to 0 hit points. If it succeeds, it takes 10d10 necrotic damage.<br><br>You can have only one creature under the effect of this feature at a time. You can choose to end the vibrations harmlessly without using an action.<br><br></script>
+<script id='tmpl_newAttrItem' type='text/html'>
+<div class='row newRow attrListItem'>
+<div class='col-md-3 attrName'>
+<select class="chosen attrKey" name="new_attr">
+<option value="none">Choose an attribute...</option>
+<option value="new">Create new attribute...</option>
+<option value="AC">AC</option>
+<option value="Add Casting Modifier">Add Casting Modifier</option>
+<option value="Alignment">Alignment</option>
+<option value="Based On">Based On</option>
+<option value="Casting Time">Casting Time</option>
+<option value="CHA">CHA</option>
+<option value="Challenge Rating">Challenge Rating</option>
+<option value="Classes">Classes</option>
+<option value="Components">Components</option>
+<option value="CON">CON</option>
+<option value="Concentration">Concentration</option>
+<option value="Condition Immunities">Condition Immunities</option>
+<option value="Cost">Cost</option>
+<option value="Damage">Damage</option>
+<option value="Damage Progression">Damage Progression</option>
+<option value="Damage Type">Damage Type</option>
+<option value="Damage Vulnerabilities">Damage Vulnerabilities</option>
+<option value="data-Actions">data-Actions</option>
+<option value="data-CastNum">data-CastNum</option>
+<option value="data-CHA-mod">data-CHA-mod</option>
+<option value="data-CON-mod">data-CON-mod</option>
+<option value="data-description">data-description</option>
+<option value="data-DEX-mod">data-DEX-mod</option>
+<option value="data-DurationNum">data-DurationNum</option>
+<option value="data-INT-mod">data-INT-mod</option>
+<option value="data-Legendary Actions">data-Legendary Actions</option>
+<option value="data-List">data-List</option>
+<option value="data-Parent">data-Parent</option>
+<option value="data-RangeNum">data-RangeNum</option>
+<option value="data-Reactions">data-Reactions</option>
+<option value="data-SizeNum">data-SizeNum</option>
+<option value="data-Spells">data-Spells</option>
+<option value="data-STR-mod">data-STR-mod</option>
+<option value="data-Traits">data-Traits</option>
+<option value="data-WIS-mod">data-WIS-mod</option>
+<option value="data-XP">data-XP</option>
+<option value="DEX">DEX</option>
+<option value="Duration">Duration</option>
+<option value="Expansion">Expansion</option>
+<option value="Healing">Healing</option>
+<option value="Higher Level Healing">Higher Level Healing</option>
+<option value="Higher Spell Slot Bonus">Higher Spell Slot Bonus</option>
+<option value="Higher Spell Slot Dice">Higher Spell Slot Dice</option>
+<option value="Higher Spell Slot Die">Higher Spell Slot Die</option>
+<option value="HP">HP</option>
+<option value="Immunities">Immunities</option>
+<option value="Importer Initials">Importer Initials</option>
+<option value="INT">INT</option>
+<option value="Item Rarity">Item Rarity</option>
+<option value="Item Type">Item Type</option>
+<option value="Lair Actions">Lair Actions</option>
+<option value="Languages">Languages</option>
+<option value="Legendary Actions Desc">Legendary Actions Desc</option>
+<option value="Legendary Roll 0">Legendary Roll 0</option>
+<option value="Level">Level</option>
+<option value="List for Category">List for Category</option>
+<option value="Material">Material</option>
+<option value="Modifiers">Modifiers</option>
+<option value="none">none</option>
+<option value="Passive Perception">Passive Perception</option>
+<option value="Properties">Properties</option>
+<option value="Race">Race</option>
+<option value="Range">Range</option>
+<option value="Requires Attunement">Requires Attunement</option>
+<option value="Resistances">Resistances</option>
+<option value="Ritual">Ritual</option>
+<option value="Roll 0">Roll 0</option>
+<option value="Roll 1">Roll 1</option>
+<option value="Roll 2">Roll 2</option>
+<option value="Roll 3">Roll 3</option>
+<option value="Roll 4">Roll 4</option>
+<option value="Save">Save</option>
+<option value="Save Success">Save Success</option>
+<option value="School">School</option>
+<option value="Secondary Damage">Secondary Damage</option>
+<option value="Secondary Damage Type">Secondary Damage Type</option>
+<option value="Secondary Higher Spell Slot Dice">Secondary Higher Spell Slot Dice</option>
+<option value="Secondary Higher Spell Slot Die">Secondary Higher Spell Slot Die</option>
+<option value="Senses">Senses</option>
+<option value="Size">Size</option>
+<option value="Skills">Skills</option>
+<option value="Speed">Speed</option>
+<option value="Spell Attack">Spell Attack</option>
+<option value="Spell Book">Spell Book</option>
+<option value="Spell to Hit">Spell to Hit</option>
+<option value="Spellcasting Ability">Spellcasting Ability</option>
+<option value="Spellcasting Level">Spellcasting Level</option>
+<option value="Spellcasting Save DC">Spellcasting Save DC</option>
+<option value="Stealth">Stealth</option>
+<option value="STR">STR</option>
+<option value="Target">Target</option>
+<option value="Token">Token</option>
+<option value="Token Size">Token Size</option>
+<option value="Type">Type</option>
+<option value="Vulnerabilities">Vulnerabilities</option>
+<option value="Weight">Weight</option>
+<option value="WIS">WIS</option></select>
+<input class='newAttrKey' placeholder='Attr Name' style='display: none; margin-top: 5px;' type='text'>
+<input class='dataAttrCheck' type='checkbox'>
+<span class='dataAttrText'>is data attribute?</span>
+</div>
+<div class='col-md-7 attrValue'>
+<textarea></textarea>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doDelete pictos'>#</div>
+</div>
+</div>
+</div>
+</script>
+<div class='pull-right'>
+<a class='showPageAttributes' href='javascript:void(0);' style='position: relative; top: 5px;'>Show Attribute List</a>
+</div>
+<a name='attributes'></a>
+<h1>
+Attributes
+</h1>
+<div class='col-md-12 attrList' id='pageAttrs'>
+<div class='attrListItem hiddenAttribute row'>
+<div class='col-md-3 attrName'>Category</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>Classes</div>
+<div class='edit'>
+<textarea>Classes</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem row'>
+<div class='col-md-3 attrName'>Hit Dice</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>d8</div>
+<div class='edit'>
+<textarea>d8</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem row'>
+<div class='col-md-3 attrName'>Saving Throws</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>Strength, Dexterity</div>
+<div class='edit'>
+<textarea>Strength, Dexterity</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem hiddenAttribute row'>
+<div class='col-md-3 attrName'>Source</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>5th Edition SRD</div>
+<div class='edit'>
+<textarea>5th Edition SRD</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='row newAttrListItem hiddenAttribute'>
+<div class='col-md-12 newAttrButton' data-template='tmpl_newAttrItem'>+ New Search Attribute</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		<div class="content-text page-links">
+			<div class="pull-right">
+				
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class='row'>
+  <div class='col-md-8'>
+    <div class='content-text'>
+      <hr>
+      <div class='pagefooter' style='font-size: 0.9em;'>
+        <div class='pull-right'>
+          <a href='/compendium/dnd5e/Index:Classes'>View All Classes &raquo;</a>
+          <br>
+          <br>
+          <a class='deleteThisPage' href='javascript:void(0);' style='font-size: 0.9em; color: red;'>Delete This Page</a>
+        </div>
+        Source: <a href="/compendium/dnd5e#content/License">5th Edition SRD</a>
+        <a class='flagthispage' href='javascript:void(0);' style='font-size: 0.9em;'>Flag This Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+if(window.location.hash === "") window.location.hash = "content";
+$(".editPageContent, .editPageAttributes, .deleteThisPage, .editBookTemplate, .hiddenAttribute, .uploadpageslot").remove();
+if($("#pageAttrs").find(".row").not(".hiddenAttribute").not(".newAttrListItem").length === 0) {
+$("#pageAttrs").prev("h1").remove();
+$("#pageAttrs, .showPageAttributes").remove();
+$("a[href=\"#attributes\"]").remove();
+}
+$(".flagthispage").remove();
+$("#tableofcontents").show().tableofcontents();
+</script>
+<script type='text/javascript'>
+$(".uploadslot").on("uploadcomplete", function(e, json) {
+if(!json) return;
+$.post("/account/update_avatar/me", {newavatar: json.base + "?" + new Date().getTime()});
+});
+$(".uploadslot").on("uploadremoved", function() {
+$.post("/account/update_avatar/me", {newavatar: ""});
+});
+</script>
+
+
+	</div>
+
+	<div class="container globalfooter">
+
+		<div class="row" style="padding-bottom: 20px; padding-top: 60px;">
+
+			<div class="col-md-12">
+
+				<div class="footerborder1"></div>
+				<div class="footerborder2"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-12 copyrightnotice">
+
+				<p style="border-top: none; padding-top: 0px;">&copy; The Orr Group, LLC &middot; <a href="https://wiki.roll20.net/Acknowledgements">Acknowledgements</a> &middot; <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy">Terms of Service & Privacy Policy</a> &middot; <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy#Notification_of_Copyright_Infringement_.28DMCA_Policy.29">DMCA</a> &middot; Need Help? <a href="https://wiki.roll20.net/Customer_Support_FAQ">Visit our FAQ!</a> &middot; On Social Media: 
+					<a href="https://www.facebook.com/pages/Roll20/439774126041559"><img src="/v2/images/social-fb.png" alt="Roll20 on Facebook" /></a>
+					<a href="https://twitter.com/roll20app"><img src="/v2/images/social-twitter.png" alt="Roll20 on Twitter" /></a>
+					<a href="https://plus.google.com/+Roll20Net/"><img src="/v2/images/social-gplus.png" alt="Roll20 on Google Plus" /></a>
+					<a href="https://www.youtube.com/user/MsRoll20"><img style="margin-right:+5px;" src="/v2/images/social-youtube.png" alt="Roll20 on YouTube" /></a>
+					<a href="http://www.reddit.com/r/roll20"><img style="margin-right:+5px;" src="/v2/images/social-reddit.png" alt="Roll20 on Reddit" /></a>
+					<a href="http://twitch.tv/roll20app"><img src="/v2/images/social-twitch.png" alt="Roll20 on Twitch" /></a>
+				</p>
+				<p style="border-top: none; padding-top: 0px;">Roll20<sup>&reg;</sup> is a Registered Trademark of The Orr Group, LLC. All rights reserved. 
+
+				
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+      $(function() {
+        var cookieName = 'roll20tempauth';
+        var cookieValue = Math.floor(Math.random()*100);
+        var myDate = new Date();
+        myDate.setMonth(myDate.getMonth() + 1);
+        var cookieinfo = cookieName +"=" + cookieValue + ";expires=" + myDate 
+                          + ";domain=.roll20.net;path=/";
+        document.cookie = cookieinfo;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://app.roll20.net/sessions/topbar/'+cookieValue;
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      });
+    </script>
+
+	<script id="tmpl_campaigntag" type="text/html">
+		<div class="tag"><$=this.model.get("tag")$></div>
+	</script>
+
+	<script id="tmpl_campaigntags" type="text/html">
+		<div class="tags tagset">
+			<div class="tagslabel">
+				<span class="pictos">z</span>
+				Tags:
+			</div>
+			<input>
+			<$ if(this.editable == "true") { $>
+			<div class="add">
+				<em>
+					<span class="pictos">p</span>
+					Edit Tags
+				</em>
+			</div>
+			<$ } $>
+		</div>
+		<div class="clear"></div>
+	</script>
+
+	<script id="tmpl_uploadslot" type="text/html">
+		<div class="avatar dropbox <$! (this != "" ? "filled" : "empty") $>">
+		<div class="status"></div>
+		<div class="inner">
+		<$ if(this == "") { $>
+		<h4 style="padding-bottom: 0px; marigin-bottom: 0px; color: #777;">Drop a File<small>(JPG, PNG, GIF)</small></h4>
+		<div style="margin-top: -5px; margin-bottom: 5px;">or</div>
+		<a href="javascript:void(0);" class="btn btn-info" style="margin-bottom: 10px;">Choose a File...</a>
+		<input class="manual" type="file" />
+		<$ } else { $>
+		<img src="<$!this$>" />
+		<div class='remove'><a href='javascript:void(0);'>Change Image</a></div>
+		<$ } $>
+		</div>
+		</div>
+	</script>
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+		ga('create', 'UA-31040388-1', {'cookieDomain': 'auto'});
+	
+	ga('send', 'pageview');
+
+	</script>
+
+</body>
+
+</html>

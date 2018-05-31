@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"50a61d60f7","applicationID":"1985886","transactionName":"cl0MRkRXVFxdFBZqW19TFkBXF3tfVRZcV1ZYRw8dcX1sEAIEVlZZX1MPVxkCSFFfA0pVR1Y=","queueTime":0,"applicationTime":193,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	
+	<title>Druid | D&amp;D 5th Edition on Roll20 Compendium</title>
+	
+
+	
+
+	<link rel="stylesheet" href="/assets/v2.css?1519751126" type="text/css" />
+	<link rel="stylesheet" href="/v2/css/compendium.css?1522337815" type="text/css" />
+	<link rel="stylesheet" href="/css/themes/bootstrap/jquery-ui-1.8.16.custom.css?1483835727" type="text/css" />
+
+	<script type="text/javascript" src="/assets/v2.js?1519751126"></script>
+	<script type="text/javascript" src="/v2/js/typeahead.js?1483835727"></script>
+	<script type="text/javascript" src="/js/d20/compendium.js?1524584807"></script>
+	<script type="text/javascript" src="/v2/js/compendium.js?1524584807"></script>
+	<script type="text/javascript" src="/js/jquery-ui.1.11.2.min.js?1483835727"></script>
+
+	
+	<link rel="canonical" href="https://roll20.net/compendium/dnd5e/Druid" />
+	
+
+	
+	<meta name="description" content=" Druid Spells by Name  " />
+	
+
+	<meta name="viewport" content="width=device-width" />
+
+	<script type="text/javascript">
+		$(function() { $.jqotetag( '$' ); });
+	</script>
+
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+	environment = "production";
+	</script>
+
+	<script type="text/javascript">
+	 if (window.self != window.top) {
+    	$(document.body).addClass("in-iframe");
+ 	 }
+ 	 
+ 	</script>
+
+	<div class="container topbar">
+
+	
+
+	
+
+	<div class="row" style="background-color: white; position: relative; z-index: 10000; padding-top: 20px; padding-bottom: 10px; margin-right: 0px;">
+
+		<div class="col-md-8 logo" style="width: 275px;">
+			<a href="https://app.roll20.net">
+				<img src="https://app.roll20.net/v2/images/roll20-logo.png?v=2" alt="Roll20 logo" class="withoutad" />
+			</a>
+		</div>
+	</div>
+
+	<div class="row mobilemenu">
+
+		<div class="col-md-12 btn-row">
+
+			<div class="menu-hider"></div>
+
+			<div class="btn-group">
+				<a class="menutoggler btn btn-default" href="#" class="btn btn-default" role="button">Menu<span class="caret"></span></a>
+
+				<div class="fullmobilemenu">
+
+					<ul class="nav nav-pills nav-stacked">
+
+						<li><a href="https://roll20.net/">Home</a></li>
+						<li><a href="https://app.roll20.net/campaigns/search">My Games</a></li>
+						<li><a href="https://app.roll20.net/lfg">Join a Game</a></li>
+						<li><a href="https://marketplace.roll20.net/">Marketplace</a></li>
+						<li><a href="https://roll20.net/compendium">Compendium</a></li>
+						<li><a href="https://app.roll20.net/forum">Forums</a></li>
+						<li><a href="https://wiki.roll20.net/">Wiki</a></li>
+						<li><a href="http://blog.roll20.net">Blog</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="simplecontainer right topbarlogin">
+				<!-- Filled in by AJAX JS -->
+			</div>		
+
+			<div class="simplecontainer right topbarnotifications">
+				<!-- This is filled in by AJAX JS -->
+			</div>
+		</div>
+	</div>
+
+	<div class="row desktopmenu">
+
+		<div class="col-md-12 btn-row">
+
+			<div class="menu-hider"></div>
+
+			
+				<div class="btn-group">
+					<a href="https://app.roll20.net/" class="btn btn-default" role="button">Play Now</a>
+				</div>
+				<div class="btn-group">
+					<a href="https://app.roll20.net/lfg" class="btn btn-default" role="button">Join a Game</a>
+				</div>
+			
+
+			<div class="btn-group drop">
+				<a href="https://marketplace.roll20.net" class="btn btn-default" role="button" data-toggle="dropdown" aria-expanded="false" data-hover="dropdown">Marketplace</a>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-hover="dropdown" id="marketplace">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full" role="menu" area-labelledby="marketplace">
+				<div class="menu">
+					<a href="https://marketplace.roll20.net">What's New</a>
+					<a href="https://marketplace.roll20.net/browse">Browse</a>
+					
+					<a href="https://marketplace.roll20.net/gift/">Give a Gift</a>
+					<a href="https://merchoforr.com/">Merchandise</a>
+				</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/compendiumexpansion/4/mordenkainens-tome-of-foes"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/505602/JBzl1PfCGzw6Q0ZCwCBHuA/med.jpg" /></a>
+							<div class="desc"><em>Mordenkainen's Tome of Foes</em><br />by Wizards of the Coast</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/set/2524/mansion-of-mystery"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/538552/QDjc9uYoJz8v6KePvk0N4g/med.jpg?1527632550" /></a>
+							<div class="desc"><em>Mansion of Mystery</em><br />by David Hemenway</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/set/2516/field-effect-icons"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/538543/RbGTB0oPk2f5mj9WKbhYlA/med.jpg?1527632513" /></a>
+							<div class="desc"><em>Field Effect Icons</em><br />by The Wizard Fuu</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/bundle/28/wotbs-the-scouring-of-gate-pass"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/539002/2RYxxnNCniMyH_SqKNbgeg/med.jpg?1527639941501" /></a>
+							<div class="desc"><em>WotBS: The Scouring of Gate Pass</em><br />by Ancris IT</div>
+						</div>
+					</div>
+				
+			</div>
+
+			<div class="btn-group drop">
+				<a href="https://roll20.net/compendium/" class="btn btn-default" role="button" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Tools</a>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" id="digitaltools">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full" role="menu" aria-labelledby="digitaltools">
+				<div class="menu">
+					<a href="https://roll20.net/compendium/">Compendium</a>
+					<a href="https://app.roll20.net/vault/">Character Vault</a>
+					<a href="https://wiki.roll20.net/Roll20_for_iPad_and_Android">Roll20 for iPad and Android</a>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://app.roll20.net/vault/">
+							<img src="/images/CharacterVault.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://app.roll20.net/vault/">Character Vault</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Any Concept / Any System</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://roll20.net/compendium/">
+							<img src="/images/Compendium.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://roll20.net/compendium/">Compendium</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Your System Come To Life</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&hl=en">
+							<img src="/images/forAndroid.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&hl=en">Roll20 for Android</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Streamlined for your Tablet</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">
+							<img src="/images/foriPad.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">Roll20 for iPad</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Streamlined for your Tablet</span>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="btn-group drop">
+				<a href="https://app.roll20.net/forum/" class="btn btn-default community-toggler" role="button" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Community</a>
+				<button type="button" class="btn btn-default dropdown-toggle community community-toggler" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" id="community">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full community" role="menu" area-labeledby="community">
+				<div class="menu">
+					<a href="https://app.roll20.net/forum/">Forums</a>
+					<a href="https://wiki.roll20.net/Main_Page">Help Wiki</a>
+					<a href="http://blog.roll20.net">Blog</a>
+					<a href="http://www.twitch.tv/roll20app">Live Stream</a>
+					<a href="https://www.youtube.com/user/MsRoll20">VODs</a>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://youtu.be/z2WlO_W8kxs"><img src="https://s3.amazonaws.com/files.d20.io/images/44959266/9g6k8DtmsEiBum1-ouhWNg/original.png?1515043470415" /></a>
+					</div>
+					<p class="snippet"><a href="https://youtu.be/z2WlO_W8kxs">[YouTube] Roll20 Presents: Burning Wheel Series 3</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://www.twitch.tv/dnd"><img src="https://s3.amazonaws.com/files.d20.io/images/38822157/__M8exgNMHVCmpFeQFji1Q/original.png?1504896244917" /></a>
+					</div>
+					<p class="snippet"><a href="https://www.twitch.tv/dnd">[Twitch] Roll20 Presents: Tomb of Annihilation - Live Fridays at 1pm PT</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://wiki.roll20.net/Main_Page"><img src="https://s3.amazonaws.com/files.d20.io/images/44959300/iUVi7Tgr7dDvQ2XQ9sF4Qg/original.png?1515043539134" /></a>
+					</div>
+					<p class="snippet"><a href="https://wiki.roll20.net/Main_Page">[Wiki] Tips, Tricks, & Guides for Roll20</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live"><img src="https://s3.amazonaws.com/files.d20.io/images/48828110/LU_SDiurgcsB585Cy9K36Q/original.png?1519848823728" /></a>
+					</div>
+					<p class="snippet"><a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live">[Blog] 3 Million Users Update!</a></p>
+				</div>
+				
+			</div>
+
+			
+
+			<div class="simplecontainer right topbarlogin">
+				<!-- Filled in by AJAX JS -->
+			</div>
+
+			<div class="simplecontainer right topbarnotifications">
+				<!-- This is filled in by AJAX JS -->
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+$(".signin input").click(function() {
+		return false;
+});
+
+$("body, .simplecontainer").on("click", ".full, .simplecontainer .simple", function(e) {
+	e.stopPropagation();
+});	
+
+$(".menutoggler").on("click", function() {
+	$(".mobilemenu").addClass("open");
+	return false;
+});
+
+$(document).on("click", function() {
+	$(".mobilemenu").removeClass("open");
+})
+
+if('ontouchstart' in document) {
+	//touch-compatible
+}
+else {
+	//mouse-compatible
+	$(".topbar .btn-group a.btn[data-toggle=dropdown]").removeAttr("data-toggle");
+	$('[data-hover="dropdown"]').dropdownHover({hoverDelay: 100, delay: 300});
+}
+
+var trackOutboundLink = function(url) {
+	ga('send', 'event', 'outbound', 'obsAdvert', '', {
+		'transport': 'beacon',
+		'hitCallback': function(){document.location = url;}
+	});
+}
+$(function() {  
+	setTimeout(function(){
+		if($(".obs_container").length > 0) {
+			// GA Event Tracking
+			ga('send', {
+				'hitType': 'event',
+				'eventCategory': 'obsAdvert',
+				'eventAction': 'topbar',
+				'eventLabel': ''
+			});
+		}
+	}, 0)
+});
+</script>
+
+	<div class="container primarycontentcontainer">
+
+		<div class='row'>
+  <div class='col-md-12'>
+    <div class='searchcontainer' data-bookid='dnd5e'>
+      <h1>D&D 5th Edition</h1>
+      <h2>Compendium</h2>
+      <p class='region_description' dir='auto'>Type to search for a spell, item, class &mdash; anything!</p>
+      <div class='region_search'>
+        <div class='define-search'>
+          <input autocomplete='off' class='define-search-input' data-bookname='dnd5e' dir='auto' id='homesearch' placeholder='searching for...' spellcheck='false' type='text'>
+          <div id='searchwarning'>
+            Searches must be at least 3 characters.
+            <span>*</span>
+          </div>
+          <div class='submit-search'>
+            <input class='btn btn-primary submit' dir='auto' id='homesearchbutton' type='submit' value='Search'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+<div class='col-md-4 toccol'>
+<div style='width: 100%;'>
+<div class='uploadpageslot pageupload' data-current-image=''>
+<div class='avatar'></div>
+</div>
+</div>
+<div class='content-text'>
+<div id='tableofcontents'></div>
+</div>
+</div>
+<div class='col-md-8'>
+<a name='content'></a>
+<a name='h-Druid'></a>
+<div class='content-text' data-bookid='dnd5e'>
+<ol class='breadcrumb'>
+<li>
+<a href='/compendium/dnd5e/BookIndex'>Home</a>
+</li>
+<li>
+<a href='/compendium/dnd5e/CategoryIndex%3AClasses'>Classes</a>
+</li>
+<li>
+Druid
+</li>
+</ol>
+<div class='pull-right' style='background-color: white; font-size: 0.9em; position: relative; top: 20px; text-align: right;'>
+<a href='#attributes'>&darr; Attributes</a>
+</div>
+<h1 class='page-title'>Druid</h1>
+<p>
+<a class='editPageContent' href='javascript:void(0);'>Edit Page Content</a>
+</p>
+<div data-pageid='5200' id='pagecontent'><aside><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?Classes%5B%5D=Druid#content">Druid Spells by Name</a><br><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?Classes%5B%5D=Druid#content"></a></strong><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?sort=Level&amp;Classes%5B%5D=Druid#content">Druid Spells by Level</a></strong></aside><br>As a druid, you gain the following <a class="autolink" href="/compendium/dnd5e/Character%20Advancement#h-Class%20Features">Class Features</a>.<br><br><a name="h-Hit%20Points"></a><h2>Hit Points</h2>
+<strong>Hit Dice</strong>: 1d8 per druid level<br><strong>Hit Points at 1st Level</strong>: 8 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier<br><strong>Hit Points at Higher Levels</strong>: 1d8 (or 5) + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier per druid level after 1st<br><br><a name="h-Starting%20Proficiencies"></a><h2>Starting Proficiencies</h2>You are proficient with the following items, in addition to any proficiencies provided by your race or background.<br><br><strong>Armor:</strong> <a class="autolink" href="/compendium/dnd5e/Armor#h-Light%20Armor">Light Armor</a>, <a class="autolink" href="/compendium/dnd5e/Armor#h-Medium%20Armor">Medium Armor</a>, shields (druids will not wear armor or use shields made of metal)<br><strong>Weapons:</strong> clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears<br><strong>Tools:</strong> <a class="autolink" href="/compendium/dnd5e/Herbalism%20kit#h-Herbalism%20kit">Herbalism kit</a><br><strong>Skills</strong>: Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival<br><br><a name="h-Starting%20Equipment"></a><h2>Starting <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a>
+</h2>You start with the following items, plus anything provided by your background.<br><br>• (a) a wooden <a class="autolink" href="/compendium/dnd5e/Shield#h-Shield"></a><a class="autolink" href="/compendium/dnd5e/Shield#h-Shield">Shield</a> or (b) any simple weapon<br>• (a) a <a class="autolink" href="/compendium/dnd5e/Scimitar#h-Scimitar">Scimitar</a> or (b) any simple melee weapon<br>• <a class="autolink" href="/compendium/dnd5e/Leather%20Armor#h-Leather%20Armor">Leather Armor</a>, an <a class="autolink" href="/compendium/dnd5e/Explorer%27s%20Pack#h-Explorer%27s%20Pack">Explorer's Pack</a>, and a druidic focus<br><br>Alternatively, you may start with 2d4 x 10 gp to buy your own <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a>.<br><br><table>
+<caption>Table: The Druid</caption>
+<thead>
+<tr>
+<th rowspan="2" style="text-align:center">Level</th>
+<th rowspan="2" style="text-align:center">Proficiency Bonus</th>
+<th rowspan="2" style="text-align:center">Features</th>
+<th rowspan="2" style="text-align:center">
+<a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">Cantrips</a> Known</th>
+<th colspan="9" style="text-align:center">
+<a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a> per <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Level">Spell Level</a>
+</th>
+</tr>
+<tr>
+<th style="text-align:center">1st</th>
+<th style="text-align:center">2nd</th>
+<th style="text-align:center">3rd</th>
+<th style="text-align:center">4th</th>
+<th style="text-align:center">5th</th>
+<th style="text-align:center">6th</th>
+<th style="text-align:center">7th</th>
+<th style="text-align:center">8th</th>
+<th style="text-align:center">9th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td>Druidic, Spellcasting</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td>Wild Shape, Druid Circle</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td>Wild Shape improvement, Ability Score Improvement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td>Druid Circle feature</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td>Wild Shape improvement, Ability Score Improvement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td>Druid Circle feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td>Druid Circle feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td>Timeless Body, Beast <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td><a class="autolink" href="/compendium/dnd5e/Archdruid#h-Archdruid">Archdruid</a></td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<a name="h-Druidic"></a><h2>Druidic</h2>You know Druidic, the secret <a class="autolink" href="/compendium/dnd5e/Gnolls#h-Language">Language</a> of druids. You can speak the <a class="autolink" href="/compendium/dnd5e/Gnolls#h-Language">Language</a> and use it to leave hidden messages. You and others who know this <a class="autolink" href="/compendium/dnd5e/Gnolls#h-Language">Language</a> automatically spot such a <a class="autolink" href="/compendium/dnd5e/Message#h-Message">Message</a>. Others spot the message's presence with a successful DC 15 <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> (Perception) check but can't decipher it without magic.<br><br><a name="h-Spellcasting"></a><h2>Spellcasting</h2>Drawing on the divine essence of nature itself, you can cast <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> to shape that essence to your will. See chapter 10 for the general rules of spellcasting and chapter 11 for the druid spell list.<br><br><strong><a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">Cantrips</a><br></strong><br>At 1st level, you know two <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">Cantrips</a> of your choice from the druid spell list. You learn additional druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">Cantrips</a> of your choice at higher levels, as shown in the <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">Cantrips</a> Known column of the Druid table.<br><br><strong>Preparing and Casting <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a></strong><br><br>The Druid table shows how many <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a> you have to cast your <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> of 1st level and higher. To cast one of these druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>, you must expend a slot of the spell's level or higher. You regain all expended <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a> when you finish a <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>.<br><br>    You prepare the list of druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> equal to your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier + your druid level (minimum of one spell). The <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> must be of a level for which you have <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a>.<br><br>    For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a>. With a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> of 16, your list of prepared <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> can include six <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> of 1st or 2nd level, in any combination. If you prepare the 1st-level spell <a class="autolink" href="/compendium/dnd5e/Cure%20Wounds#h-Cure%20Wounds">Cure Wounds</a>, you can cast it using a 1st-level ar 2nd-level slot. Casting the spell doesn't remove it from your list of prepared <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>.<br><br>    You can also change your list of prepared <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> when you finish a <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>. Preparing a new list of druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> requires time spent in prayer and meditation: at least 1 minute per <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Level">Spell Level</a> for each spell on your list.<br><br><strong>Spellcasting Ability</strong><br><br><a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> is your spellcasting ability for your druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>, since your magic draws upon your devotion and <a class="autolink" href="/compendium/dnd5e/Magic%20Items#h-Attunement">Attunement</a> to nature. You use your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> whenever a spell refers to your spellcasting ability. In addition, you use your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier when <a class="autolink" href="/compendium/dnd5e/Setting#h-Setting">Setting</a> the saving throw DC for a druid spell you cast and when <a class="autolink" href="/compendium/dnd5e/Combat#h-Making%20an%20Attack">Making an Attack</a> roll with one.<br><br><div style="margin-left: 20px;">
+<strong>Spell save DC</strong> = 8 + your proficiency bonus + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier<br><strong>    Spell <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> modifier</strong> = your proficiency bonus + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> modifier</div>
+<br><strong>Ritual Casting</strong><br><br>You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.<br><br><strong>Spellcasting Focus</strong><br><br>You can use a druidic focus (see "Equipment") as a spellcasting focus for your druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>.<br><br><a name="h-Wild%20Shape"></a><h2>Wild Shape</h2>Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>.<br><br>    Your druid level determines the <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Beasts">Beasts</a> you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.<br><br><table>
+<caption>Table: Beast Shapes</caption>
+<thead><tr>
+<th>Level</th>
+<th>Max. CR</th>
+<th>Limitations</th>
+<th>Example</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>2nd</td>
+<td>1/4</td>
+<td>No flying or swimming speed</td>
+<td>
+<a class="autolink" href="/compendium/dnd5e/Wolf#h-Wolf"></a><a class="autolink" href="/compendium/dnd5e/Wolf#h-Wolf">Wolf</a>
+</td>
+</tr>
+<tr>
+<td>4th</td>
+<td>1/2</td>
+<td>No flying speed</td>
+<td>
+<a class="autolink" href="/compendium/dnd5e/Crocodile#h-Crocodile"></a><a class="autolink" href="/compendium/dnd5e/Crocodile#h-Crocodile">Crocodile</a>
+</td>
+</tr>
+<tr>
+<td>8th</td>
+<td>1</td>
+<td>—</td>
+<td><a class="autolink" href="/compendium/dnd5e/Giant%20Eagle#h-Giant%20Eagle">Giant Eagle</a></td>
+</tr>
+</tbody>
+</table>    You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a> on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>. You automatically revert if you fall <a class="autolink" href="/compendium/dnd5e/Conditions#h-Unconscious">Unconscious</a>, drop to 0 hit points, or die.<br><br>    While you are transformed, the following rules apply:<br><br><ul>
+<li>Your game <a class="autolink" href="/compendium/dnd5e/Monsters#h-Statistics">Statistics</a> are replaced by the <a class="autolink" href="/compendium/dnd5e/Monsters#h-Statistics">Statistics</a> of the beast, but you retain your alignment, personality, and <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">Intelligence</a>, <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a>, and <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Charisma">Charisma</a> scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.</li>
+<li>When you transform, you assume the beast's <a class="autolink" href="/compendium/dnd5e/Character%20Advancement#h-Hit%20Points%20and%20Hit%20Dice">Hit Points and Hit Dice</a>. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of <a class="autolink" href="/compendium/dnd5e/Combat#h-Dropping%20to%200%20Hit%20Points">Dropping to 0 Hit Points</a>, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked <a class="autolink" href="/compendium/dnd5e/Conditions#h-Unconscious">Unconscious</a>.</li>
+<li>You can't cast <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your <a class="autolink" href="/compendium/dnd5e/Spells#h-Concentration">Concentration</a> on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as <a class="autolink" href="/compendium/dnd5e/Call%20Lightning#h-Call%20Lightning">Call Lightning</a>, that you've already cast.</li>
+<li>You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your <a class="autolink" href="/compendium/dnd5e/Weapons#h-Special">Special</a> senses, such as <a class="autolink" href="/compendium/dnd5e/Darkvision#h-Darkvision">Darkvision</a>, unless your new form also has that sense.</li>
+<li>You choose whether your <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a> falls to the ground in your space, merges into your new form, or is worn by it. Worn <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a> functions as normal, but the DM decides whether it is practical for the new form to wear a piece of <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a>, based on the creature's shape and size. Your <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a> doesn't change size or shape to match the new form, and any <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a> that the new form can't wear must either fall to the ground or merge with it. <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a> that merges with the form has no effect until you leave the form.</li>
+</ul>
+<br><a name="h-Druid%20Circle"></a><h2>Druid Circle</h2>At 2nd level, you choose to <a class="autolink" href="/compendium/dnd5e/Identify#h-Identify">Identify</a> with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.<br><br><a name="h-Ability%20Score%20Improvement"></a><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Ability%20Scores">Ability Scores</a> of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><a name="h-Timeless%20Body"></a><h2>Timeless Body</h2>Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.<br><br><a name="h-Beast%20Spells"></a><h2>Beast <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</h2>Beginning at 18th level, you can cast many of your druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> in any shape you assume using Wild Shape. You can perform the somatic and verbal <a class="autolink" href="/compendium/dnd5e/Spells#h-Components">Components</a> of a druid spell while in a beast shape, but you aren't able to provide material <a class="autolink" href="/compendium/dnd5e/Spells#h-Components">Components</a>.<br><br><a name="h-Archdruid"></a><h2><a class="autolink" href="/compendium/dnd5e/Archdruid#h-Archdruid">Archdruid</a></h2>At 20th level, you can use your Wild Shape an unlimited number of times.<br><br>    Additionally, you can ignore the verbal and somatic <a class="autolink" href="/compendium/dnd5e/Spells#h-Components">Components</a> of your druid <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>, as well as any material <a class="autolink" href="/compendium/dnd5e/Spells#h-Components">Components</a> that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape.<br><br><a name="h-Circle%20of%20the%20Land"></a><h2>Circle of the Land</h2>The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle’s wisest members preside as the chief <a class="autolink" href="/compendium/dnd5e/Priest%20of%20Mephistopheles#h-Priests">Priests</a> of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle’s mysterious rites.<br><br><a name="h-Bonus%20Cantrip"></a><h3>Bonus Cantrip</h3>When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice.<br><br><a name="h-Natural%20Recovery"></a><h3>Natural Recovery</h3>Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a <a class="autolink" href="/compendium/dnd5e/Resting#h-Short%20Rest">Short Rest</a>, you choose expended <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a> to recover. The <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a> can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can’t use this feature again until you finish a <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>.<br><br>For example, when you are a 4th-level druid, you can recover up to two levels worth of <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">Spell Slots</a>. You can recover either a 2nd-level slot or two 1st-level slots.<br><br><a name="h-Circle%20Spells"></a><h3>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</h3>Your mystical connection to the land infuses you with the ability to cast certain <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>. At 3rd, 5th, 7th, and 9th level you gain access to circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> connected to the land where you became a druid.<br><br>Choose that land—<em>arctic</em>, <em>coast</em>, <em>desert</em>, <em>forest</em>, <em>grassland</em>, <em>mountain</em>, or <em>swamp</em>—and consult the associated list of <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>.<br><br>Once you gain access to a circle spell, you always have it prepared, and it doesn’t count against the number of <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a> you can prepare each day. If you gain access to a spell that doesn’t appear on the druid spell list, the spell is nonetheless a druid spell for you.<br><br><table>
+<caption>Table: Arctic</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td>
+<em><a class="autolink" href="/compendium/dnd5e/Hold%20Person#h-Hold%20Person">Hold Person</a></em>, S<em>pike Growth</em>
+</td>
+</tr>
+<tr>
+<td>5th</td>
+<td>
+<em><a class="autolink" href="/compendium/dnd5e/Sleet%20Storm#h-Sleet%20Storm">Sleet Storm</a></em>, S<em>low</em>
+</td>
+</tr>
+<tr>
+<td>7th</td>
+<td>
+<em><a class="autolink" href="/compendium/dnd5e/Freedom%20of%20Movement#h-Freedom%20of%20Movement">Freedom of Movement</a></em>, <em>I</em><em>ce Storm</em>
+</td>
+</tr>
+<tr>
+<td>9th</td>
+<td>
+<em><a class="autolink" href="/compendium/dnd5e/Commune%20with%20Nature#h-Commune%20with%20Nature">Commune with Nature</a></em>, <em>C</em><em>one of Cold</em>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table: Coast</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Mirror%20Image#h-Mirror%20Image">Mirror Image</a>, <a class="autolink" href="/compendium/dnd5e/Misty%20Step#h-Misty%20Step">Misty Step</a></em></td>
+</tr>
+<tr>
+<td>5th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Water%20Breathing#h-Water%20Breathing">Water Breathing</a>, <a class="autolink" href="/compendium/dnd5e/Water%20Walk#h-Water%20Walk">Water Walk</a></em></td>
+</tr>
+<tr>
+<td>7th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Control%20Water#h-Control%20Water">Control Water</a>, <a class="autolink" href="/compendium/dnd5e/Freedom%20of%20Movement#h-Freedom%20of%20Movement">Freedom of Movement</a></em></td>
+</tr>
+<tr>
+<td>9th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Conjure%20Elemental#h-Conjure%20Elemental">Conjure Elemental</a>, <a class="autolink" href="/compendium/dnd5e/Scrying#h-Scrying">Scrying</a></em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table: Desert</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Blur#h-Blur">Blur</a>, <a class="autolink" href="/compendium/dnd5e/Silence#h-Silence">Silence</a></em></td>
+</tr>
+<tr>
+<td>5th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Create%20Food%20and%20Water#h-Create%20Food%20and%20Water">Create Food and Water</a>, <a class="autolink" href="/compendium/dnd5e/Protection%20from%20Energy#h-Protection%20from%20Energy">Protection from Energy</a></em></td>
+</tr>
+<tr>
+<td>7th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Blight#h-Blight">Blight</a>, <a class="autolink" href="/compendium/dnd5e/Hallucinatory%20Terrain#h-Hallucinatory%20Terrain">Hallucinatory Terrain</a></em></td>
+</tr>
+<tr>
+<td>9th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Insect%20Plague#h-Insect%20Plague">Insect Plague</a>, <a class="autolink" href="/compendium/dnd5e/Wall%20of%20Stone#h-Wall%20of%20Stone">Wall of Stone</a></em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table: Forest</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Barkskin#h-Barkskin">Barkskin</a>, <a class="autolink" href="/compendium/dnd5e/Spider%20Climb#h-Spider%20Climb">Spider Climb</a></em></td>
+</tr>
+<tr>
+<td>5th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Call%20Lightning#h-Call%20Lightning">Call Lightning</a>, <a class="autolink" href="/compendium/dnd5e/Plant%20Growth#h-Plant%20Growth">Plant Growth</a></em></td>
+</tr>
+<tr>
+<td>7th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Divination#h-Divination">Divination</a>, <a class="autolink" href="/compendium/dnd5e/Freedom%20of%20Movement#h-Freedom%20of%20Movement">Freedom of Movement</a></em></td>
+</tr>
+<tr>
+<td>9th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Commune%20with%20Nature#h-Commune%20with%20Nature">Commune with Nature</a>, <a class="autolink" href="/compendium/dnd5e/Tree%20Stride#h-Tree%20Stride">Tree Stride</a></em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table: Grassland</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Invisibility#h-Invisibility">Invisibility</a>, <a class="autolink" href="/compendium/dnd5e/Pass%20without%20Trace#h-Pass%20without%20Trace">Pass without Trace</a></em></td>
+</tr>
+<tr>
+<td>5th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Daylight#h-Daylight">Daylight</a>, <a class="autolink" href="/compendium/dnd5e/Haste#h-Haste">Haste</a></em></td>
+</tr>
+<tr>
+<td>7th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Divination#h-Divination">Divination</a>, <a class="autolink" href="/compendium/dnd5e/Freedom%20of%20Movement#h-Freedom%20of%20Movement">Freedom of Movement</a></em></td>
+</tr>
+<tr>
+<td>9th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Dream#h-Dream">Dream</a>, <a class="autolink" href="/compendium/dnd5e/Insect%20Plague#h-Insect%20Plague">Insect Plague</a></em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table: Mountain</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Spider%20Climb#h-Spider%20Climb">Spider Climb</a>, <a class="autolink" href="/compendium/dnd5e/Spike%20Growth#h-Spike%20Growth">Spike Growth</a></em></td>
+</tr>
+<tr>
+<td>5th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Lightning%20Bolt#h-Lightning%20Bolt">Lightning Bolt</a>, <a class="autolink" href="/compendium/dnd5e/Meld%20into%20Stone#h-Meld%20into%20Stone">Meld into Stone</a></em></td>
+</tr>
+<tr>
+<td>7th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Stone%20Shape#h-Stone%20Shape">Stone Shape</a>, <a class="autolink" href="/compendium/dnd5e/Stoneskin#h-Stoneskin">Stoneskin</a></em></td>
+</tr>
+<tr>
+<td>9th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Passwall#h-Passwall">Passwall</a>, <a class="autolink" href="/compendium/dnd5e/Wall%20of%20Stone#h-Wall%20of%20Stone">Wall of Stone</a></em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption>Table: Swamp</caption>
+<thead><tr>
+<th>Druid Level</th>
+<th>Circle <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>
+</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>3rd</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Acid%20Arrow#h-Acid%20Arrow">Acid Arrow</a>, <a class="autolink" href="/compendium/dnd5e/Darkness#h-Darkness">Darkness</a></em></td>
+</tr>
+<tr>
+<td>5th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Water%20Walk#h-Water%20Walk">Water Walk</a>, <a class="autolink" href="/compendium/dnd5e/Stinking%20Cloud#h-Stinking%20Cloud">Stinking Cloud</a></em></td>
+</tr>
+<tr>
+<td>7th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Freedom%20of%20Movement#h-Freedom%20of%20Movement">Freedom of Movement</a>, <a class="autolink" href="/compendium/dnd5e/Locate%20Creature#h-Locate%20Creature">Locate Creature</a></em></td>
+</tr>
+<tr>
+<td>9th</td>
+<td><em><a class="autolink" href="/compendium/dnd5e/Insect%20Plague#h-Insect%20Plague">Insect Plague</a>, <a class="autolink" href="/compendium/dnd5e/Scrying#h-Scrying">Scrying</a></em></td>
+</tr>
+</tbody>
+</table>
+<a name="h-Land%E2%80%99s%20Stride"></a><h3>Land’s Stride</h3>Starting at 6th level, moving through nonmagical difficult terrain costs you no extra <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>. You can also pass through nonmagical <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.<br><br>In addition, you have advantage on saving throws against <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> that are magically created or manipulated to impede <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>, such those created by the <em><a class="autolink" href="/compendium/dnd5e/Entangle#h-Entangle">Entangle</a></em> spell.<br><br><a name="h-Nature%E2%80%99s%20Ward"></a><h3>Nature’s Ward</h3>When you reach 10th level, you can’t be <a class="autolink" href="/compendium/dnd5e/Conditions#h-Charmed">Charmed</a> or <a class="autolink" href="/compendium/dnd5e/Conditions#h-Frightened">Frightened</a> by elementals or fey, and you are immune to poison and disease.<br><br><a name="h-Nature%E2%80%99s%20Sanctuary"></a><h3>Nature’s <a class="autolink" href="/compendium/dnd5e/Sanctuary#h-Sanctuary">Sanctuary</a>
+</h3>When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> you. When a beast or plant creature attacks you, that creature must make a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> automatically misses. On a successful save, the creature is immune to this effect for 24 hours.<br><br>The creature is aware of this effect before it makes its <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> against you.<br><br><a name="h-Sacred%20Plants%20and%20Wood"></a><h2>Sacred <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> and Wood</h2>A druid holds certain <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> to be sacred, particularly alder, ash, birch, elder, hazel, holly, juniper, mistletoe, oak, rowan, willow, and yew. Druids often use such <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> as part of a spellcasting focus, incorporating lengths of oak or yew or sprigs of mistletoe.<br><br>Similarly, a druid uses such woods to make other <a class="autolink" href="/compendium/dnd5e/Objects#h-Objects">Objects</a>, such as <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a> and shields. Yew is associated with death and rebirth, so weapon handles for scimitars or sickles might be fashioned from it. Ash is associated with life and oak with <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a>. These woods make excellent hafts or whole <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>, such as clubs or quarterstaffs, as well as shields. Alder is associated with air, and it might be used for <a class="autolink" href="/compendium/dnd5e/Weapons#h-Thrown">Thrown</a> <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>, such as darts or javelins.<br><br>Druids from regions that lack the <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> described here have chosen other <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a> to take on similar uses. For instance, a druid of a desert region might value the yucca tree and cactus <a class="autolink" href="/compendium/dnd5e/Creatures%20By%20Type#h-Plants">Plants</a>.<br><br><a name="h-Druids%20and%20the%20Gods"></a><h2>Druids and the Gods</h2>Some druids venerate the forces of nature themselves, but most druids are devoted to one of the many nature deities worshiped in the multiverse (the lists of gods in <a class="autolink" href="/compendium/dnd5e/Pantheons#h-Pantheons">Pantheons</a> include many such deities). The worship of these deities is often considered a more ancient tradition than the faiths of clerics and urbanized peoples.<br><br></div>
+<script id='origpagecontent' type='text/html'><aside><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?Classes[]=Druid#content">Druid Spells by Name</a><br><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?Classes[]=Druid#content"></a></strong><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?sort=Level&Classes[]=Druid#content">Druid Spells by Level</a></strong></aside><br>As a druid, you gain the following class features.<br><br><h2>Hit Points</h2><strong>Hit Dice</strong>: 1d8 per druid level<br><strong>Hit Points at 1st Level</strong>: 8 + your Constitution modifier<br><strong>Hit Points at Higher Levels</strong>: 1d8 (or 5) + your Constitution modifier per druid level after 1st<br><br><h2>Starting Proficiencies</h2>You are proficient with the following items, in addition to any proficiencies provided by your race or background.<br><br><strong>Armor:</strong> light armor, medium armor, shields (druids will not wear armor or use shields made of metal)<br><strong>Weapons:</strong> clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears<br><strong>Tools:</strong> herbalism kit<br><strong>Skills</strong>: Choose two from Arcana, Animal Handling, Insight, Medicine, Nature, Perception, Religion, and Survival<br><br><h2>Starting Equipment</h2>You start with the following items, plus anything provided by your background.<br><br>• (a) a wooden shield or (b) any simple weapon<br>• (a) a scimitar or (b) any simple melee weapon<br>• Leather Armor, an explorer's pack, and a druidic focus<br><br>Alternatively, you may start with 2d4 x 10 gp to buy your own equipment.<br><br><table>
+<caption>Table: The Druid</caption>
+<thead>
+<tr>
+<th rowspan="2" style="text-align:center">Level</th>
+<th rowspan="2" style="text-align:center">Proficiency Bonus</th>
+<th rowspan="2" style="text-align:center">Features</th>
+<th rowspan="2" style="text-align:center">Cantrips Known</th>
+<th colspan="9" style="text-align:center">Spell Slots per Spell Level</th>
+</tr>
+<tr>
+<th style="text-align:center">1st</th>
+<th style="text-align:center">2nd</th>
+<th style="text-align:center">3rd</th>
+<th style="text-align:center">4th</th>
+<th style="text-align:center">5th</th>
+<th style="text-align:center">6th</th>
+<th style="text-align:center">7th</th>
+<th style="text-align:center">8th</th>
+<th style="text-align:center">9th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td>Druidic, Spellcasting</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td>Wild Shape, Druid Circle</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td>Wild Shape improvement, Ability Score Improvement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td>Druid Circle feature</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td>Wild Shape improvement, Ability Score Improvement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td>Druid Circle feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td>Druid Circle feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td>Timeless Body, Beast Spells</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td>Archdruid</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td></tr></tbody></table><h2>Druidic</h2>You know Druidic, the secret language of druids. You can speak the language and use it to leave hidden messages. You and others who know this language automatically spot such a message. Others spot the message's presence with a successful DC 15 Wisdom (Perception) check but can't decipher it without magic.<br><br><h2>Spellcasting</h2>Drawing on the divine essence of nature itself, you can cast spells to shape that essence to your will. See chapter 10 for the general rules of spellcasting and chapter 11 for the druid spell list.<br><br><strong>Cantrips<br></strong><br>At 1st level, you know two cantrips of your choice from the druid spell list. You learn additional druid cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Druid table.<br><br><strong>Preparing and Casting Spells</strong><br><br>The Druid table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these druid spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.<br><br>    You prepare the list of druid spells that are available for you to cast, choosing from the druid spell list. When you do so, choose a number of druid spells equal to your Wisdom modifier + your druid level (minimum of one spell). The spells must be of a level for which you have spell slots.<br><br>    For example, if you are a 3rd-level druid, you have four 1st-level and two 2nd-level spell slots. With a Wisdom of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. If you prepare the 1st-level spell Cure Wounds, you can cast it using a 1st-level ar 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.<br><br>    You can also change your list of prepared spells when you finish a long rest. Preparing a new list of druid spells requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.<br><br><strong>Spellcasting Ability</strong><br><br>Wisdom is your spellcasting ability for your druid spells, since your magic draws upon your devotion and attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a druid spell you cast and when making an attack roll with one.<br><br><div style="margin-left: 20px;"><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier<br><strong>    Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</div><br><strong>Ritual Casting</strong><br><br>You can cast a druid spell as a ritual if that spell has the ritual tag and you have the spell prepared.<br><br><strong>Spellcasting Focus</strong><br><br>You can use a druidic focus (see "Equipment") as a spellcasting focus for your druid spells.<br><br><h2>Wild Shape</h2>Starting at 2nd level, you can use your action to magically assume the shape of a beast that you have seen before. You can use this feature twice. You regain expended uses when you finish a short or long rest.<br><br>    Your druid level determines the beasts you can transform into, as shown in the Beast Shapes table. At 2nd level, for example, you can transform into any beast that has a challenge rating of 1/4 or lower that doesn't have a flying or swimming speed.<br><br><table><caption>Table: Beast Shapes</caption><thead><tr><th>Level</th><th>Max. CR</th><th>Limitations</th><th>Example</th></tr></thead><tbody><tr><td>2nd</td><td>1/4</td><td>No flying or swimming speed</td><td>Wolf</td></tr><tr><td>4th</td><td>1/2</td><td>No flying speed</td><td>Crocodile</td></tr><tr><td>8th</td><td>1</td><td>—</td><td>Giant eagle</td></tr></tbody></table>    You can stay in a beast shape for a number of hours equal to half your druid level (rounded down). You then revert to your normal form unless you expend another use of this feature. You can revert to your normal form earlier by using a bonus action on your turn. You automatically revert if you fall unconscious, drop to 0 hit points, or die.<br><br>    While you are transformed, the following rules apply:<br><br><ul><li>Your game statistics are replaced by the statistics of the beast, but you retain your alignment, personality, and Intelligence, Wisdom, and Charisma scores. You also retain all of your skill and saving throw proficiencies, in addition to gaining those of the creature. If the creature has the same proficiency as you and the bonus in its stat block is higher than yours, use the creature's bonus instead of yours. If the creature has any legendary or lair actions, you can't use them.</li><li>When you transform, you assume the beast's hit points and Hit Dice. When you revert to your normal form, you return to the number of hit points you had before you transformed. However, if you revert as a result of dropping to 0 hit points, any excess damage carries over to your normal form. For example, if you take 10 damage in animal form and have only 1 hit point left, you revert and take 9 damage. As long as the excess damage doesn't reduce your normal form to 0 hit points, you aren't knocked unconscious.</li><li>You can't cast spells, and your ability to speak or take any action that requires hands is limited to the capabilities of your beast form. Transforming doesn't break your concentration on a spell you've already cast, however, or prevent you from taking actions that are part of a spell, such as Call Lightning, that you've already cast.</li><li>You retain the benefit of any features from your class, race, or other source and can use them if the new form is physically capable of doing so. However, you can't use any of your special senses, such as darkvision, unless your new form also has that sense.</li><li>You choose whether your equipment falls to the ground in your space, merges into your new form, or is worn by it. Worn equipment functions as normal, but the DM decides whether it is practical for the new form to wear a piece of equipment, based on the creature's shape and size. Your equipment doesn't change size or shape to match the new form, and any equipment that the new form can't wear must either fall to the ground or merge with it. Equipment that merges with the form has no effect until you leave the form.</li></ul><br><h2>Druid Circle</h2>At 2nd level, you choose to identify with a circle of druids, such as the Circle of the Land. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.<br><br><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><h2>Timeless Body</h2>Starting at 18th level, the primal magic that you wield causes you to age more slowly. For every 10 years that pass, your body ages only 1 year.<br><br><h2>Beast Spells</h2>Beginning at 18th level, you can cast many of your druid spells in any shape you assume using Wild Shape. You can perform the somatic and verbal components of a druid spell while in a beast shape, but you aren't able to provide material components.<br><br><h2>Archdruid</h2>At 20th level, you can use your Wild Shape an unlimited number of times.<br><br>    Additionally, you can ignore the verbal and somatic components of your druid spells, as well as any material components that lack a cost and aren't consumed by a spell. You gain this benefit in both your normal shape and your beast shape from Wild Shape.<br><br><h2>Circle of the Land</h2>The Circle of the Land is made up of mystics and sages who safeguard ancient knowledge and rites through a vast oral tradition. These druids meet within sacred circles of trees or standing stones to whisper primal secrets in Druidic. The circle’s wisest members preside as the chief priests of communities that hold to the Old Faith and serve as advisors to the rulers of those folk. As a member of this circle, your magic is influenced by the land where you were initiated into the circle’s mysterious rites.<br><br><h3>Bonus Cantrip</h3>When you choose this circle at 2nd level, you learn one additional druid cantrip of your choice.<br><br><h3>Natural Recovery</h3>Starting at 2nd level, you can regain some of your magical energy by sitting in meditation and communing with nature. During a short rest, you choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your druid level (rounded up), and none of the slots can be 6th level or higher. You can’t use this feature again until you finish a long rest.<br><br>For example, when you are a 4th-level druid, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level slot or two 1st-level slots.<br><br><h3>Circle Spells</h3>Your mystical connection to the land infuses you with the ability to cast certain spells. At 3rd, 5th, 7th, and 9th level you gain access to circle spells connected to the land where you became a druid.<br><br>Choose that land—<em>arctic</em>, <em>coast</em>, <em>desert</em>, <em>forest</em>, <em>grassland</em>, <em>mountain</em>, or <em>swamp</em>—and consult the associated list of spells.<br><br>Once you gain access to a circle spell, you always have it prepared, and it doesn’t count against the number of spells you can prepare each day. If you gain access to a spell that doesn’t appear on the druid spell list, the spell is nonetheless a druid spell for you.<br><br><table><caption>Table: Arctic</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Hold Person</em>, S<em>pike Growth</em></td></tr><tr><td>5th</td><td><em>Sleet Storm</em>, S<em>low</em></td></tr><tr><td>7th</td><td><em>Freedom of Movement</em>, <em>I</em><em>ce Storm</em></td></tr><tr><td>9th</td><td><em>Commune with Nature</em>, <em>C</em><em>one of Cold</em></td></tr></tbody></table><table><caption>Table: Coast</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Mirror Image, Misty Step</em></td></tr><tr><td>5th</td><td><em>Water Breathing, Water Walk</em></td></tr><tr><td>7th</td><td><em>Control Water, Freedom of Movement</em></td></tr><tr><td>9th</td><td><em>Conjure Elemental, Scrying</em></td></tr></tbody></table><table><caption>Table: Desert</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Blur, Silence</em></td></tr><tr><td>5th</td><td><em>Create Food and Water, Protection from Energy</em></td></tr><tr><td>7th</td><td><em>Blight, Hallucinatory Terrain</em></td></tr><tr><td>9th</td><td><em>Insect Plague, Wall of Stone</em></td></tr></tbody></table><table><caption>Table: Forest</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Barkskin, Spider Climb</em></td></tr><tr><td>5th</td><td><em>Call Lightning, Plant Growth</em></td></tr><tr><td>7th</td><td><em>Divination, Freedom of Movement</em></td></tr><tr><td>9th</td><td><em>Commune with Nature, Tree Stride</em></td></tr></tbody></table><table><caption>Table: Grassland</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Invisibility, Pass Without Trace</em></td></tr><tr><td>5th</td><td><em>Daylight, Haste</em></td></tr><tr><td>7th</td><td><em>Divination, Freedom of Movement</em></td></tr><tr><td>9th</td><td><em>Dream, Insect Plague</em></td></tr></tbody></table><table><caption>Table: Mountain</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Spider Climb, Spike Growth</em></td></tr><tr><td>5th</td><td><em>Lightning Bolt, Meld into Stone</em></td></tr><tr><td>7th</td><td><em>Stone Shape, Stoneskin</em></td></tr><tr><td>9th</td><td><em>Passwall, Wall of Stone</em></td></tr></tbody></table><table><caption>Table: Swamp</caption><thead><tr><th>Druid Level</th><th>Circle Spells</th></tr></thead><tbody><tr><td>3rd</td><td><em>Acid Arrow, Darkness</em></td></tr><tr><td>5th</td><td><em>Water Walk, Stinking Cloud</em></td></tr><tr><td>7th</td><td><em>Freedom of Movement, Locate Creature</em></td></tr><tr><td>9th</td><td><em>Insect Plague, Scrying</em></td></tr></tbody></table><h3>Land’s Stride</h3>Starting at 6th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.<br><br>In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the <em>entangle</em> spell.<br><br><h3>Nature’s Ward</h3>When you reach 10th level, you can’t be charmed or frightened by elementals or fey, and you are immune to poison and disease.<br><br><h3>Nature’s Sanctuary</h3>When you reach 14th level, creatures of the natural world sense your connection to nature and become hesitant to attack you. When a beast or plant creature attacks you, that creature must make a Wisdom saving throw against your druid spell save DC. On a failed save, the creature must choose a different target, or the attack automatically misses. On a successful save, the creature is immune to this effect for 24 hours.<br><br>The creature is aware of this effect before it makes its attack against you.<br><br><h2>Sacred Plants and Wood</h2>A druid holds certain plants to be sacred, particularly alder, ash, birch, elder, hazel, holly, juniper, mistletoe, oak, rowan, willow, and yew. Druids often use such plants as part of a spellcasting focus, incorporating lengths of oak or yew or sprigs of mistletoe.<br><br>Similarly, a druid uses such woods to make other objects, such as weapons and shields. Yew is associated with death and rebirth, so weapon handles for scimitars or sickles might be fashioned from it. Ash is associated with life and oak with strength. These woods make excellent hafts or whole weapons, such as clubs or quarterstaffs, as well as shields. Alder is associated with air, and it might be used for thrown weapons, such as darts or javelins.<br><br>Druids from regions that lack the plants described here have chosen other plants to take on similar uses. For instance, a druid of a desert region might value the yucca tree and cactus plants.<br><br><h2>Druids and the Gods</h2>Some druids venerate the forces of nature themselves, but most druids are devoted to one of the many nature deities worshiped in the multiverse (the lists of gods in Pantheons include many such deities). The worship of these deities is often considered a more ancient tradition than the faiths of clerics and urbanized peoples.<br><br></script>
+<script id='tmpl_newAttrItem' type='text/html'>
+<div class='row newRow attrListItem'>
+<div class='col-md-3 attrName'>
+<select class="chosen attrKey" name="new_attr">
+<option value="none">Choose an attribute...</option>
+<option value="new">Create new attribute...</option>
+<option value="AC">AC</option>
+<option value="Add Casting Modifier">Add Casting Modifier</option>
+<option value="Alignment">Alignment</option>
+<option value="Based On">Based On</option>
+<option value="Casting Time">Casting Time</option>
+<option value="CHA">CHA</option>
+<option value="Challenge Rating">Challenge Rating</option>
+<option value="Classes">Classes</option>
+<option value="Components">Components</option>
+<option value="CON">CON</option>
+<option value="Concentration">Concentration</option>
+<option value="Condition Immunities">Condition Immunities</option>
+<option value="Cost">Cost</option>
+<option value="Damage">Damage</option>
+<option value="Damage Progression">Damage Progression</option>
+<option value="Damage Type">Damage Type</option>
+<option value="Damage Vulnerabilities">Damage Vulnerabilities</option>
+<option value="data-Actions">data-Actions</option>
+<option value="data-CastNum">data-CastNum</option>
+<option value="data-CHA-mod">data-CHA-mod</option>
+<option value="data-CON-mod">data-CON-mod</option>
+<option value="data-description">data-description</option>
+<option value="data-DEX-mod">data-DEX-mod</option>
+<option value="data-DurationNum">data-DurationNum</option>
+<option value="data-INT-mod">data-INT-mod</option>
+<option value="data-Legendary Actions">data-Legendary Actions</option>
+<option value="data-Parent">data-Parent</option>
+<option value="data-RangeNum">data-RangeNum</option>
+<option value="data-Reactions">data-Reactions</option>
+<option value="data-SizeNum">data-SizeNum</option>
+<option value="data-Spells">data-Spells</option>
+<option value="data-STR-mod">data-STR-mod</option>
+<option value="data-Traits">data-Traits</option>
+<option value="data-WIS-mod">data-WIS-mod</option>
+<option value="data-XP">data-XP</option>
+<option value="DEX">DEX</option>
+<option value="Duration">Duration</option>
+<option value="Expansion">Expansion</option>
+<option value="Healing">Healing</option>
+<option value="Higher Level Healing">Higher Level Healing</option>
+<option value="Higher Spell Slot Bonus">Higher Spell Slot Bonus</option>
+<option value="Higher Spell Slot Dice">Higher Spell Slot Dice</option>
+<option value="Higher Spell Slot Die">Higher Spell Slot Die</option>
+<option value="HP">HP</option>
+<option value="Immunities">Immunities</option>
+<option value="Importer Initials">Importer Initials</option>
+<option value="INT">INT</option>
+<option value="Item Rarity">Item Rarity</option>
+<option value="Item Type">Item Type</option>
+<option value="Lair Actions">Lair Actions</option>
+<option value="Languages">Languages</option>
+<option value="Legendary Actions Desc">Legendary Actions Desc</option>
+<option value="Legendary Roll 0">Legendary Roll 0</option>
+<option value="Level">Level</option>
+<option value="List for Category">List for Category</option>
+<option value="Material">Material</option>
+<option value="Modifiers">Modifiers</option>
+<option value="none">none</option>
+<option value="Passive Perception">Passive Perception</option>
+<option value="Properties">Properties</option>
+<option value="Race">Race</option>
+<option value="Range">Range</option>
+<option value="Requires Attunement">Requires Attunement</option>
+<option value="Resistances">Resistances</option>
+<option value="Ritual">Ritual</option>
+<option value="Roll 0">Roll 0</option>
+<option value="Roll 1">Roll 1</option>
+<option value="Roll 2">Roll 2</option>
+<option value="Roll 3">Roll 3</option>
+<option value="Roll 4">Roll 4</option>
+<option value="Save">Save</option>
+<option value="Save Success">Save Success</option>
+<option value="School">School</option>
+<option value="Secondary Damage">Secondary Damage</option>
+<option value="Secondary Damage Type">Secondary Damage Type</option>
+<option value="Secondary Higher Spell Slot Dice">Secondary Higher Spell Slot Dice</option>
+<option value="Secondary Higher Spell Slot Die">Secondary Higher Spell Slot Die</option>
+<option value="Senses">Senses</option>
+<option value="Size">Size</option>
+<option value="Skills">Skills</option>
+<option value="Speed">Speed</option>
+<option value="Spell Attack">Spell Attack</option>
+<option value="Spell Book">Spell Book</option>
+<option value="Spell to Hit">Spell to Hit</option>
+<option value="Spellcasting Ability">Spellcasting Ability</option>
+<option value="Spellcasting Level">Spellcasting Level</option>
+<option value="Spellcasting Save DC">Spellcasting Save DC</option>
+<option value="Stealth">Stealth</option>
+<option value="STR">STR</option>
+<option value="Target">Target</option>
+<option value="Token">Token</option>
+<option value="Token Size">Token Size</option>
+<option value="Type">Type</option>
+<option value="Vulnerabilities">Vulnerabilities</option>
+<option value="Weight">Weight</option>
+<option value="WIS">WIS</option></select>
+<input class='newAttrKey' placeholder='Attr Name' style='display: none; margin-top: 5px;' type='text'>
+<input class='dataAttrCheck' type='checkbox'>
+<span class='dataAttrText'>is data attribute?</span>
+</div>
+<div class='col-md-7 attrValue'>
+<textarea></textarea>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doDelete pictos'>#</div>
+</div>
+</div>
+</div>
+</script>
+<div class='pull-right'>
+<a class='showPageAttributes' href='javascript:void(0);' style='position: relative; top: 5px;'>Show Attribute List</a>
+</div>
+<a name='attributes'></a>
+<h1>
+Attributes
+</h1>
+<div class='col-md-12 attrList' id='pageAttrs'>
+<div class='attrListItem hiddenAttribute row'>
+<div class='col-md-3 attrName'>Category</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>Classes</div>
+<div class='edit'>
+<textarea>Classes</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem row'>
+<div class='col-md-3 attrName'>Hit Dice</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>d8</div>
+<div class='edit'>
+<textarea>d8</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem dataAttribute hiddenAttribute row'>
+<div class='col-md-3 attrName'>List</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>false</div>
+<div class='edit'>
+<textarea>false</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem row'>
+<div class='col-md-3 attrName'>Saving Throws</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>Intelligence, Wisdom</div>
+<div class='edit'>
+<textarea>Intelligence, Wisdom</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem hiddenAttribute row'>
+<div class='col-md-3 attrName'>Source</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>5th Edition SRD</div>
+<div class='edit'>
+<textarea>5th Edition SRD</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='row newAttrListItem hiddenAttribute'>
+<div class='col-md-12 newAttrButton' data-template='tmpl_newAttrItem'>+ New Search Attribute</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		<div class="content-text page-links">
+			<div class="pull-right">
+				
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class='row'>
+  <div class='col-md-8'>
+    <div class='content-text'>
+      <hr>
+      <div class='pagefooter' style='font-size: 0.9em;'>
+        <div class='pull-right'>
+          <a href='/compendium/dnd5e/Index:Classes'>View All Classes &raquo;</a>
+          <br>
+          <br>
+          <a class='deleteThisPage' href='javascript:void(0);' style='font-size: 0.9em; color: red;'>Delete This Page</a>
+        </div>
+        Source: <a href="/compendium/dnd5e#content/License">5th Edition SRD</a>
+        <a class='flagthispage' href='javascript:void(0);' style='font-size: 0.9em;'>Flag This Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+if(window.location.hash === "") window.location.hash = "content";
+$(".editPageContent, .editPageAttributes, .deleteThisPage, .editBookTemplate, .hiddenAttribute, .uploadpageslot").remove();
+if($("#pageAttrs").find(".row").not(".hiddenAttribute").not(".newAttrListItem").length === 0) {
+$("#pageAttrs").prev("h1").remove();
+$("#pageAttrs, .showPageAttributes").remove();
+$("a[href=\"#attributes\"]").remove();
+}
+$(".flagthispage").remove();
+$("#tableofcontents").show().tableofcontents();
+</script>
+<script type='text/javascript'>
+$(".uploadslot").on("uploadcomplete", function(e, json) {
+if(!json) return;
+$.post("/account/update_avatar/me", {newavatar: json.base + "?" + new Date().getTime()});
+});
+$(".uploadslot").on("uploadremoved", function() {
+$.post("/account/update_avatar/me", {newavatar: ""});
+});
+</script>
+
+
+	</div>
+
+	<div class="container globalfooter">
+
+		<div class="row" style="padding-bottom: 20px; padding-top: 60px;">
+
+			<div class="col-md-12">
+
+				<div class="footerborder1"></div>
+				<div class="footerborder2"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-12 copyrightnotice">
+
+				<p style="border-top: none; padding-top: 0px;">&copy; The Orr Group, LLC &middot; <a href="https://wiki.roll20.net/Acknowledgements">Acknowledgements</a> &middot; <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy">Terms of Service & Privacy Policy</a> &middot; <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy#Notification_of_Copyright_Infringement_.28DMCA_Policy.29">DMCA</a> &middot; Need Help? <a href="https://wiki.roll20.net/Customer_Support_FAQ">Visit our FAQ!</a> &middot; On Social Media: 
+					<a href="https://www.facebook.com/pages/Roll20/439774126041559"><img src="/v2/images/social-fb.png" alt="Roll20 on Facebook" /></a>
+					<a href="https://twitter.com/roll20app"><img src="/v2/images/social-twitter.png" alt="Roll20 on Twitter" /></a>
+					<a href="https://plus.google.com/+Roll20Net/"><img src="/v2/images/social-gplus.png" alt="Roll20 on Google Plus" /></a>
+					<a href="https://www.youtube.com/user/MsRoll20"><img style="margin-right:+5px;" src="/v2/images/social-youtube.png" alt="Roll20 on YouTube" /></a>
+					<a href="http://www.reddit.com/r/roll20"><img style="margin-right:+5px;" src="/v2/images/social-reddit.png" alt="Roll20 on Reddit" /></a>
+					<a href="http://twitch.tv/roll20app"><img src="/v2/images/social-twitch.png" alt="Roll20 on Twitch" /></a>
+				</p>
+				<p style="border-top: none; padding-top: 0px;">Roll20<sup>&reg;</sup> is a Registered Trademark of The Orr Group, LLC. All rights reserved. 
+
+				
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+      $(function() {
+        var cookieName = 'roll20tempauth';
+        var cookieValue = Math.floor(Math.random()*100);
+        var myDate = new Date();
+        myDate.setMonth(myDate.getMonth() + 1);
+        var cookieinfo = cookieName +"=" + cookieValue + ";expires=" + myDate 
+                          + ";domain=.roll20.net;path=/";
+        document.cookie = cookieinfo;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://app.roll20.net/sessions/topbar/'+cookieValue;
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      });
+    </script>
+
+	<script id="tmpl_campaigntag" type="text/html">
+		<div class="tag"><$=this.model.get("tag")$></div>
+	</script>
+
+	<script id="tmpl_campaigntags" type="text/html">
+		<div class="tags tagset">
+			<div class="tagslabel">
+				<span class="pictos">z</span>
+				Tags:
+			</div>
+			<input>
+			<$ if(this.editable == "true") { $>
+			<div class="add">
+				<em>
+					<span class="pictos">p</span>
+					Edit Tags
+				</em>
+			</div>
+			<$ } $>
+		</div>
+		<div class="clear"></div>
+	</script>
+
+	<script id="tmpl_uploadslot" type="text/html">
+		<div class="avatar dropbox <$! (this != "" ? "filled" : "empty") $>">
+		<div class="status"></div>
+		<div class="inner">
+		<$ if(this == "") { $>
+		<h4 style="padding-bottom: 0px; marigin-bottom: 0px; color: #777;">Drop a File<small>(JPG, PNG, GIF)</small></h4>
+		<div style="margin-top: -5px; margin-bottom: 5px;">or</div>
+		<a href="javascript:void(0);" class="btn btn-info" style="margin-bottom: 10px;">Choose a File...</a>
+		<input class="manual" type="file" />
+		<$ } else { $>
+		<img src="<$!this$>" />
+		<div class='remove'><a href='javascript:void(0);'>Change Image</a></div>
+		<$ } $>
+		</div>
+		</div>
+	</script>
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+		ga('create', 'UA-31040388-1', {'cookieDomain': 'auto'});
+	
+	ga('send', 'pageview');
+
+	</script>
+
+</body>
+
+</html>
