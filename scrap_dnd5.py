@@ -18,6 +18,22 @@ is_linebreak = lambda x: True if (isinstance(x, element.NavigableString) and x =
 is_navstring = lambda x: True if (isinstance(x, element.NavigableString)) else False
 has_subelements = lambda x: True if (not is_navstring(x) and len(x.contents) > 1) else False #
 get_header_number = lambda h: int(h.name[1]) if len(h.name) == 2 else 0
+get_text = lambda h: h.text.strip()
+def get_header_n_t (h):
+    return get_header_number(h), get_text(h)
+
+def ask_parent(parent_dic, sprev, s):
+
+    if sprev == None:
+        return None
+
+    sprev_n, sprev_t = get_header_n_t(sprev)
+    s_n, s_t = get_header_n_t(s)
+
+    if  sprev_n == s_n:
+        return parent_dic[sprev]
+    elif sprev_n > s_n:
+        ask_parent( parent_dic, parent_dic[sprev], s )
 
 def has_attr ( x,a ):
     r=re.compile(a)
@@ -93,40 +109,38 @@ h1
       h4
 """
 
-def create_header_structure (soup):
+def create_header_parents (soup):
     headers = soup.find_all( re.compile('h[0-9]+') )
-    tree = {}
-    hn_prev=0
+
+    h_prev = None
+    parents = { }
     for h in headers:
-        hn = get_header_number(h)
-        if hn < hn_prev:
-            tree[] = ( h.text.strip() )
-        elif hn = hn_prev:
-            # add to branch
+        # print( h.name, get_header_number(h), len(h.contents), h.text.strip() )
+        h_n, h_t = get_header_n_t(h)
+        if h_prev == None:
+            h_prev_n, h_prev_t = -1, 'root'
         else:
-            # close branch start new branch
+            h_prev_n, h_prev_t = get_header_n_t(h_prev)
 
-        print( h.name, get_header_number(h), len(h.contents), h.text.strip() )
+        if h_n > h_prev_n:
+            parents[ h ] = h_prev
+        elif h_n == h_prev_n:
+            parents[ h ] = parents[h_prev]
+        else:
+            parents[ h ] = ask_parent(parents, h_prev, h)
+        h_prev = h
 
-# headers = soup.find_all(attrs={ "name" : re.compile('h-')} )
-# for s in headers[2].next_siblings:
-#     if (not is_navstring(s)) and (s!=None) and (not has_attr(s,'h-.*')):
-#         print( s )
-#     elif is_navstring( s ):
-#         print( s )
-#     else:
-#         print( "Finish" )
-#         pass
-# for h in headers:
-    # for sib in  h.next_siblings:
-    #     print( sib )
-    # if not is_navstring(h.next_sibling):
-    #     print('-----------')
-    #     print( h.next_sibling.text )
-    #     print( h.next_sibling.next_sibling )
-    # else:
-    #     print('-----------')
-    #     print( h.next_sibling.string )
+    parents_dic = {}
+    for key in parents:
+        if parents[key] == None:
+            parents_dic[ get_text(key) ] = None
+        else:
+            parents_dic[ get_text(key) ] = get_text(parents[key])
+
+    return parents_dic, parents
+
+header_parents_dic, header_parents_tag = create_header_parents(soup)
+print( header_parents_dic )
 
 # print( fields )
 # print( table )
