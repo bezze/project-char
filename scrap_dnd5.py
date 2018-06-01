@@ -17,6 +17,7 @@ def download_html(link, filename=False):
 is_linebreak = lambda x: True if (isinstance(x, element.NavigableString) and x == '\n') else False
 is_navstring = lambda x: True if (isinstance(x, element.NavigableString)) else False
 has_subelements = lambda x: True if (not is_navstring(x) and len(x.contents) > 1) else False #
+get_header_number = lambda h: int(h.name[1]) if len(h.name) == 2 else 0
 
 def has_attr ( x,a ):
     r=re.compile(a)
@@ -79,15 +80,43 @@ raw_page = open('Warlock', 'r').read() # Testing
 soup = bs(raw_page, 'html.parser')
 fields, table = get_fields_table( soup )
 
-headers = soup.find_all(attrs={ "name" : re.compile('h-')} )
-for s in headers[0].next_siblings:
-    if (not is_navstring(s)) and (s!=None) and (not has_attr(s,'h-.*')):
-        print( s )
-    elif is_navstring( s ):
-        print( s )
-    else:
-        print( "Finish" )
-        pass
+"""
+h1
+  h2
+  h2
+    h3
+    h3
+  h2
+  h2
+  h2
+    h3
+      h4
+"""
+
+def create_header_structure (soup):
+    headers = soup.find_all( re.compile('h[0-9]+') )
+    tree = {}
+    hn_prev=0
+    for h in headers:
+        hn = get_header_number(h)
+        if hn < hn_prev:
+            tree[] = ( h.text.strip() )
+        elif hn = hn_prev:
+            # add to branch
+        else:
+            # close branch start new branch
+
+        print( h.name, get_header_number(h), len(h.contents), h.text.strip() )
+
+# headers = soup.find_all(attrs={ "name" : re.compile('h-')} )
+# for s in headers[2].next_siblings:
+#     if (not is_navstring(s)) and (s!=None) and (not has_attr(s,'h-.*')):
+#         print( s )
+#     elif is_navstring( s ):
+#         print( s )
+#     else:
+#         print( "Finish" )
+#         pass
 # for h in headers:
     # for sib in  h.next_siblings:
     #     print( sib )
