@@ -34,19 +34,33 @@ class ClassInfo ():
     def __init__ (self, class_file = None):
         if class_file == None:
             raw_page = download_html(sys.argv[1]) # Real download
+            classname = class_file.split('#')[-1]
         else:
             raw_page = open(class_file, 'r').read() # Testing
+            classname = class_file.split('/')[-1]
+
+        self.classname = classname
         self.soup = bs(raw_page, 'html.parser');  #print(soup.prettify())
         self.table = TableInfo(self.soup)
         self.section = SectionTree(self.soup)
 
-info = ClassInfo('Druid')
+    def get_section(self):
+        all_sections = self.section.parse_all_sections()
+        all_sections.pop('D&D; 5th Edition')
+        all_sections.pop('Compendium')
+        all_sections.pop(self.classname)
+        return all_sections
 
-print( info.section )
+
+info = ClassInfo('CharacterClasses/'+'Wizard')
+
+# print( info.section.search_tree("Pact Boon") )
+# print( info.table )
+for l in info.get_section() :
+    print(l, info.get_section()[l])
 
 # header_parents_dic, header_parents_tag = create_header_parents(soup)
 # # print( header_parents_dic )
-# sections = parse_all_sections(soup)
 
 # st = SectionTree( header_parents_dic )
 # # print(st.search_tree("Spellcasting"))

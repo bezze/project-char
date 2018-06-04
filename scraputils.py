@@ -16,7 +16,7 @@ is_linebreak = lambda x: True if (isinstance(x, element.NavigableString) and x =
 is_navstring = lambda x: True if (isinstance(x, element.NavigableString)) else False
 has_subelements = lambda x: True if (not is_navstring(x) and len(x.contents) > 1) else False #
 get_header_number = lambda h: int(h.name[1]) if len(h.name) == 2 else 0
-get_text = lambda h: ' '.join(h.text.replace('\n',' ').strip().split())
+get_text = lambda h: ' '.join(h.text.split())
 is_key = lambda k,d : True if k in d.keys() else False
 not_empty = lambda d: True if len( d ) != 0 else False
 
@@ -39,7 +39,19 @@ def return_nstring_text ( tag ):
     elif tag.name == 'strong':
         return header_indent_lvl(tag,2)
     else:
-        return ' '+tag.text.strip()+' '
+        return ' '+get_text(tag)+' '
+
+def return_nstring_text_attribute ( tag ):
+    if is_navstring(tag):
+        print('[NAV]')
+        return tag.string.strip()
+    elif tag.name == 'strong':
+        print('[HEAD]')
+        return header_indent_lvl(tag,2)
+    else:
+        print('[TAG]')
+        return ' '+get_text(tag)+' '
+
 
 def get_header_n_t (h):
     return get_header_number(h), get_text(h)

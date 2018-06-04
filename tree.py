@@ -108,13 +108,18 @@ class SectionTree (Tree):
                 # if isinstance(s, element.Tag) and s.name == 'h2':
                 if isinstance(s, element.Tag) and re.match(re.compile('h[0-9]+'),s.name) != None:
                     break
-                text += return_nstring_text(s)
+                elif isinstance(s, element.Tag) and re.match(re.compile('script'),s.name) != None:
+                    continue
+                elif isinstance(s, element.Tag) and re.match(re.compile('Attributes'),s.name) != None:
+                    text += return_nstring_text_attribute(s)
+                else:
+                    text += return_nstring_text(s)
             return text
 
         sections = {}
         for  hname, htag in zip(self.__header_parents_dic, self.__header_parents_tag):
-            if hname == 'D&D; 5th Edition':
-                continue
+            # if (hname == 'D&D; 5th Edition') or (hname == ):
+            #     continue
             sections[hname] = parse_text_up_to_next_htag(htag)
         return sections
 

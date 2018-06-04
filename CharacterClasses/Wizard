@@ -1,0 +1,3034 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"50a61d60f7","applicationID":"1985886","transactionName":"cl0MRkRXVFxdFBZqW19TFkBXF3tfVRZcV1ZYRw8dcX1sEAIEVlZZX1MPVxkCSFFfA0pVR1Y=","queueTime":0,"applicationTime":209,"agent":""}
+  </script>
+  <script type="text/javascript">
+   window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);
+  </script>
+  <title>
+   Wizard | D&amp;D 5th Edition on Roll20 Compendium
+  </title>
+  <link href="/assets/v2.css?1519751126" rel="stylesheet" type="text/css"/>
+  <link href="/v2/css/compendium.css?1522337815" rel="stylesheet" type="text/css"/>
+  <link href="/css/themes/bootstrap/jquery-ui-1.8.16.custom.css?1483835727" rel="stylesheet" type="text/css"/>
+  <script src="/assets/v2.js?1519751126" type="text/javascript">
+  </script>
+  <script src="/v2/js/typeahead.js?1483835727" type="text/javascript">
+  </script>
+  <script src="/js/d20/compendium.js?1524584807" type="text/javascript">
+  </script>
+  <script src="/v2/js/compendium.js?1524584807" type="text/javascript">
+  </script>
+  <script src="/js/jquery-ui.1.11.2.min.js?1483835727" type="text/javascript">
+  </script>
+  <link href="https://roll20.net/compendium/dnd5e/Wizard" rel="canonical"/>
+  <meta content=" Wizard Spells by Name  " name="description">
+   <meta content="width=device-width" name="viewport"/>
+   <script type="text/javascript">
+    $(function() { $.jqotetag( '$' ); });
+   </script>
+  </meta>
+ </head>
+ <body>
+  <script type="text/javascript">
+   environment = "production";
+  </script>
+  <script type="text/javascript">
+   if (window.self != window.top) {
+    	$(document.body).addClass("in-iframe");
+ 	 }
+  </script>
+  <div class="container topbar">
+   <div class="row" style="background-color: white; position: relative; z-index: 10000; padding-top: 20px; padding-bottom: 10px; margin-right: 0px;">
+    <div class="col-md-8 logo" style="width: 275px;">
+     <a href="https://app.roll20.net">
+      <img alt="Roll20 logo" class="withoutad" src="https://app.roll20.net/v2/images/roll20-logo.png?v=2"/>
+     </a>
+    </div>
+   </div>
+   <div class="row mobilemenu">
+    <div class="col-md-12 btn-row">
+     <div class="menu-hider">
+     </div>
+     <div class="btn-group">
+      <a class="btn btn-default" href="#" role="button">
+       Menu
+       <span class="caret">
+       </span>
+      </a>
+      <div class="fullmobilemenu">
+       <ul class="nav nav-pills nav-stacked">
+        <li>
+         <a href="https://roll20.net/">
+          Home
+         </a>
+        </li>
+        <li>
+         <a href="https://app.roll20.net/campaigns/search">
+          My Games
+         </a>
+        </li>
+        <li>
+         <a href="https://app.roll20.net/lfg">
+          Join a Game
+         </a>
+        </li>
+        <li>
+         <a href="https://marketplace.roll20.net/">
+          Marketplace
+         </a>
+        </li>
+        <li>
+         <a href="https://roll20.net/compendium">
+          Compendium
+         </a>
+        </li>
+        <li>
+         <a href="https://app.roll20.net/forum">
+          Forums
+         </a>
+        </li>
+        <li>
+         <a href="https://wiki.roll20.net/">
+          Wiki
+         </a>
+        </li>
+        <li>
+         <a href="http://blog.roll20.net">
+          Blog
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="simplecontainer right topbarlogin">
+      <!-- Filled in by AJAX JS -->
+     </div>
+     <div class="simplecontainer right topbarnotifications">
+      <!-- This is filled in by AJAX JS -->
+     </div>
+    </div>
+   </div>
+   <div class="row desktopmenu">
+    <div class="col-md-12 btn-row">
+     <div class="menu-hider">
+     </div>
+     <div class="btn-group">
+      <a class="btn btn-default" href="https://app.roll20.net/" role="button">
+       Play Now
+      </a>
+     </div>
+     <div class="btn-group">
+      <a class="btn btn-default" href="https://app.roll20.net/lfg" role="button">
+       Join a Game
+      </a>
+     </div>
+     <div class="btn-group drop">
+      <a aria-expanded="false" class="btn btn-default" data-hover="dropdown" data-toggle="dropdown" href="https://marketplace.roll20.net" role="button">
+       Marketplace
+      </a>
+      <button aria-expanded="false" class="btn btn-default dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" id="marketplace" type="button">
+       <span class="caret">
+       </span>
+       <span class="sr-only">
+        Toggle Dropdown
+       </span>
+      </button>
+     </div>
+     <div area-labelledby="marketplace" class="full" role="menu">
+      <div class="menu">
+       <a href="https://marketplace.roll20.net">
+        What's New
+       </a>
+       <a href="https://marketplace.roll20.net/browse">
+        Browse
+       </a>
+       <a href="https://marketplace.roll20.net/gift/">
+        Give a Gift
+       </a>
+       <a href="https://merchoforr.com/">
+        Merchandise
+       </a>
+      </div>
+      <div class="listing marketplaceitem">
+       <div class="inneritem">
+        <a href="https://marketplace.roll20.net/browse/compendiumexpansion/4/mordenkainens-tome-of-foes">
+         <img src="https://s3.amazonaws.com/files.d20.io/marketplace/505602/JBzl1PfCGzw6Q0ZCwCBHuA/med.jpg"/>
+        </a>
+        <div class="desc">
+         <em>
+          Mordenkainen's Tome of Foes
+         </em>
+         <br/>
+         by Wizards of the Coast
+        </div>
+       </div>
+      </div>
+      <div class="listing marketplaceitem">
+       <div class="inneritem">
+        <a href="https://marketplace.roll20.net/browse/set/2524/mansion-of-mystery">
+         <img src="https://s3.amazonaws.com/files.d20.io/marketplace/538552/QDjc9uYoJz8v6KePvk0N4g/med.jpg?1527632550"/>
+        </a>
+        <div class="desc">
+         <em>
+          Mansion of Mystery
+         </em>
+         <br/>
+         by David Hemenway
+        </div>
+       </div>
+      </div>
+      <div class="listing marketplaceitem">
+       <div class="inneritem">
+        <a href="https://marketplace.roll20.net/browse/set/2516/field-effect-icons">
+         <img src="https://s3.amazonaws.com/files.d20.io/marketplace/538543/RbGTB0oPk2f5mj9WKbhYlA/med.jpg?1527632513"/>
+        </a>
+        <div class="desc">
+         <em>
+          Field Effect Icons
+         </em>
+         <br/>
+         by The Wizard Fuu
+        </div>
+       </div>
+      </div>
+      <div class="listing marketplaceitem">
+       <div class="inneritem">
+        <a href="https://marketplace.roll20.net/browse/bundle/28/wotbs-the-scouring-of-gate-pass">
+         <img src="https://s3.amazonaws.com/files.d20.io/marketplace/539002/2RYxxnNCniMyH_SqKNbgeg/med.jpg?1527639941501"/>
+        </a>
+        <div class="desc">
+         <em>
+          WotBS: The Scouring of Gate Pass
+         </em>
+         <br/>
+         by Ancris IT
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="btn-group drop">
+      <a aria-expanded="false" class="btn btn-default" data-hover="dropdown" data-toggle="dropdown" href="https://roll20.net/compendium/" role="button">
+       Tools
+      </a>
+      <button aria-expanded="false" class="btn btn-default dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" id="digitaltools" type="button">
+       <span class="caret">
+       </span>
+       <span class="sr-only">
+        Toggle Dropdown
+       </span>
+      </button>
+     </div>
+     <div aria-labelledby="digitaltools" class="full" role="menu">
+      <div class="menu">
+       <a href="https://roll20.net/compendium/">
+        Compendium
+       </a>
+       <a href="https://app.roll20.net/vault/">
+        Character Vault
+       </a>
+       <a href="https://wiki.roll20.net/Roll20_for_iPad_and_Android">
+        Roll20 for iPad and Android
+       </a>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://app.roll20.net/vault/">
+         <img src="/images/CharacterVault.png"/>
+        </a>
+       </div>
+       <div class="gameinfo">
+        <a href="https://app.roll20.net/vault/">
+         Character Vault
+        </a>
+        <div class="shorthr">
+        </div>
+        <span class="gameinfo">
+         Any Concept / Any System
+        </span>
+       </div>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://roll20.net/compendium/">
+         <img src="/images/Compendium.png"/>
+        </a>
+       </div>
+       <div class="gameinfo">
+        <a href="https://roll20.net/compendium/">
+         Compendium
+        </a>
+        <div class="shorthr">
+        </div>
+        <span class="gameinfo">
+         Your System Come To Life
+        </span>
+       </div>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&amp;hl=en">
+         <img src="/images/forAndroid.png"/>
+        </a>
+       </div>
+       <div class="gameinfo">
+        <a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&amp;hl=en">
+         Roll20 for Android
+        </a>
+        <div class="shorthr">
+        </div>
+        <span class="gameinfo">
+         Streamlined for your Tablet
+        </span>
+       </div>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">
+         <img src="/images/foriPad.png"/>
+        </a>
+       </div>
+       <div class="gameinfo">
+        <a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">
+         Roll20 for iPad
+        </a>
+        <div class="shorthr">
+        </div>
+        <span class="gameinfo">
+         Streamlined for your Tablet
+        </span>
+       </div>
+      </div>
+     </div>
+     <div class="btn-group drop">
+      <a aria-expanded="false" class="btn btn-default community-toggler" data-hover="dropdown" data-toggle="dropdown" href="https://app.roll20.net/forum/" role="button">
+       Community
+      </a>
+      <button aria-expanded="false" class="btn btn-default dropdown-toggle community community-toggler" data-hover="dropdown" data-toggle="dropdown" id="community" type="button">
+       <span class="caret">
+       </span>
+       <span class="sr-only">
+        Toggle Dropdown
+       </span>
+      </button>
+     </div>
+     <div area-labeledby="community" class="full community" role="menu">
+      <div class="menu">
+       <a href="https://app.roll20.net/forum/">
+        Forums
+       </a>
+       <a href="https://wiki.roll20.net/Main_Page">
+        Help Wiki
+       </a>
+       <a href="http://blog.roll20.net">
+        Blog
+       </a>
+       <a href="http://www.twitch.tv/roll20app">
+        Live Stream
+       </a>
+       <a href="https://www.youtube.com/user/MsRoll20">
+        VODs
+       </a>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://youtu.be/z2WlO_W8kxs">
+         <img src="https://s3.amazonaws.com/files.d20.io/images/44959266/9g6k8DtmsEiBum1-ouhWNg/original.png?1515043470415"/>
+        </a>
+       </div>
+       <p class="snippet">
+        <a href="https://youtu.be/z2WlO_W8kxs">
+         [YouTube] Roll20 Presents: Burning Wheel Series 3
+        </a>
+       </p>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://www.twitch.tv/dnd">
+         <img src="https://s3.amazonaws.com/files.d20.io/images/38822157/__M8exgNMHVCmpFeQFji1Q/original.png?1504896244917"/>
+        </a>
+       </div>
+       <p class="snippet">
+        <a href="https://www.twitch.tv/dnd">
+         [Twitch] Roll20 Presents: Tomb of Annihilation - Live Fridays at 1pm PT
+        </a>
+       </p>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="https://wiki.roll20.net/Main_Page">
+         <img src="https://s3.amazonaws.com/files.d20.io/images/44959300/iUVi7Tgr7dDvQ2XQ9sF4Qg/original.png?1515043539134"/>
+        </a>
+       </div>
+       <p class="snippet">
+        <a href="https://wiki.roll20.net/Main_Page">
+         [Wiki] Tips, Tricks, &amp; Guides for Roll20
+        </a>
+       </p>
+      </div>
+      <div class="listing">
+       <div class="imgcontainer">
+        <a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live">
+         <img src="https://s3.amazonaws.com/files.d20.io/images/48828110/LU_SDiurgcsB585Cy9K36Q/original.png?1519848823728"/>
+        </a>
+       </div>
+       <p class="snippet">
+        <a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live">
+         [Blog] 3 Million Users Update!
+        </a>
+       </p>
+      </div>
+     </div>
+     <div class="simplecontainer right topbarlogin">
+      <!-- Filled in by AJAX JS -->
+     </div>
+     <div class="simplecontainer right topbarnotifications">
+      <!-- This is filled in by AJAX JS -->
+     </div>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   $(".signin input").click(function() {
+		return false;
+});
+
+$("body, .simplecontainer").on("click", ".full, .simplecontainer .simple", function(e) {
+	e.stopPropagation();
+});	
+
+$(".menutoggler").on("click", function() {
+	$(".mobilemenu").addClass("open");
+	return false;
+});
+
+$(document).on("click", function() {
+	$(".mobilemenu").removeClass("open");
+})
+
+if('ontouchstart' in document) {
+	//touch-compatible
+}
+else {
+	//mouse-compatible
+	$(".topbar .btn-group a.btn[data-toggle=dropdown]").removeAttr("data-toggle");
+	$('[data-hover="dropdown"]').dropdownHover({hoverDelay: 100, delay: 300});
+}
+
+var trackOutboundLink = function(url) {
+	ga('send', 'event', 'outbound', 'obsAdvert', '', {
+		'transport': 'beacon',
+		'hitCallback': function(){document.location = url;}
+	});
+}
+$(function() {  
+	setTimeout(function(){
+		if($(".obs_container").length > 0) {
+			// GA Event Tracking
+			ga('send', {
+				'hitType': 'event',
+				'eventCategory': 'obsAdvert',
+				'eventAction': 'topbar',
+				'eventLabel': ''
+			});
+		}
+	}, 0)
+});
+  </script>
+  <div class="container primarycontentcontainer">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="searchcontainer" data-bookid="dnd5e">
+      <h1>
+       D&amp;D; 5th Edition
+      </h1>
+      <h2>
+       Compendium
+      </h2>
+      <p class="region_description" dir="auto">
+       Type to search for a spell, item, class — anything!
+      </p>
+      <div class="region_search">
+       <div class="define-search">
+        <input autocomplete="off" class="define-search-input" data-bookname="dnd5e" dir="auto" id="homesearch" placeholder="searching for..." spellcheck="false" type="text"/>
+        <div id="searchwarning">
+         Searches must be at least 3 characters.
+         <span>
+          *
+         </span>
+        </div>
+        <div class="submit-search">
+         <input class="btn btn-primary submit" dir="auto" id="homesearchbutton" type="submit" value="Search"/>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-4 toccol">
+     <div style="width: 100%;">
+      <div class="uploadpageslot pageupload" data-current-image="">
+       <div class="avatar">
+       </div>
+      </div>
+     </div>
+     <div class="content-text">
+      <div id="tableofcontents">
+      </div>
+     </div>
+    </div>
+    <div class="col-md-8">
+     <a name="content">
+     </a>
+     <a name="h-Wizard">
+     </a>
+     <div class="content-text" data-bookid="dnd5e">
+      <ol class="breadcrumb">
+       <li>
+        <a href="/compendium/dnd5e/BookIndex">
+         Home
+        </a>
+       </li>
+       <li>
+        <a href="/compendium/dnd5e/CategoryIndex%3AClasses">
+         Classes
+        </a>
+       </li>
+       <li>
+        Wizard
+       </li>
+      </ol>
+      <div class="pull-right" style="background-color: white; font-size: 0.9em; position: relative; top: 20px; text-align: right;">
+       <a href="#attributes">
+        ↓ Attributes
+       </a>
+      </div>
+      <h1 class="page-title">
+       Wizard
+      </h1>
+      <p>
+       <a class="editPageContent" href="javascript:void(0);">
+        Edit Page Content
+       </a>
+      </p>
+      <div data-pageid="5210" id="pagecontent">
+       <aside>
+        <strong>
+         <a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?Classes%5B%5D=Wizard">
+          Wizard Spells by Name
+         </a>
+        </strong>
+        <br/>
+        <strong>
+         <a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?sort=level&amp;Classes%5B%5D=Wizard">
+          Wizard Spells by Level
+         </a>
+        </strong>
+        <br/>
+        <strong>
+         <a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?sort=school&amp;Classes%5B%5D=Wizard">
+          Wizard Spells by School
+         </a>
+        </strong>
+       </aside>
+       <br/>
+       As a wizard, you gain the following
+       <a class="autolink" href="/compendium/dnd5e/Character%20Advancement#h-Class%20Features">
+        Class Features
+       </a>
+       .
+       <br/>
+       <br/>
+       <a name="h-Hit%20Points">
+       </a>
+       <h2>
+        Hit Points
+       </h2>
+       <strong>
+        Hit Dice
+       </strong>
+       : 1d6 per wizard level
+       <br/>
+       <strong>
+        Hit Points at 1st Level
+       </strong>
+       : 6 + your
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">
+        Constitution
+       </a>
+       modifier
+       <br/>
+       <strong>
+        Hit Points at Higher Levels
+       </strong>
+       : 1d6 (or 4) + your
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">
+        Constitution
+       </a>
+       modifier per wizard level after 1st
+       <br/>
+       <br/>
+       <a name="h-Starting%20Proficiencies">
+       </a>
+       <h2>
+        Starting Proficiencies
+       </h2>
+       You are proficient with the following items, in addition to any proficiencies provided by your race or background.
+       <br/>
+       <br/>
+       <strong>
+        Armor:
+       </strong>
+       none
+       <br/>
+       <strong>
+        Weapons:
+       </strong>
+       daggers, darts, slings, quarterstaffs, light crossbows
+       <br/>
+       <strong>
+        Tools:
+       </strong>
+       none
+       <br/>
+       <strong>
+        Skills:
+       </strong>
+       Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion
+       <br/>
+       <br/>
+       <a name="h-Starting%20Equipment">
+       </a>
+       <h2>
+        Starting
+        <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">
+         Equipment
+        </a>
+       </h2>
+       You start with the following items, plus anything provided by your background.
+       <br/>
+       <br/>
+       • (a) a
+       <a class="autolink" href="/compendium/dnd5e/Quarterstaff#h-Quarterstaff">
+        Quarterstaff
+       </a>
+       or (b) a
+       <a class="autolink" href="/compendium/dnd5e/Dagger#h-Dagger">
+        Dagger
+       </a>
+       <br/>
+       • (a) a
+       <a class="autolink" href="/compendium/dnd5e/Component%20pouch#h-Component%20pouch">
+        Component pouch
+       </a>
+       or (b) an arcane focus
+       <br/>
+       • (a) a
+       <a class="autolink" href="/compendium/dnd5e/Scholar%27s%20Pack#h-Scholar%27s%20Pack">
+        Scholar's Pack
+       </a>
+       or (b) an
+       <a class="autolink" href="/compendium/dnd5e/Explorer%27s%20Pack#h-Explorer%27s%20Pack">
+        Explorer's Pack
+       </a>
+       <br/>
+       • A
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       <br/>
+       <br/>
+       Alternatively, you may start with 4d4 x 10 gp to buy your own
+       <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">
+        Equipment
+       </a>
+       .
+       <br/>
+       <br/>
+       <br/>
+       <table>
+        <caption>
+         Table: The Wizard
+        </caption>
+        <thead>
+         <tr>
+          <th rowspan="2" style="text-align:center">
+           Level
+          </th>
+          <th rowspan="2" style="text-align:center">
+           Proficiency Bonus
+          </th>
+          <th rowspan="2" style="text-align:center">
+           Features
+          </th>
+          <th rowspan="2" style="text-align:center">
+           <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+            Cantrips
+           </a>
+           Known
+          </th>
+          <th colspan="9" style="text-align:center">
+           —Spell Slots per Spell Level—
+          </th>
+         </tr>
+         <tr>
+          <th style="text-align:center">
+           1st
+          </th>
+          <th style="text-align:center">
+           2nd
+          </th>
+          <th style="text-align:center">
+           3rd
+          </th>
+          <th style="text-align:center">
+           4th
+          </th>
+          <th style="text-align:center">
+           5th
+          </th>
+          <th style="text-align:center">
+           6th
+          </th>
+          <th style="text-align:center">
+           7th
+          </th>
+          <th style="text-align:center">
+           8th
+          </th>
+          <th style="text-align:center">
+           9th
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td style="text-align:center">
+           1st
+          </td>
+          <td style="text-align:center">
+           +2
+          </td>
+          <td style="text-align:left">
+           Spellcasting, Arcane Recovery
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           2nd
+          </td>
+          <td style="text-align:center">
+           +2
+          </td>
+          <td style="text-align:left">
+           Arcane Tradition
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           3rd
+          </td>
+          <td style="text-align:center">
+           +2
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           4th
+          </td>
+          <td style="text-align:center">
+           +2
+          </td>
+          <td style="text-align:left">
+           Ability Score Improvement
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           5th
+          </td>
+          <td style="text-align:center">
+           +3
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           6th
+          </td>
+          <td style="text-align:center">
+           +3
+          </td>
+          <td style="text-align:left">
+           Arcane Tradition feature
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           7th
+          </td>
+          <td style="text-align:center">
+           +3
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           8th
+          </td>
+          <td style="text-align:center">
+           +3
+          </td>
+          <td style="text-align:left">
+           Ability Score Improvement
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           9th
+          </td>
+          <td style="text-align:center">
+           +4
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           10th
+          </td>
+          <td style="text-align:center">
+           +4
+          </td>
+          <td style="text-align:left">
+           Arcane Tradition feature
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           11th
+          </td>
+          <td style="text-align:center">
+           +4
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           12th
+          </td>
+          <td style="text-align:center">
+           +4
+          </td>
+          <td style="text-align:left">
+           Ability Score Improvement
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           13th
+          </td>
+          <td style="text-align:center">
+           +5
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           14th
+          </td>
+          <td style="text-align:center">
+           +5
+          </td>
+          <td style="text-align:left">
+           Arcane Tradition feature
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           15th
+          </td>
+          <td style="text-align:center">
+           +5
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           16th
+          </td>
+          <td style="text-align:center">
+           +5
+          </td>
+          <td style="text-align:left">
+           Ability Score Improvement
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           -
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           17th
+          </td>
+          <td style="text-align:center">
+           +6
+          </td>
+          <td style="text-align:left">
+           -
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           18th
+          </td>
+          <td style="text-align:center">
+           +6
+          </td>
+          <td style="text-align:left">
+           Spell Mastery
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           19th
+          </td>
+          <td style="text-align:center">
+           +6
+          </td>
+          <td style="text-align:left">
+           Ability Score Improvement
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+         </tr>
+         <tr>
+          <td style="text-align:center">
+           20th
+          </td>
+          <td style="text-align:center">
+           +6
+          </td>
+          <td style="text-align:left">
+           Signature Spell
+          </td>
+          <td style="text-align:center">
+           5
+          </td>
+          <td style="text-align:center">
+           4
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           3
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           2
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+          <td style="text-align:center">
+           1
+          </td>
+         </tr>
+        </tbody>
+       </table>
+       <br/>
+       <a name="h-Spellcasting">
+       </a>
+       <h2>
+        Spellcasting
+       </h2>
+       As a student of
+       <a class="autolink" href="/compendium/dnd5e/Mind%20Flayers#h-Arcane%20Magic">
+        Arcane Magic
+       </a>
+       , you have a
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       containing
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       that show the first glimmerings of your true power.
+       <br/>
+       <br/>
+       <strong>
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+         Cantrips
+        </a>
+       </strong>
+       <br/>
+       <br/>
+       At 1st level, you know three
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+        Cantrips
+       </a>
+       of your choice from the wizard spell list. You learn additional wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+        Cantrips
+       </a>
+       of your choice at higher levels, as shown in the
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+        Cantrips
+       </a>
+       Known column of the Wizard table.
+       <br/>
+       <br/>
+       <strong>
+        <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+         Spellbook
+        </a>
+       </strong>
+       <br/>
+       <br/>
+       At 1st level, you have a
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       containing six 1st-level wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       of your choice. Your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       is the repository of the wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       you know, except your
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+        Cantrips
+       </a>
+       , which are fixed in your mind.
+       <br/>
+       <br/>
+       <strong>
+        Preparing and Casting
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+         Spells
+        </a>
+       </strong>
+       <br/>
+       <br/>
+       The Wizard table shows how many
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       you have to cast your
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       of 1st level and higher. To cast one of these
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       , you must expend a slot of the spell's level or higher. You regain all expended
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       when you finish a
+       <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">
+        Long Rest
+       </a>
+       .
+       <br/>
+       <br/>
+       You prepare the list of wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       that are available for you to cast. To do so, choose a number of wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       from your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       equal to your
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+        Intelligence
+       </a>
+       modifier + your wizard level (minimum of one spell). The
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       must be of a level for which you have
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       .
+       <br/>
+       <br/>
+       For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       . With an
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+        Intelligence
+       </a>
+       of 16, your list of prepared
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       can include six
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       of 1st or 2nd level, in any combination, chosen from your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       . If you prepare the 1st-level spell
+       <a class="autolink" href="/compendium/dnd5e/Magic%20Missile#h-Magic%20Missile">
+        Magic Missile
+       </a>
+       , you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       .
+       <br/>
+       <br/>
+       You can change your list of prepared
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       when you finish a
+       <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">
+        Long Rest
+       </a>
+       . Preparing a new list of wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       requires time spent studying your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Level">
+        Spell Level
+       </a>
+       for each spell on your list.
+       <br/>
+       <br/>
+       <strong>
+        Spellcasting Ability
+       </strong>
+       <br/>
+       <br/>
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+        Intelligence
+       </a>
+       is your spellcasting ability for your wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       , since you learn your
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       through dedicated study and memorization. You use your
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+        Intelligence
+       </a>
+       whenever a spell refers to your spellcasting ability. In addition, you use your
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+        Intelligence
+       </a>
+       modifier when
+       <a class="autolink" href="/compendium/dnd5e/Setting#h-Setting">
+        Setting
+       </a>
+       the saving throw DC for a wizard spell you cast and when
+       <a class="autolink" href="/compendium/dnd5e/Combat#h-Making%20an%20Attack">
+        Making an Attack
+       </a>
+       roll with one.
+       <br/>
+       <br/>
+       <div style="margin-left: 20px;">
+        <strong>
+         Spell save DC
+        </strong>
+        = 8 + your proficiency bonus + your
+        <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+         Intelligence
+        </a>
+        modifier
+        <br/>
+        <strong>
+         Spell
+         <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">
+          Attack
+         </a>
+         modifier
+        </strong>
+        = your proficiency bonus + your
+        <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+         Intelligence
+        </a>
+        modifier
+       </div>
+       <br/>
+       <strong>
+        Ritual Casting
+       </strong>
+       <br/>
+       <br/>
+       You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       . You don't need to have the spell prepared.
+       <br/>
+       <br/>
+       <strong>
+        Spellcasting Focus
+       </strong>
+       <br/>
+       <br/>
+       You can use an arcane focus as a spellcasting focus for your wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       .
+       <br/>
+       <br/>
+       <strong>
+        Learning
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+         Spells
+        </a>
+        of 1st Level and Higher
+       </strong>
+       <br/>
+       <strong>
+       </strong>
+       <br/>
+       Each time you gain a wizard level, you can add two wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       of your choice to your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       for free. Each of these
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       must be of a level for which you have
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       , as shown on the Wizard table. On your adventures, you might find other
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       that you can add to your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       (see “Your Spellbook”).
+       <br/>
+       <br/>
+       <a name="h-Arcane%20Recovery">
+       </a>
+       <h2>
+        Arcane Recovery
+       </h2>
+       You have learned to regain some of your magical energy by studying your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       . Once per day when you finish a
+       <a class="autolink" href="/compendium/dnd5e/Resting#h-Short%20Rest">
+        Short Rest
+       </a>
+       , you can choose expended
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       to recover. The
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.
+       <br/>
+       <br/>
+       For example, if you’re a 4th-level wizard, you can recover up to two levels worth of
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       . You can recover either a 2nd-level spell slot or two 1st-level
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Slots">
+        Spell Slots
+       </a>
+       .
+       <br/>
+       <br/>
+       <a name="h-Arcane%20Tradition">
+       </a>
+       <h2>
+        Arcane Tradition
+       </h2>
+       When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+        Evocation
+       </a>
+       . Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.
+       <br/>
+       <br/>
+       <a name="h-Ability%20Score%20Improvement">
+       </a>
+       <h2>
+        Ability Score Improvement
+       </h2>
+       When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Ability%20Scores">
+        Ability Scores
+       </a>
+       of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.
+       <br/>
+       <br/>
+       <a name="h-Spell%20Mastery">
+       </a>
+       <h2>
+        Spell Mastery
+       </h2>
+       At 18th level, you have achieved such mastery over certain
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       . You can cast those
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.
+       <br/>
+       <br/>
+       By spending 8 hours in study, you can exchange one or both of the
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       you chose for different
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       of the same levels.
+       <br/>
+       <br/>
+       <a name="h-Signature%20Spells">
+       </a>
+       <h2>
+        Signature
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+         Spells
+        </a>
+       </h2>
+       When you reach 20th level, you gain mastery over two powerful
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       and can cast them with little effort. Choose two 3rd-level wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       in your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       as your signature
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       . You always have these
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       prepared, they don't count against the number of
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or
+       <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">
+        Long Rest
+       </a>
+       .
+       <br/>
+       <br/>
+       If you want to cast either spell at a higher level, you must expend a spell slot as normal.
+       <br/>
+       <br/>
+       <a>
+       <h2>
+       Arcane Traditions
+       </a>
+       </h2>
+       <br/>
+       <br/>
+       The study of
+       <a class="autolink" href="/compendium/dnd5e/Elves#h-Wizardry">
+        Wizardry
+       </a>
+       is ancient, stretching back to the earliest mortal discoveries of magic. It is firmly established in fantasy gaming worlds, with various traditions dedicated to its complex study.
+       <br/>
+       <br/>
+       The most common arcane traditions in the multiverse revolve around
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-The%20Schools%20of%20Magic">
+        The Schools of Magic
+       </a>
+       . Wizards through the ages have cataloged thousands of
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       , grouping them into eight categories called schools. In some places, these traditions are literally schools. In other institutions, the schools are more like academic departments, with rival faculties competing for students and funding. Even wizards who train apprentices in the solitude of their own towers use the division of magic into schools as a learning device, since the
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       of each school require mastery of different techniques.
+       <br/>
+       <br/>
+       <a name="h-School%20of%20Evocation">
+       </a>
+       <h3>
+        School of
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+         Evocation
+        </a>
+       </h3>
+       You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.
+       <br/>
+       <br/>
+       <a name="h-Evocation%20Savant">
+       </a>
+       <h4>
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+         Evocation
+        </a>
+        Savant
+       </h4>
+       Beginning when you select this school at 2nd level, the gold and time you must spend to copy an
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+        Evocation
+       </a>
+       spell into your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       is halved.
+       <br/>
+       <br/>
+       <a name="h-Sculpt%20Spells">
+       </a>
+       <h4>
+        Sculpt
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+         Spells
+        </a>
+       </h4>
+       Beginning at 2nd level, you can create pockets of relative safety within the effects of your
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+        Evocation
+       </a>
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       . When you cast an
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+        Evocation
+       </a>
+       spell that affects other creatures that you can see, you can choose a number of them equal to 1 + the spell’s level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.
+       <br/>
+       <br/>
+       <a name="h-Potent%20Cantrip">
+       </a>
+       <h4>
+        Potent Cantrip
+       </h4>
+       Starting at 6th level, your damaging
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Cantrips">
+        Cantrips
+       </a>
+       affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip’s damage (if any) but suffers no additional effect from the cantrip.
+       <br/>
+       <br/>
+       <a name="h-Empowered%20Evocation">
+       </a>
+       <h4>
+        Empowered
+        <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+         Evocation
+        </a>
+       </h4>
+       Beginning at 10th level, you can add your
+       <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Intelligence">
+        Intelligence
+       </a>
+       modifier to one damage roll of any wizard
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Evocation">
+        Evocation
+       </a>
+       spell you cast.
+       <br/>
+       <br/>
+       <a name="h-Overchannel">
+       </a>
+       <h4>
+        Overchannel
+       </h4>
+       Starting at 14th level, you can increase the power of your simpler
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       . When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell.
+       <br/>
+       <br/>
+       The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a
+       <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">
+        Long Rest
+       </a>
+       , you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a
+       <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">
+        Long Rest
+       </a>
+       , the necrotic damage per
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Level">
+        Spell Level
+       </a>
+       increases by 1d12. This damage ignores
+       <a class="autolink" href="/compendium/dnd5e/Resistance#h-Resistance">
+        Resistance
+       </a>
+       and immunity.
+       <br/>
+       <br/>
+       <a name="h-Your%20Spellbook">
+       </a>
+       <h2>
+        Your
+        <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+         Spellbook
+        </a>
+       </h2>
+       The
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       that you add to your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       during your adventures. You could discover a spell recorded on a scroll in an evil wizard’s chest, for example, or in a dusty tome in an ancient
+       <a class="autolink" href="/compendium/dnd5e/Goblinoids#h-Library">
+        Library
+       </a>
+       .
+       <br/>
+       <br/>
+       <strong>
+        Copying a Spell into the
+        <a class="autolink" href="/compendium/dnd5e/Book#h-Book">
+         Book
+        </a>
+       </strong>
+       : When you find a wizard spell of 1st level or higher, you can add it to your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       if it is of a
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spell%20Level">
+        Spell Level
+       </a>
+       you can prepare and if you can spare the time to decipher and copy it.
+       <br/>
+       <br/>
+       Copying that spell into your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       using your own notation.
+       <br/>
+       <br/>
+       For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Components">
+        Components
+       </a>
+       you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       .
+       <br/>
+       <br/>
+       <strong>
+        Replacing the
+        <a class="autolink" href="/compendium/dnd5e/Book#h-Book">
+         Book
+        </a>
+       </strong>
+       : You can copy a spell from your own
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       into another book—for example, if you want to make a backup copy of your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       . This is just like copying a new spell into your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       , but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.
+       <br/>
+       <br/>
+       If you lose your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       , you can use the same procedure to transcribe the
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       that you have prepared into a new
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       . Filling out the remainder of your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       requires you to find new
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place.
+       <br/>
+       <br/>
+       <strong>
+        The Book’s Appearance
+       </strong>
+       : Your
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       is a unique compilation of
+       <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">
+        Spells
+       </a>
+       , with its own decorative flourishes and margin notes. It might be a plain, functional leather volume that you received as a gift from your master, a finely bound gilt-­edged tome you found in an ancient
+       <a class="autolink" href="/compendium/dnd5e/Goblinoids#h-Library">
+        Library
+       </a>
+       , or even a loose collection of notes scrounged together after you lost your previous
+       <a class="autolink" href="/compendium/dnd5e/Spellbook#h-Spellbook">
+        Spellbook
+       </a>
+       in a mishap.
+       <br/>
+       <br/>
+      </div>
+      <script id="origpagecontent" type="text/html">
+       <aside><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?Classes%5B%5D=Wizard">Wizard Spells by Name</a></strong><br><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?sort=level&Classes%5B%5D=Wizard">Wizard Spells by Level</a></strong><br><strong><a href="https://app.roll20.net/compendium/dnd5e/Spells%20List?sort=school&Classes%5B%5D=Wizard">Wizard Spells by School</a></strong></aside><br>As a wizard, you gain the following class features.<br><br><h2>Hit Points</h2><strong>Hit Dice</strong>: 1d6 per wizard level<br><strong>Hit Points at 1st Level</strong>: 6 + your Constitution modifier<br><strong>Hit Points at Higher Levels</strong>: 1d6 (or 4) + your Constitution modifier per wizard level after 1st<br><br><h2>Starting Proficiencies</h2>You are proficient with the following items, in addition to any proficiencies provided by your race or background.<br><br><strong>Armor:</strong> none<br><strong>Weapons:</strong> daggers, darts, slings, quarterstaffs, light crossbows<br><strong>Tools:</strong> none<br><strong>Skills:</strong> Choose two from Arcana, History, Insight, Investigation, Medicine, and Religion<br><br><h2>Starting Equipment</h2>You start with the following items, plus anything provided by your background.<br><br>• (a) a quarterstaff or (b) a dagger<br>• (a) a component pouch or (b) an arcane focus<br>• (a) a scholar's pack or (b) an explorer's pack<br>• A spellbook<br><br>Alternatively, you may start with 4d4 x 10 gp to buy your own equipment.<br><br><br><table>
+<caption>Table: The Wizard</caption>
+<thead>
+<tr>
+<th rowspan="2" style="text-align:center">Level</th>
+<th rowspan="2" style="text-align:center">Proficiency Bonus</th>
+<th rowspan="2" style="text-align:center">Features</th>
+<th rowspan="2" style="text-align:center">Cantrips Known</th>
+<th colspan="9" style="text-align:center">—Spell Slots per Spell Level—</th>
+</tr>
+<tr>
+<th style="text-align:center">1st</th>
+<th style="text-align:center">2nd</th>
+<th style="text-align:center">3rd</th>
+<th style="text-align:center">4th</th>
+<th style="text-align:center">5th</th>
+<th style="text-align:center">6th</th>
+<th style="text-align:center">7th</th>
+<th style="text-align:center">8th</th>
+<th style="text-align:center">9th</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:left">Spellcasting, Arcane Recovery</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:left">Arcane Tradition</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td style="text-align:left">Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:left">Arcane Tradition feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td style="text-align:left">Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:left">Arcane Tradition feature</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td style="text-align:left">Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:left">Arcane Tradition feature</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td style="text-align:left">Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:left">-</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:left">Spell Mastery</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:left">Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td style="text-align:left">Signature Spell</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table><br><h2>Spellcasting</h2>As a student of arcane magic, you have a spellbook containing spells that show the first glimmerings of your true power.<br><br><strong>Cantrips</strong><br><br>At 1st level, you know three cantrips of your choice from the wizard spell list. You learn additional wizard cantrips of your choice at higher levels, as shown in the Cantrips Known column of the Wizard table.<br><br><strong>Spellbook</strong><br><br>At 1st level, you have a spellbook containing six 1st-level wizard spells of your choice. Your spellbook is the repository of the wizard spells you know, except your cantrips, which are fixed in your mind.<br><br><strong>Preparing and Casting Spells</strong><br><br>The Wizard table shows how many spell slots you have to cast your spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell's level or higher. You regain all expended spell slots when you finish a long rest.<br><br>    You prepare the list of wizard spells that are available for you to cast. To do so, choose a number of wizard spells from your spellbook equal to your Intelligence modifier + your wizard level (minimum of one spell). The spells must be of a level for which you have spell slots.<br><br>    For example, if you're a 3rd-level wizard, you have four 1st-level and two 2nd-level spell slots. With an Intelligence of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination, chosen from your spellbook. If you prepare the 1st-level spell Magic Missile, you can cast it using a 1st-level or a 2nd-level slot. Casting the spell doesn't remove it from your list of prepared spells.<br><br>    You can change your list of prepared spells when you finish a long rest. Preparing a new list of wizard spells requires time spent studying your spellbook and memorizing the incantations and gestures you must make to cast the spell: at least 1 minute per spell level for each spell on your list.<br><br><strong>Spellcasting Ability</strong><br><br>Intelligence is your spellcasting ability for your wizard spells, since you learn your spells through dedicated study and memorization. You use your Intelligence whenever a spell refers to your spellcasting ability. In addition, you use your Intelligence modifier when setting the saving throw DC for a wizard spell you cast and when making an attack roll with one.<br><br><div style="margin-left: 20px;"><strong>Spell save DC </strong>= 8 + your proficiency bonus + your Intelligence modifier<br><strong>    Spell attack modifier</strong> = your proficiency bonus + your Intelligence modifier</div><br><strong>Ritual Casting</strong><br><br>You can cast a wizard spell as a ritual if that spell has the ritual tag and you have the spell in your spellbook. You don't need to have the spell prepared.<br><br><strong>Spellcasting Focus</strong><br><br>You can use an arcane focus as a spellcasting focus for your wizard spells.<br><br><strong>Learning Spells of 1st Level and Higher</strong><br><strong></strong><br> Each time you gain a wizard level, you can add two wizard spells of your choice to your spellbook for free. Each of these spells must be of a level for which you have spell slots, as shown on the Wizard table. On your adventures, you might find other spells that you can add to your spellbook (see “Your Spellbook”).<br><br><h2>Arcane Recovery</h2>You have learned to regain some of your magical energy by studying your spellbook. Once per day when you finish a short rest, you can choose expended spell slots to recover. The spell slots can have a combined level that is equal to or less than half your wizard level (rounded up), and none of the slots can be 6th level or higher.<br><br>For example, if you’re a 4th-level wizard, you can recover up to two levels worth of spell slots. You can recover either a 2nd-level spell slot or two 1st-level spell slots.<br><br><h2>Arcane Tradition</h2>When you reach 2nd level, you choose an arcane tradition, shaping your practice of magic through one of eight schools, such as Evocation. Your choice grants you features at 2nd level and again at 6th, 10th, and 14th level.<br><br><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><h2>Spell Mastery</h2>At 18th level, you have achieved such mastery over certain spells that you can cast them at will. Choose a 1st-level wizard spell and a 2nd-level wizard spell that are in your spellbook. You can cast those spells at their lowest level without expending a spell slot when you have them prepared. If you want to cast either spell at a higher level, you must expend a spell slot as normal.<br><br>    By spending 8 hours in study, you can exchange one or both of the spells you chose for different spells of the same levels.<br><br><h2>Signature Spells</h2>When you reach 20th level, you gain mastery over two powerful spells and can cast them with little effort. Choose two 3rd-level wizard spells in your spellbook as your signature spells. You always have these spells prepared, they don't count against the number of spells you have prepared, and you can cast each of them once at 3rd level without expending a spell slot. When you do so, you can't do so again until you finish a short or long rest.<br><br>    If you want to cast either spell at a higher level, you must expend a spell slot as normal.<br><br>Arcane Traditions<br><br>The study of wizardry is ancient, stretching back to the earliest mortal discoveries of magic. It is firmly established in fantasy gaming worlds, with various traditions dedicated to its complex study.<br><br>The most common arcane traditions in the multiverse revolve around the schools of magic. Wizards through the ages have cataloged thousands of spells, grouping them into eight categories called schools. In some places, these traditions are literally schools. In other institutions, the schools are more like academic departments, with rival faculties competing for students and funding. Even wizards who train apprentices in the solitude of their own towers use the division of magic into schools as a learning device, since the spells of each school require mastery of different techniques.<br><br><h3>School of Evocation</h3>You focus your study on magic that creates powerful elemental effects such as bitter cold, searing flame, rolling thunder, crackling lightning, and burning acid. Some evokers find employment in military forces, serving as artillery to blast enemy armies from afar. Others use their spectacular power to protect the weak, while some seek their own gain as bandits, adventurers, or aspiring tyrants.<br><br><h4>Evocation Savant</h4>Beginning when you select this school at 2nd level, the gold and time you must spend to copy an evocation spell into your spellbook is halved.<br><br><h4>Sculpt Spells</h4>Beginning at 2nd level, you can create pockets of relative safety within the effects of your evocation spells. When you cast an evocation spell that affects other creatures that you can see, you can choose a number of them equal to 1 + the spell’s level. The chosen creatures automatically succeed on their saving throws against the spell, and they take no damage if they would normally take half damage on a successful save.<br><br><h4>Potent Cantrip</h4>Starting at 6th level, your damaging cantrips affect even creatures that avoid the brunt of the effect. When a creature succeeds on a saving throw against your cantrip, the creature takes half the cantrip’s damage (if any) but suffers no additional effect from the cantrip.<br><br><h4>Empowered Evocation</h4>Beginning at 10th level, you can add your Intelligence modifier to one damage roll of any wizard evocation spell you cast.<br><br><h4>Overchannel</h4>Starting at 14th level, you can increase the power of your simpler spells. When you cast a wizard spell of 1st through 5th level that deals damage, you can deal maximum damage with that spell.<br><br>The first time you do so, you suffer no adverse effect. If you use this feature again before you finish a long rest, you take 2d12 necrotic damage for each level of the spell, immediately after you cast it. Each time you use this feature again before finishing a long rest, the necrotic damage per spell level increases by 1d12. This damage ignores resistance and immunity.<br><br><h2>Your Spellbook</h2>The spells that you add to your spellbook as you gain levels reflect the arcane research you conduct on your own, as well as intellectual breakthroughs you have had about the nature of the multiverse. You might find other spells during your adventures. You could discover a spell recorded on a scroll in an evil wizard’s chest, for example, or in a dusty tome in an ancient library.<br><br><strong>Copying a Spell into the Book</strong>: When you find a wizard spell of 1st level or higher, you can add it to your spellbook if it is of a spell level you can prepare and if you can spare the time to decipher and copy it.<br><br>Copying that spell into your spellbook involves reproducing the basic form of the spell, then deciphering the unique system of notation used by the wizard who wrote it. You must practice the spell until you understand the sounds or gestures required, then transcribe it into your spellbook using your own notation.<br><br>For each level of the spell, the process takes 2 hours and costs 50 gp. The cost represents material components you expend as you experiment with the spell to master it, as well as the fine inks you need to record it. Once you have spent this time and money, you can prepare the spell just like your other spells.<br><br><strong>Replacing the Book</strong>: You can copy a spell from your own spellbook into another book—for example, if you want to make a backup copy of your spellbook. This is just like copying a new spell into your spellbook, but faster and easier, since you understand your own notation and already know how to cast the spell. You need spend only 1 hour and 10 gp for each level of the copied spell.<br><br>If you lose your spellbook, you can use the same procedure to transcribe the spells that you have prepared into a new spellbook. Filling out the remainder of your spellbook requires you to find new spells to do so, as normal. For this reason, many wizards keep backup spellbooks in a safe place.<br><br><strong>The Book’s Appearance</strong>: Your spellbook is a unique compilation of spells, with its own decorative flourishes and margin notes. It might be a plain, functional leather volume that you received as a gift from your master, a finely bound gilt-­edged tome you found in an ancient library, or even a loose collection of notes scrounged together after you lost your previous spellbook in a mishap.<br><br>
+      </script>
+      <script id="tmpl_newAttrItem" type="text/html">
+       <div class='row newRow attrListItem'>
+<div class='col-md-3 attrName'>
+<select class="chosen attrKey" name="new_attr">
+<option value="none">Choose an attribute...</option>
+<option value="new">Create new attribute...</option>
+<option value="AC">AC</option>
+<option value="Add Casting Modifier">Add Casting Modifier</option>
+<option value="Alignment">Alignment</option>
+<option value="Based On">Based On</option>
+<option value="Casting Time">Casting Time</option>
+<option value="CHA">CHA</option>
+<option value="Challenge Rating">Challenge Rating</option>
+<option value="Classes">Classes</option>
+<option value="Components">Components</option>
+<option value="CON">CON</option>
+<option value="Concentration">Concentration</option>
+<option value="Condition Immunities">Condition Immunities</option>
+<option value="Cost">Cost</option>
+<option value="Damage">Damage</option>
+<option value="Damage Progression">Damage Progression</option>
+<option value="Damage Type">Damage Type</option>
+<option value="Damage Vulnerabilities">Damage Vulnerabilities</option>
+<option value="data-Actions">data-Actions</option>
+<option value="data-CastNum">data-CastNum</option>
+<option value="data-CHA-mod">data-CHA-mod</option>
+<option value="data-CON-mod">data-CON-mod</option>
+<option value="data-description">data-description</option>
+<option value="data-DEX-mod">data-DEX-mod</option>
+<option value="data-DurationNum">data-DurationNum</option>
+<option value="data-INT-mod">data-INT-mod</option>
+<option value="data-Legendary Actions">data-Legendary Actions</option>
+<option value="data-Parent">data-Parent</option>
+<option value="data-RangeNum">data-RangeNum</option>
+<option value="data-Reactions">data-Reactions</option>
+<option value="data-SizeNum">data-SizeNum</option>
+<option value="data-Spells">data-Spells</option>
+<option value="data-STR-mod">data-STR-mod</option>
+<option value="data-Traits">data-Traits</option>
+<option value="data-WIS-mod">data-WIS-mod</option>
+<option value="data-XP">data-XP</option>
+<option value="DEX">DEX</option>
+<option value="Duration">Duration</option>
+<option value="Expansion">Expansion</option>
+<option value="Healing">Healing</option>
+<option value="Higher Level Healing">Higher Level Healing</option>
+<option value="Higher Spell Slot Bonus">Higher Spell Slot Bonus</option>
+<option value="Higher Spell Slot Dice">Higher Spell Slot Dice</option>
+<option value="Higher Spell Slot Die">Higher Spell Slot Die</option>
+<option value="HP">HP</option>
+<option value="Immunities">Immunities</option>
+<option value="Importer Initials">Importer Initials</option>
+<option value="INT">INT</option>
+<option value="Item Rarity">Item Rarity</option>
+<option value="Item Type">Item Type</option>
+<option value="Lair Actions">Lair Actions</option>
+<option value="Languages">Languages</option>
+<option value="Legendary Actions Desc">Legendary Actions Desc</option>
+<option value="Legendary Roll 0">Legendary Roll 0</option>
+<option value="Level">Level</option>
+<option value="List for Category">List for Category</option>
+<option value="Material">Material</option>
+<option value="Modifiers">Modifiers</option>
+<option value="none">none</option>
+<option value="Passive Perception">Passive Perception</option>
+<option value="Properties">Properties</option>
+<option value="Race">Race</option>
+<option value="Range">Range</option>
+<option value="Requires Attunement">Requires Attunement</option>
+<option value="Resistances">Resistances</option>
+<option value="Ritual">Ritual</option>
+<option value="Roll 0">Roll 0</option>
+<option value="Roll 1">Roll 1</option>
+<option value="Roll 2">Roll 2</option>
+<option value="Roll 3">Roll 3</option>
+<option value="Roll 4">Roll 4</option>
+<option value="Save">Save</option>
+<option value="Save Success">Save Success</option>
+<option value="School">School</option>
+<option value="Secondary Damage">Secondary Damage</option>
+<option value="Secondary Damage Type">Secondary Damage Type</option>
+<option value="Secondary Higher Spell Slot Dice">Secondary Higher Spell Slot Dice</option>
+<option value="Secondary Higher Spell Slot Die">Secondary Higher Spell Slot Die</option>
+<option value="Senses">Senses</option>
+<option value="Size">Size</option>
+<option value="Skills">Skills</option>
+<option value="Speed">Speed</option>
+<option value="Spell Attack">Spell Attack</option>
+<option value="Spell Book">Spell Book</option>
+<option value="Spell to Hit">Spell to Hit</option>
+<option value="Spellcasting Ability">Spellcasting Ability</option>
+<option value="Spellcasting Level">Spellcasting Level</option>
+<option value="Spellcasting Save DC">Spellcasting Save DC</option>
+<option value="Stealth">Stealth</option>
+<option value="STR">STR</option>
+<option value="Target">Target</option>
+<option value="Token">Token</option>
+<option value="Token Size">Token Size</option>
+<option value="Type">Type</option>
+<option value="Vulnerabilities">Vulnerabilities</option>
+<option value="Weight">Weight</option>
+<option value="WIS">WIS</option></select>
+<input class='newAttrKey' placeholder='Attr Name' style='display: none; margin-top: 5px;' type='text'>
+<input class='dataAttrCheck' type='checkbox'>
+<span class='dataAttrText'>is data attribute?</span>
+</div>
+<div class='col-md-7 attrValue'>
+<textarea></textarea>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doDelete pictos'>#</div>
+</div>
+</div>
+</div>
+      </script>
+      <div class="pull-right">
+       <a class="showPageAttributes" href="javascript:void(0);" style="position: relative; top: 5px;">
+        Show Attribute List
+       </a>
+      </div>
+      <a name="attributes">
+      </a>
+      <h1>
+       Attributes
+      </h1>
+      <div class="col-md-12 attrList" id="pageAttrs">
+       <div class="attrListItem hiddenAttribute row">
+        <div class="col-md-3 attrName">
+         Category
+        </div>
+        <div class="col-md-7 attrValue">
+         <div class="value">
+          Classes
+         </div>
+         <div class="edit">
+          <textarea>Classes</textarea>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="editListAttr">
+          <div class="doEdit pictos">
+           p
+          </div>
+          <div class="undoEdit pictos">
+           *
+          </div>
+          <div class="doDelete pictos">
+           #
+          </div>
+          <div class="undoDelete pictos">
+           8
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="attrListItem row">
+        <div class="col-md-3 attrName">
+         Hit Dice
+        </div>
+        <div class="col-md-7 attrValue">
+         <div class="value">
+          d6
+         </div>
+         <div class="edit">
+          <textarea>d6</textarea>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="editListAttr">
+          <div class="doEdit pictos">
+           p
+          </div>
+          <div class="undoEdit pictos">
+           *
+          </div>
+          <div class="doDelete pictos">
+           #
+          </div>
+          <div class="undoDelete pictos">
+           8
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="attrListItem dataAttribute hiddenAttribute row">
+        <div class="col-md-3 attrName">
+         List
+        </div>
+        <div class="col-md-7 attrValue">
+         <div class="value">
+          false
+         </div>
+         <div class="edit">
+          <textarea>false</textarea>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="editListAttr">
+          <div class="doEdit pictos">
+           p
+          </div>
+          <div class="undoEdit pictos">
+           *
+          </div>
+          <div class="doDelete pictos">
+           #
+          </div>
+          <div class="undoDelete pictos">
+           8
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="attrListItem row">
+        <div class="col-md-3 attrName">
+         Saving Throws
+        </div>
+        <div class="col-md-7 attrValue">
+         <div class="value">
+          Intelligence, Wisdom
+         </div>
+         <div class="edit">
+          <textarea>Intelligence, Wisdom</textarea>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="editListAttr">
+          <div class="doEdit pictos">
+           p
+          </div>
+          <div class="undoEdit pictos">
+           *
+          </div>
+          <div class="doDelete pictos">
+           #
+          </div>
+          <div class="undoDelete pictos">
+           8
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="attrListItem hiddenAttribute row">
+        <div class="col-md-3 attrName">
+         Source
+        </div>
+        <div class="col-md-7 attrValue">
+         <div class="value">
+          5th Edition SRD
+         </div>
+         <div class="edit">
+          <textarea>5th Edition SRD</textarea>
+         </div>
+        </div>
+        <div class="col-md-2">
+         <div class="editListAttr">
+          <div class="doEdit pictos">
+           p
+          </div>
+          <div class="undoEdit pictos">
+           *
+          </div>
+          <div class="doDelete pictos">
+           #
+          </div>
+          <div class="undoDelete pictos">
+           8
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="row newAttrListItem hiddenAttribute">
+        <div class="col-md-12 newAttrButton" data-template="tmpl_newAttrItem">
+         + New Search Attribute
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-8">
+     <div class="content-text page-links">
+      <div class="pull-right">
+      </div>
+      <div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-8">
+     <div class="content-text">
+      <hr/>
+      <div class="pagefooter" style="font-size: 0.9em;">
+       <div class="pull-right">
+        <a href="/compendium/dnd5e/Index:Classes">
+         View All Classes »
+        </a>
+        <br/>
+        <br/>
+        <a class="deleteThisPage" href="javascript:void(0);" style="font-size: 0.9em; color: red;">
+         Delete This Page
+        </a>
+       </div>
+       Source:
+       <a href="/compendium/dnd5e#content/License">
+        5th Edition SRD
+       </a>
+       <a class="flagthispage" href="javascript:void(0);" style="font-size: 0.9em;">
+        Flag This Page
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+   <script type="text/javascript">
+    if(window.location.hash === "") window.location.hash = "content";
+$(".editPageContent, .editPageAttributes, .deleteThisPage, .editBookTemplate, .hiddenAttribute, .uploadpageslot").remove();
+if($("#pageAttrs").find(".row").not(".hiddenAttribute").not(".newAttrListItem").length === 0) {
+$("#pageAttrs").prev("h1").remove();
+$("#pageAttrs, .showPageAttributes").remove();
+$("a[href=\"#attributes\"]").remove();
+}
+$(".flagthispage").remove();
+$("#tableofcontents").show().tableofcontents();
+   </script>
+   <script type="text/javascript">
+    $(".uploadslot").on("uploadcomplete", function(e, json) {
+if(!json) return;
+$.post("/account/update_avatar/me", {newavatar: json.base + "?" + new Date().getTime()});
+});
+$(".uploadslot").on("uploadremoved", function() {
+$.post("/account/update_avatar/me", {newavatar: ""});
+});
+   </script>
+  </div>
+  <div class="container globalfooter">
+   <div class="row" style="padding-bottom: 20px; padding-top: 60px;">
+    <div class="col-md-12">
+     <div class="footerborder1">
+     </div>
+     <div class="footerborder2">
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12 copyrightnotice">
+     <p style="border-top: none; padding-top: 0px;">
+      © The Orr Group, LLC ·
+      <a href="https://wiki.roll20.net/Acknowledgements">
+       Acknowledgements
+      </a>
+      ·
+      <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy">
+       Terms of Service &amp; Privacy Policy
+      </a>
+      ·
+      <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy#Notification_of_Copyright_Infringement_.28DMCA_Policy.29">
+       DMCA
+      </a>
+      · Need Help?
+      <a href="https://wiki.roll20.net/Customer_Support_FAQ">
+       Visit our FAQ!
+      </a>
+      · On Social Media:
+      <a href="https://www.facebook.com/pages/Roll20/439774126041559">
+       <img alt="Roll20 on Facebook" src="/v2/images/social-fb.png"/>
+      </a>
+      <a href="https://twitter.com/roll20app">
+       <img alt="Roll20 on Twitter" src="/v2/images/social-twitter.png"/>
+      </a>
+      <a href="https://plus.google.com/+Roll20Net/">
+       <img alt="Roll20 on Google Plus" src="/v2/images/social-gplus.png"/>
+      </a>
+      <a href="https://www.youtube.com/user/MsRoll20">
+       <img alt="Roll20 on YouTube" src="/v2/images/social-youtube.png" style="margin-right:+5px;"/>
+      </a>
+      <a href="http://www.reddit.com/r/roll20">
+       <img alt="Roll20 on Reddit" src="/v2/images/social-reddit.png" style="margin-right:+5px;"/>
+      </a>
+      <a href="http://twitch.tv/roll20app">
+       <img alt="Roll20 on Twitch" src="/v2/images/social-twitch.png"/>
+      </a>
+     </p>
+     <p style="border-top: none; padding-top: 0px;">
+      Roll20
+      <sup>
+       ®
+      </sup>
+      is a Registered Trademark of The Orr Group, LLC. All rights reserved.
+     </p>
+    </div>
+   </div>
+  </div>
+  <script type="text/javascript">
+   $(function() {
+        var cookieName = 'roll20tempauth';
+        var cookieValue = Math.floor(Math.random()*100);
+        var myDate = new Date();
+        myDate.setMonth(myDate.getMonth() + 1);
+        var cookieinfo = cookieName +"=" + cookieValue + ";expires=" + myDate 
+                          + ";domain=.roll20.net;path=/";
+        document.cookie = cookieinfo;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://app.roll20.net/sessions/topbar/'+cookieValue;
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      });
+  </script>
+  <script id="tmpl_campaigntag" type="text/html">
+   <div class="tag"><$=this.model.get("tag")$></div>
+  </script>
+  <script id="tmpl_campaigntags" type="text/html">
+   <div class="tags tagset">
+			<div class="tagslabel">
+				<span class="pictos">z</span>
+				Tags:
+			</div>
+			<input>
+			<$ if(this.editable == "true") { $>
+			<div class="add">
+				<em>
+					<span class="pictos">p</span>
+					Edit Tags
+				</em>
+			</div>
+			<$ } $>
+		</div>
+		<div class="clear"></div>
+  </script>
+  <script id="tmpl_uploadslot" type="text/html">
+   <div class="avatar dropbox <$! (this != "" ? "filled" : "empty") $>">
+		<div class="status"></div>
+		<div class="inner">
+		<$ if(this == "") { $>
+		<h4 style="padding-bottom: 0px; marigin-bottom: 0px; color: #777;">Drop a File<small>(JPG, PNG, GIF)</small></h4>
+		<div style="margin-top: -5px; margin-bottom: 5px;">or</div>
+		<a href="javascript:void(0);" class="btn btn-info" style="margin-bottom: 10px;">Choose a File...</a>
+		<input class="manual" type="file" />
+		<$ } else { $>
+		<img src="<$!this$>" />
+		<div class='remove'><a href='javascript:void(0);'>Change Image</a></div>
+		<$ } $>
+		</div>
+		</div>
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+		ga('create', 'UA-31040388-1', {'cookieDomain': 'auto'});
+	
+	ga('send', 'pageview');
+  </script>
+ </body>
+</html>
+

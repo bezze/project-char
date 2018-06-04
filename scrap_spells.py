@@ -4,7 +4,7 @@ import pandas, re
 
 colnames = ('Level', 'Spell', 'School', 'Casting_time', 'Range', 'Components', 'Duration', 'Effect', 'Spellbook')
 
-spellbook_csv_file = 'wizard.csv'
+spellbook_csv_file = 'SpellbookList/'+'wizard'+'.csv'
 
 spellbook_df = pandas.read_csv( spellbook_csv_file, delimiter = ';', header=None, names=colnames )
 
@@ -31,7 +31,8 @@ class Spellbook():
         return query
 
 sb = Spellbook( spellbook_df )
-player_sb = sb.get_player_spellbook(["Magic Missile", "Minor Illusion"])
+player_sb = sb.get_player_spellbook(["Shocking Grasp"])
+print( player_sb.values )
 
 
 

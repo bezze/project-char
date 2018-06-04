@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"50a61d60f7","applicationID":"1985886","transactionName":"cl0MRkRXVFxdFBZqW19TFkBXF3tfVRZcV1ZYRw8dcX1sEAIEVlZZX1MPVxkCSFFfA0pVR1Y=","queueTime":0,"applicationTime":219,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+	
+	<title>Barbarian | D&amp;D 5th Edition on Roll20 Compendium</title>
+	
+
+	
+
+	<link rel="stylesheet" href="/assets/v2.css?1519751126" type="text/css" />
+	<link rel="stylesheet" href="/v2/css/compendium.css?1522337815" type="text/css" />
+	<link rel="stylesheet" href="/css/themes/bootstrap/jquery-ui-1.8.16.custom.css?1483835727" type="text/css" />
+
+	<script type="text/javascript" src="/assets/v2.js?1519751126"></script>
+	<script type="text/javascript" src="/v2/js/typeahead.js?1483835727"></script>
+	<script type="text/javascript" src="/js/d20/compendium.js?1524584807"></script>
+	<script type="text/javascript" src="/v2/js/compendium.js?1524584807"></script>
+	<script type="text/javascript" src="/js/jquery-ui.1.11.2.min.js?1483835727"></script>
+
+	
+	<link rel="canonical" href="https://roll20.net/compendium/dnd5e/Barbarian" />
+	
+
+	
+	<meta name="description" content="As a Barbarian, you gain the following class features:   Hit Points Hit Dice: 1d12 per barbarian level Hit Points at 1st Level: 12 + your Constitution modifier Hit Points at Higher Levels: 1d12 (or 7) + your Constitution modifier per barbarian level after 1st   Proficiencies Armor: Light armor, medium armor, shields Weapons: Simple weapons, martial weapons Tools: None Saving Throws: Strength, Constitution Skills: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival   Equipment You start with the following equipment, in addition to the equipment granted by your background:   (a) a greataxe or (b) any martial melee weapon  (a) two handaxes or (b) any simple weapon  An explorer’s pack and four javelins   Table: The Barbarian
+Level
+Proficiency Bonus
+Features
+Rages
+Rage Damage
+1st
++2
+Rage, Unarmored Defense
+2
++2
+2nd
++2
+Reckless Attack, Danger Sense
+2
++2
+3rd
++2
+Primal Path
+3
++2
+4th
++2
+Ability Score Improvement
+3
++2
+5th
++3
+Extra Attack, Fast Movement
+3
++2
+6th
++3
+Path feature
+4
++2
+7th
++3
+Feral Instinct
+4
++2
+8th
++3
+Ability Score Improvement
+4
++2
+9th
++4
+Brutal Critical (1 die)
+4
++3
+10th
++4
+Path feature
+4
++3
+11th
++4
+Relentless
+4
++3
+12th
++4
+Ability Score Improvement
+5
++3
+13th
++5
+Brutal Critical (2 dice)
+5
++3
+14th
++5
+Path feature
+5
++3
+15th
++5
+Persistent Rage
+5
++3
+16th
++5
+Ability Score Improvement
+5
++4
+17th
++6
+Brutal Critical (3 dice)
+6
++4
+18th
++6
+Indomitable Might
+6
++4
+19th
++6
+Ability Score Improvement
+6
++4
+20th
++6
+Primal Champion
+Unlimited
++4
+ Rage In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.      While raging, you gain the following benefits if you aren't wearing heavy armor:  • You have advantage on Strength checks and Strength saving throws.  • When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll" />
+	
+
+	<meta name="viewport" content="width=device-width" />
+
+	<script type="text/javascript">
+		$(function() { $.jqotetag( '$' ); });
+	</script>
+
+</head>
+
+<body>
+	
+	<script type="text/javascript">
+	environment = "production";
+	</script>
+
+	<script type="text/javascript">
+	 if (window.self != window.top) {
+    	$(document.body).addClass("in-iframe");
+ 	 }
+ 	 
+ 	</script>
+
+	<div class="container topbar">
+
+	
+
+	
+
+	<div class="row" style="background-color: white; position: relative; z-index: 10000; padding-top: 20px; padding-bottom: 10px; margin-right: 0px;">
+
+		<div class="col-md-8 logo" style="width: 275px;">
+			<a href="https://app.roll20.net">
+				<img src="https://app.roll20.net/v2/images/roll20-logo.png?v=2" alt="Roll20 logo" class="withoutad" />
+			</a>
+		</div>
+	</div>
+
+	<div class="row mobilemenu">
+
+		<div class="col-md-12 btn-row">
+
+			<div class="menu-hider"></div>
+
+			<div class="btn-group">
+				<a class="menutoggler btn btn-default" href="#" class="btn btn-default" role="button">Menu<span class="caret"></span></a>
+
+				<div class="fullmobilemenu">
+
+					<ul class="nav nav-pills nav-stacked">
+
+						<li><a href="https://roll20.net/">Home</a></li>
+						<li><a href="https://app.roll20.net/campaigns/search">My Games</a></li>
+						<li><a href="https://app.roll20.net/lfg">Join a Game</a></li>
+						<li><a href="https://marketplace.roll20.net/">Marketplace</a></li>
+						<li><a href="https://roll20.net/compendium">Compendium</a></li>
+						<li><a href="https://app.roll20.net/forum">Forums</a></li>
+						<li><a href="https://wiki.roll20.net/">Wiki</a></li>
+						<li><a href="http://blog.roll20.net">Blog</a></li>
+
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="simplecontainer right topbarlogin">
+				<!-- Filled in by AJAX JS -->
+			</div>		
+
+			<div class="simplecontainer right topbarnotifications">
+				<!-- This is filled in by AJAX JS -->
+			</div>
+		</div>
+	</div>
+
+	<div class="row desktopmenu">
+
+		<div class="col-md-12 btn-row">
+
+			<div class="menu-hider"></div>
+
+			
+				<div class="btn-group">
+					<a href="https://app.roll20.net/" class="btn btn-default" role="button">Play Now</a>
+				</div>
+				<div class="btn-group">
+					<a href="https://app.roll20.net/lfg" class="btn btn-default" role="button">Join a Game</a>
+				</div>
+			
+
+			<div class="btn-group drop">
+				<a href="https://marketplace.roll20.net" class="btn btn-default" role="button" data-toggle="dropdown" aria-expanded="false" data-hover="dropdown">Marketplace</a>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" data-hover="dropdown" id="marketplace">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full" role="menu" area-labelledby="marketplace">
+				<div class="menu">
+					<a href="https://marketplace.roll20.net">What's New</a>
+					<a href="https://marketplace.roll20.net/browse">Browse</a>
+					
+					<a href="https://marketplace.roll20.net/gift/">Give a Gift</a>
+					<a href="https://merchoforr.com/">Merchandise</a>
+				</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/compendiumexpansion/4/mordenkainens-tome-of-foes"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/505602/JBzl1PfCGzw6Q0ZCwCBHuA/med.jpg" /></a>
+							<div class="desc"><em>Mordenkainen's Tome of Foes</em><br />by Wizards of the Coast</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/set/2524/mansion-of-mystery"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/538552/QDjc9uYoJz8v6KePvk0N4g/med.jpg?1527632550" /></a>
+							<div class="desc"><em>Mansion of Mystery</em><br />by David Hemenway</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/set/2516/field-effect-icons"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/538543/RbGTB0oPk2f5mj9WKbhYlA/med.jpg?1527632513" /></a>
+							<div class="desc"><em>Field Effect Icons</em><br />by The Wizard Fuu</div>
+						</div>
+					</div>
+				
+					<div class="listing marketplaceitem">
+						<div class='inneritem'>
+							<a href="https://marketplace.roll20.net/browse/bundle/28/wotbs-the-scouring-of-gate-pass"><img src="https://s3.amazonaws.com/files.d20.io/marketplace/539002/2RYxxnNCniMyH_SqKNbgeg/med.jpg?1527639941501" /></a>
+							<div class="desc"><em>WotBS: The Scouring of Gate Pass</em><br />by Ancris IT</div>
+						</div>
+					</div>
+				
+			</div>
+
+			<div class="btn-group drop">
+				<a href="https://roll20.net/compendium/" class="btn btn-default" role="button" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Tools</a>
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" id="digitaltools">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full" role="menu" aria-labelledby="digitaltools">
+				<div class="menu">
+					<a href="https://roll20.net/compendium/">Compendium</a>
+					<a href="https://app.roll20.net/vault/">Character Vault</a>
+					<a href="https://wiki.roll20.net/Roll20_for_iPad_and_Android">Roll20 for iPad and Android</a>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://app.roll20.net/vault/">
+							<img src="/images/CharacterVault.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://app.roll20.net/vault/">Character Vault</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Any Concept / Any System</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://roll20.net/compendium/">
+							<img src="/images/Compendium.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://roll20.net/compendium/">Compendium</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Your System Come To Life</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&hl=en">
+							<img src="/images/forAndroid.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://play.google.com/store/apps/details?id=net.roll20.playerappandroid&hl=en">Roll20 for Android</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Streamlined for your Tablet</span>
+					</div>
+				</div>
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">
+							<img src="/images/foriPad.png">
+						</a>
+					</div>
+					<div class="gameinfo">
+						<a href="https://itunes.apple.com/us/app/roll20-for-ipad/id944989026?mt=8">Roll20 for iPad</a>
+						<div class="shorthr"></div>
+						<span class="gameinfo">Streamlined for your Tablet</span>
+					</div>
+				</div>
+			</div>
+
+			
+
+			<div class="btn-group drop">
+				<a href="https://app.roll20.net/forum/" class="btn btn-default community-toggler" role="button" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false">Community</a>
+				<button type="button" class="btn btn-default dropdown-toggle community community-toggler" data-toggle="dropdown" data-hover="dropdown" aria-expanded="false" id="community">
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+			</div>
+			<div class="full community" role="menu" area-labeledby="community">
+				<div class="menu">
+					<a href="https://app.roll20.net/forum/">Forums</a>
+					<a href="https://wiki.roll20.net/Main_Page">Help Wiki</a>
+					<a href="http://blog.roll20.net">Blog</a>
+					<a href="http://www.twitch.tv/roll20app">Live Stream</a>
+					<a href="https://www.youtube.com/user/MsRoll20">VODs</a>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://youtu.be/z2WlO_W8kxs"><img src="https://s3.amazonaws.com/files.d20.io/images/44959266/9g6k8DtmsEiBum1-ouhWNg/original.png?1515043470415" /></a>
+					</div>
+					<p class="snippet"><a href="https://youtu.be/z2WlO_W8kxs">[YouTube] Roll20 Presents: Burning Wheel Series 3</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://www.twitch.tv/dnd"><img src="https://s3.amazonaws.com/files.d20.io/images/38822157/__M8exgNMHVCmpFeQFji1Q/original.png?1504896244917" /></a>
+					</div>
+					<p class="snippet"><a href="https://www.twitch.tv/dnd">[Twitch] Roll20 Presents: Tomb of Annihilation - Live Fridays at 1pm PT</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="https://wiki.roll20.net/Main_Page"><img src="https://s3.amazonaws.com/files.d20.io/images/44959300/iUVi7Tgr7dDvQ2XQ9sF4Qg/original.png?1515043539134" /></a>
+					</div>
+					<p class="snippet"><a href="https://wiki.roll20.net/Main_Page">[Wiki] Tips, Tricks, & Guides for Roll20</a></p>
+				</div>
+				
+				<div class="listing">
+					<div class="imgcontainer">
+						<a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live"><img src="https://s3.amazonaws.com/files.d20.io/images/48828110/LU_SDiurgcsB585Cy9K36Q/original.png?1519848823728" /></a>
+					</div>
+					<p class="snippet"><a href="http://blog.roll20.net/post/171387355950/3-million-user-update-is-now-live">[Blog] 3 Million Users Update!</a></p>
+				</div>
+				
+			</div>
+
+			
+
+			<div class="simplecontainer right topbarlogin">
+				<!-- Filled in by AJAX JS -->
+			</div>
+
+			<div class="simplecontainer right topbarnotifications">
+				<!-- This is filled in by AJAX JS -->
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+$(".signin input").click(function() {
+		return false;
+});
+
+$("body, .simplecontainer").on("click", ".full, .simplecontainer .simple", function(e) {
+	e.stopPropagation();
+});	
+
+$(".menutoggler").on("click", function() {
+	$(".mobilemenu").addClass("open");
+	return false;
+});
+
+$(document).on("click", function() {
+	$(".mobilemenu").removeClass("open");
+})
+
+if('ontouchstart' in document) {
+	//touch-compatible
+}
+else {
+	//mouse-compatible
+	$(".topbar .btn-group a.btn[data-toggle=dropdown]").removeAttr("data-toggle");
+	$('[data-hover="dropdown"]').dropdownHover({hoverDelay: 100, delay: 300});
+}
+
+var trackOutboundLink = function(url) {
+	ga('send', 'event', 'outbound', 'obsAdvert', '', {
+		'transport': 'beacon',
+		'hitCallback': function(){document.location = url;}
+	});
+}
+$(function() {  
+	setTimeout(function(){
+		if($(".obs_container").length > 0) {
+			// GA Event Tracking
+			ga('send', {
+				'hitType': 'event',
+				'eventCategory': 'obsAdvert',
+				'eventAction': 'topbar',
+				'eventLabel': ''
+			});
+		}
+	}, 0)
+});
+</script>
+
+	<div class="container primarycontentcontainer">
+
+		<div class='row'>
+  <div class='col-md-12'>
+    <div class='searchcontainer' data-bookid='dnd5e'>
+      <h1>D&D 5th Edition</h1>
+      <h2>Compendium</h2>
+      <p class='region_description' dir='auto'>Type to search for a spell, item, class &mdash; anything!</p>
+      <div class='region_search'>
+        <div class='define-search'>
+          <input autocomplete='off' class='define-search-input' data-bookname='dnd5e' dir='auto' id='homesearch' placeholder='searching for...' spellcheck='false' type='text'>
+          <div id='searchwarning'>
+            Searches must be at least 3 characters.
+            <span>*</span>
+          </div>
+          <div class='submit-search'>
+            <input class='btn btn-primary submit' dir='auto' id='homesearchbutton' type='submit' value='Search'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='row'>
+<div class='col-md-4 toccol'>
+<div style='width: 100%;'>
+<div class='uploadpageslot pageupload' data-current-image=''>
+<div class='avatar'></div>
+</div>
+</div>
+<div class='content-text'>
+<div id='tableofcontents'></div>
+</div>
+</div>
+<div class='col-md-8'>
+<a name='content'></a>
+<a name='h-Barbarian'></a>
+<div class='content-text' data-bookid='dnd5e'>
+<ol class='breadcrumb'>
+<li>
+<a href='/compendium/dnd5e/BookIndex'>Home</a>
+</li>
+<li>
+<a href='/compendium/dnd5e/CategoryIndex%3AClasses'>Classes</a>
+</li>
+<li>
+Barbarian
+</li>
+</ol>
+<div class='pull-right' style='background-color: white; font-size: 0.9em; position: relative; top: 20px; text-align: right;'>
+<a href='#attributes'>&darr; Attributes</a>
+</div>
+<h1 class='page-title'>Barbarian</h1>
+<p>
+<a class='editPageContent' href='javascript:void(0);'>Edit Page Content</a>
+</p>
+<div data-pageid='5197' id='pagecontent'>As a Barbarian, you gain the following class features:<br><br><a name="h-Hit%20Points"></a><h2>Hit Points</h2>
+<strong>Hit Dice</strong>: 1d12 per barbarian level<br><strong>Hit Points at 1st Level</strong>: 12 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier<br><strong>Hit Points at Higher Levels</strong>: 1d12 (or 7) + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier per barbarian level after 1st<br><br><a name="h-Proficiencies"></a><h2>Proficiencies</h2>
+<strong><a class="autolink" href="/compendium/dnd5e/Armor#h-Armor">Armor</a></strong>: <a class="autolink" href="/compendium/dnd5e/Armor#h-Light%20Armor">Light Armor</a>, <a class="autolink" href="/compendium/dnd5e/Armor#h-Medium%20Armor">Medium Armor</a>, shields Weapons: Simple <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a>, martial <a class="autolink" href="/compendium/dnd5e/Weapons#h-Weapons">Weapons</a> Tools: None<br><strong>Saving Throws</strong>: <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a>, <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a><br><strong>Skills</strong>: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival<br><br><a name="h-Equipment"></a><h2><a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a></h2>You start with the following <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a>, in addition to the <a class="autolink" href="/compendium/dnd5e/Equipment#h-Equipment">Equipment</a> granted by your background:<br><ul>
+<li>(<em>a</em>) a <a class="autolink" href="/compendium/dnd5e/Greataxe#h-Greataxe">Greataxe</a> or (<em>b</em>) any martial melee weapon</li>
+<li>(<em>a</em>) two handaxes or (<em>b</em>) any simple weapon</li>
+<li>An explorer’s pack and four javelins</li>
+</ul>
+<br><table>
+<caption>Table: The Barbarian</caption>
+<thead><tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Proficiency Bonus</th>
+<th style="text-align:center">Features</th>
+<th style="text-align:center">Rages</th>
+<th style="text-align:center">Rage Damage</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td>Rage, Unarmored Defense</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td>Reckless <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>, Danger Sense</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td>Primal Path</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td>Extra <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>, Fast <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>
+</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td>Path feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td>Feral Instinct</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td>Brutal Critical (1 die)</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td>Path feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td>Relentless</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td>Brutal Critical (2 dice)</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td>Path feature</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td>Persistent Rage</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td>Brutal Critical (3 dice)</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td>
+<a class="autolink" href="/compendium/dnd5e/Fighter#h-Indomitable">Indomitable</a> Might</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td>Primal <a class="autolink" href="/compendium/dnd5e/Champion#h-Champion">Champion</a>
+</td>
+<td style="text-align:center">Unlimited</td>
+<td style="text-align:center">+4</td>
+</tr>
+</tbody>
+</table>
+<a name="h-Rage"></a><h2>Rage</h2>In battle, you fight with primal ferocity. On <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>, you can enter a rage as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a>.<br><br>    While raging, you gain the following benefits if you aren't wearing heavy armor:<br><br>• You have advantage on <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength%20Checks">Strength Checks</a> and <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> saving throws.<br><br>• When you make a melee weapon <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> using <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a>, you gain a +2 bonus to the damage roll. This bonus increases as you level.<br><br>• You have <a class="autolink" href="/compendium/dnd5e/Resistance#h-Resistance">Resistance</a> to bludgeoning, piercing, and slashing damage.<br><br>If you are able to cast <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>, you can't cast them or concentrate on them while raging.<br><br>    Your rage lasts for 1 minute. It ends early if you are knocked <a class="autolink" href="/compendium/dnd5e/Conditions#h-Unconscious">Unconscious</a> or if <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a> ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a> as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a>.<br><br>    Once you have raged the maximum number of times for your barbarian level, you must finish a <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a> before you can rage again.  You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.<br><br><a name="h-Unarmored%20Defense"></a><h2>Unarmored Defense</h2>While you are not wearing any armor, your <a class="autolink" href="/compendium/dnd5e/Armor#h-Armor">Armor</a> Class equals 10 + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> modifier + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> modifier. You can use a <a class="autolink" href="/compendium/dnd5e/Shield#h-Shield"></a><a class="autolink" href="/compendium/dnd5e/Shield#h-Shield">Shield</a> and still gain this benefit.<br><br><a name="h-Danger%20Sense"></a><h2>Danger Sense</h2>At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Dexterity">Dexterity</a> saving throws against effects that you can see, such as traps and <a class="autolink" href="/compendium/dnd5e/Spells#h-Spells">Spells</a>. To gain this benefit, you can't be <a class="autolink" href="/compendium/dnd5e/Conditions#h-Blinded">Blinded</a>, <a class="autolink" href="/compendium/dnd5e/Conditions#h-Deafened">Deafened</a>, or <a class="autolink" href="/compendium/dnd5e/Conditions#h-Incapacitated">Incapacitated</a>.<br><br><a name="h-Reckless%20Attack"></a><h2>Reckless <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>
+</h2>Starting at 2nd level, you can throw aside all concern for defense to <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> with fierce desperation. When you make your first <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>, you can decide to <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> recklessly. Doing so gives you advantage on melee weapon <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> rolls using <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> during this turn, but <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> rolls against you have advantage until your next turn.<br><br><a name="h-Primal%20Path"></a><h2>Primal Path</h2>At 3rd level, you choose a path that shapes the nature of your rage, such as the Path of the <a class="autolink" href="/compendium/dnd5e/Berserker#h-Berserker"></a><a class="autolink" href="/compendium/dnd5e/Berserker#h-Berserker">Berserker</a>. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.<br><br><a name="h-Ability%20Score%20Improvement"></a><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Ability%20Scores">Ability Scores</a> of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><a name="h-Extra%20Attack"></a><h2>Extra <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>
+</h2>Beginning at 5th level, you can <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> twice, instead of once, whenever you take the <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> action on <a class="autolink" href="/compendium/dnd5e/Combat#h-Your%20Turn">Your Turn</a>.<br><br><a name="h-Fast%20Movement"></a><h2>Fast <a class="autolink" href="/compendium/dnd5e/Movement#h-Movement">Movement</a>
+</h2>Starting at 5th level, your speed increases by 10 feet while you aren't wearing <a class="autolink" href="/compendium/dnd5e/Armor#h-Heavy%20Armor">Heavy Armor</a>.<br><br><a name="h-Feral%20Instinct"></a><h2>Feral Instinct</h2>By 7th level, your instincts are so honed that you have advantage on initiative rolls.<br><br>    Additionally, if you are surprised at the beginning of <a class="autolink" href="/compendium/dnd5e/Combat#h-Combat">Combat</a> and aren't <a class="autolink" href="/compendium/dnd5e/Conditions#h-Incapacitated">Incapacitated</a>, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.<br><br><a name="h-Brutal%20Critical"></a><h2>Brutal Critical</h2>Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a>.<br><br>    This increases to two additional dice at 13th level and three additional dice at 17th level.<br><br><a name="h-Relentless%20Rage"></a><h2>Relentless Rage</h2>Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> saving throw. If you succeed, you drop to 1 hit point instead.<br><br>    Each time you use this feature after the first, the DC increases by 5. When you finish a short or <a class="autolink" href="/compendium/dnd5e/Resting#h-Long%20Rest">Long Rest</a>, the DC resets to 10.<br><br><a name="h-Persistent%20Rage"></a><h2>Persistent Rage</h2>Beginning at 15th level, your rage is so fierce that it ends early only if you fall <a class="autolink" href="/compendium/dnd5e/Conditions#h-Unconscious">Unconscious</a> or if you choose to end it.<br><br><a name="h-Indomitable%20Might"></a><h2>
+<a class="autolink" href="/compendium/dnd5e/Fighter#h-Indomitable">Indomitable</a> Might</h2>Beginning at 18th level, if your total for a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> check is less than your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> score, you can use that score in place of the total.<br><br><a name="h-Primal%20Champion"></a><h2>Primal <a class="autolink" href="/compendium/dnd5e/Champion#h-Champion">Champion</a>
+</h2>At 20th level, you embody the power of the wilds. Your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Strength">Strength</a> and <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Constitution">Constitution</a> scores increase by 4. Your maximum for those scores is now 24.<br><a name="h-Primal%20Paths"></a><h2>Primal Paths</h2>
+<a name="h-Path%20of%20the%20Berserker"></a><h3>Path of the <a class="autolink" href="/compendium/dnd5e/Berserker#h-Berserker"></a><a class="autolink" href="/compendium/dnd5e/Berserker#h-Berserker">Berserker</a>
+</h3>
+<p>For some barbarians, rage is a means to an end— that end being violence. The Path of the <a class="autolink" href="/compendium/dnd5e/Berserker#h-Berserker"></a><a class="autolink" href="/compendium/dnd5e/Berserker#h-Berserker">Berserker</a> is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being.</p>
+<a name="h-Frenzy"></a><h4>Frenzy</h4>Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the <a class="autolink" href="/compendium/dnd5e/Spells#h-Duration">Duration</a> of your rage you can make a single melee weapon <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> as a <a class="autolink" href="/compendium/dnd5e/Spells#h-Bonus%20Action">Bonus Action</a> on each of your turns after this one. When your rage ends, you suffer one level of <a class="autolink" href="/compendium/dnd5e/Conditions#h-Exhaustion">Exhaustion</a> (as described in Conditions).<br><br><a name="h-Mindless%20Rage"></a><h4>Mindless Rage</h4>Beginning at 6th level, you can’t be <a class="autolink" href="/compendium/dnd5e/Conditions#h-Charmed">Charmed</a> or <a class="autolink" href="/compendium/dnd5e/Conditions#h-Frightened">Frightened</a> while raging. If you are <a class="autolink" href="/compendium/dnd5e/Conditions#h-Charmed">Charmed</a> or <a class="autolink" href="/compendium/dnd5e/Conditions#h-Frightened">Frightened</a> when you enter your rage, the effect is suspended for the <a class="autolink" href="/compendium/dnd5e/Spells#h-Duration">Duration</a> of the rage.<br><br><a name="h-Intimidating%20Presence"></a><h4>Intimidating Presence</h4>Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Wisdom">Wisdom</a> saving throw (DC equal to 8 + your proficiency bonus + your <a class="autolink" href="/compendium/dnd5e/Ability%20Scores#h-Charisma">Charisma</a> modifier) or be <a class="autolink" href="/compendium/dnd5e/Conditions#h-Frightened">Frightened</a> of you until the end of your next turn. On subsequent turns, you can use your action to extend the <a class="autolink" href="/compendium/dnd5e/Spells#h-Duration">Duration</a> of this effect on the <a class="autolink" href="/compendium/dnd5e/Conditions#h-Frightened">Frightened</a> creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.<br>If the creature succeeds on its saving throw, you can’t use this feature on that creature again for 24 hours.<br><br><a name="h-Retaliation"></a><h4>Retaliation</h4>Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon <a class="autolink" href="/compendium/dnd5e/Combat#h-Attack">Attack</a> against that creature.<br><br></div>
+<script id='origpagecontent' type='text/html'>As a Barbarian, you gain the following class features:<br><br><h2>Hit Points</h2><strong>Hit Dice</strong>: 1d12 per barbarian level<br><strong>Hit Points at 1st Level</strong>: 12 + your Constitution modifier<br><strong>Hit Points at Higher Levels</strong>: 1d12 (or 7) + your Constitution modifier per barbarian level after 1st<br><br><h2>Proficiencies</h2><strong>Armor</strong>: Light armor, medium armor, shields Weapons: Simple weapons, martial weapons Tools: None<br><strong>Saving Throws</strong>: Strength, Constitution<br><strong>Skills</strong>: Choose two from Animal Handling, Athletics, Intimidation, Nature, Perception, and Survival<br><br><h2>Equipment</h2>You start with the following equipment, in addition to the equipment granted by your background:<br><ul><li>(<em>a</em>) a greataxe or (<em>b</em>) any martial melee weapon</li><li>(<em>a</em>) two handaxes or (<em>b</em>) any simple weapon</li><li>An explorer’s pack and four javelins</li></ul><br><table>
+<caption>Table: The Barbarian</caption>
+<thead>
+<tr>
+<th style="text-align:center">Level</th>
+<th style="text-align:center">Proficiency Bonus</th>
+<th style="text-align:center">Features</th>
+<th style="text-align:center">Rages</th>
+<th style="text-align:center">Rage Damage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1st</td>
+<td style="text-align:center">+2</td>
+<td>Rage, Unarmored Defense</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">2nd</td>
+<td style="text-align:center">+2</td>
+<td>Reckless Attack, Danger Sense</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">3rd</td>
+<td style="text-align:center">+2</td>
+<td>Primal Path</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">4th</td>
+<td style="text-align:center">+2</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">5th</td>
+<td style="text-align:center">+3</td>
+<td>Extra Attack, Fast Movement</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">6th</td>
+<td style="text-align:center">+3</td>
+<td>Path feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">7th</td>
+<td style="text-align:center">+3</td>
+<td>Feral Instinct</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">8th</td>
+<td style="text-align:center">+3</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+2</td>
+</tr>
+<tr>
+<td style="text-align:center">9th</td>
+<td style="text-align:center">+4</td>
+<td>Brutal Critical (1 die)</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">10th</td>
+<td style="text-align:center">+4</td>
+<td>Path feature</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">11th</td>
+<td style="text-align:center">+4</td>
+<td>Relentless</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">12th</td>
+<td style="text-align:center">+4</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">13th</td>
+<td style="text-align:center">+5</td>
+<td>Brutal Critical (2 dice)</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">14th</td>
+<td style="text-align:center">+5</td>
+<td>Path feature</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">15th</td>
+<td style="text-align:center">+5</td>
+<td>Persistent Rage</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+3</td>
+</tr>
+<tr>
+<td style="text-align:center">16th</td>
+<td style="text-align:center">+5</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">17th</td>
+<td style="text-align:center">+6</td>
+<td>Brutal Critical (3 dice)</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">18th</td>
+<td style="text-align:center">+6</td>
+<td>Indomitable Might</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">19th</td>
+<td style="text-align:center">+6</td>
+<td>Ability Score Improvement</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">+4</td>
+</tr>
+<tr>
+<td style="text-align:center">20th</td>
+<td style="text-align:center">+6</td>
+<td>Primal Champion</td>
+<td style="text-align:center">Unlimited</td>
+<td style="text-align:center">+4</td>
+</tr>
+</tbody>
+</table><h2>Rage</h2>In battle, you fight with primal ferocity. On your turn, you can enter a rage as a bonus action.<br><br>    While raging, you gain the following benefits if you aren't wearing heavy armor:<br><br>• You have advantage on Strength checks and Strength saving throws.<br><br>• When you make a melee weapon attack using Strength, you gain a +2 bonus to the damage roll. This bonus increases as you level.<br><br>• You have resistance to bludgeoning, piercing, and slashing damage.<br><br>If you are able to cast spells, you can't cast them or concentrate on them while raging.<br><br>    Your rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven't attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.<br><br>    Once you have raged the maximum number of times for your barbarian level, you must finish a long rest before you can rage again.  You may rage 2 times at 1st level, 3 at 3rd, 4 at 6th, 5 at 12th, and 6 at 17th.<br><br><h2>Unarmored Defense</h2>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.<br><br><h2>Danger Sense</h2>At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated.<br><br><h2>Reckless Attack</h2>Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.<br><br><h2>Primal Path</h2>At 3rd level, you choose a path that shapes the nature of your rage, such as the Path of the Berserker. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.<br><br><h2>Ability Score Improvement</h2>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.<br><br><h2>Extra Attack</h2>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.<br><br><h2>Fast Movement</h2>Starting at 5th level, your speed increases by 10 feet while you aren't wearing heavy armor.<br><br><h2>Feral Instinct</h2>By 7th level, your instincts are so honed that you have advantage on initiative rolls.<br><br>    Additionally, if you are surprised at the beginning of combat and aren't incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.<br><br><h2>Brutal Critical</h2>Beginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.<br><br>    This increases to two additional dice at 13th level and three additional dice at 17th level.<br><br><h2>Relentless Rage</h2>Starting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you're raging and don't die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.<br><br>    Each time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.<br><br><h2>Persistent Rage</h2>Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.<br><br><h2>Indomitable Might</h2>Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.<br><br><h2>Primal Champion</h2>At 20th level, you embody the power of the wilds. Your Strength and Constitution scores increase by 4. Your maximum for those scores is now 24.<br><h2>Primal Paths</h2><h3>Path of the Berserker</h3><p>For some barbarians, rage is a means to an end— that end being violence. The Path of the Berserker is a path of untrammeled fury, slick with blood. As you enter the berserker’s rage, you thrill in the chaos of battle, heedless of your own health or well-being.</p><h4>Frenzy</h4>Starting when you choose this path at 3rd level, you can go into a frenzy when you rage. If you do so, for the duration of your rage you can make a single melee weapon attack as a bonus action on each of your turns after this one. When your rage ends, you suffer one level of exhaustion (as described in Conditions).<br><br><h4>Mindless Rage</h4>Beginning at 6th level, you can’t be charmed or frightened while raging. If you are charmed or frightened when you enter your rage, the effect is suspended for the duration of the rage.<br><br><h4>Intimidating Presence</h4>Beginning at 10th level, you can use your action to frighten someone with your menacing presence. When you do so, choose one creature that you can see within 30 feet of you. If the creature can see or hear you, it must succeed on a Wisdom saving throw (DC equal to 8 + your proficiency bonus + your Charisma modifier) or be frightened of you until the end of your next turn. On subsequent turns, you can use your action to extend the duration of this effect on the frightened creature until the end of your next turn. This effect ends if the creature ends its turn out of line of sight or more than 60 feet away from you.<br>If the creature succeeds on its saving throw, you can’t use this feature on that creature again for 24 hours.<br><br><h4>Retaliation</h4>Starting at 14th level, when you take damage from a creature that is within 5 feet of you, you can use your reaction to make a melee weapon attack against that creature.<br><br></script>
+<script id='tmpl_newAttrItem' type='text/html'>
+<div class='row newRow attrListItem'>
+<div class='col-md-3 attrName'>
+<select class="chosen attrKey" name="new_attr">
+<option value="none">Choose an attribute...</option>
+<option value="new">Create new attribute...</option>
+<option value="AC">AC</option>
+<option value="Add Casting Modifier">Add Casting Modifier</option>
+<option value="Alignment">Alignment</option>
+<option value="Based On">Based On</option>
+<option value="Casting Time">Casting Time</option>
+<option value="CHA">CHA</option>
+<option value="Challenge Rating">Challenge Rating</option>
+<option value="Classes">Classes</option>
+<option value="Components">Components</option>
+<option value="CON">CON</option>
+<option value="Concentration">Concentration</option>
+<option value="Condition Immunities">Condition Immunities</option>
+<option value="Cost">Cost</option>
+<option value="Damage">Damage</option>
+<option value="Damage Progression">Damage Progression</option>
+<option value="Damage Type">Damage Type</option>
+<option value="Damage Vulnerabilities">Damage Vulnerabilities</option>
+<option value="data-Actions">data-Actions</option>
+<option value="data-CastNum">data-CastNum</option>
+<option value="data-CHA-mod">data-CHA-mod</option>
+<option value="data-CON-mod">data-CON-mod</option>
+<option value="data-description">data-description</option>
+<option value="data-DEX-mod">data-DEX-mod</option>
+<option value="data-DurationNum">data-DurationNum</option>
+<option value="data-INT-mod">data-INT-mod</option>
+<option value="data-Legendary Actions">data-Legendary Actions</option>
+<option value="data-List">data-List</option>
+<option value="data-Parent">data-Parent</option>
+<option value="data-RangeNum">data-RangeNum</option>
+<option value="data-Reactions">data-Reactions</option>
+<option value="data-SizeNum">data-SizeNum</option>
+<option value="data-Spells">data-Spells</option>
+<option value="data-STR-mod">data-STR-mod</option>
+<option value="data-Traits">data-Traits</option>
+<option value="data-WIS-mod">data-WIS-mod</option>
+<option value="data-XP">data-XP</option>
+<option value="DEX">DEX</option>
+<option value="Duration">Duration</option>
+<option value="Expansion">Expansion</option>
+<option value="Healing">Healing</option>
+<option value="Higher Level Healing">Higher Level Healing</option>
+<option value="Higher Spell Slot Bonus">Higher Spell Slot Bonus</option>
+<option value="Higher Spell Slot Dice">Higher Spell Slot Dice</option>
+<option value="Higher Spell Slot Die">Higher Spell Slot Die</option>
+<option value="HP">HP</option>
+<option value="Immunities">Immunities</option>
+<option value="Importer Initials">Importer Initials</option>
+<option value="INT">INT</option>
+<option value="Item Rarity">Item Rarity</option>
+<option value="Item Type">Item Type</option>
+<option value="Lair Actions">Lair Actions</option>
+<option value="Languages">Languages</option>
+<option value="Legendary Actions Desc">Legendary Actions Desc</option>
+<option value="Legendary Roll 0">Legendary Roll 0</option>
+<option value="Level">Level</option>
+<option value="List for Category">List for Category</option>
+<option value="Material">Material</option>
+<option value="Modifiers">Modifiers</option>
+<option value="none">none</option>
+<option value="Passive Perception">Passive Perception</option>
+<option value="Properties">Properties</option>
+<option value="Race">Race</option>
+<option value="Range">Range</option>
+<option value="Requires Attunement">Requires Attunement</option>
+<option value="Resistances">Resistances</option>
+<option value="Ritual">Ritual</option>
+<option value="Roll 0">Roll 0</option>
+<option value="Roll 1">Roll 1</option>
+<option value="Roll 2">Roll 2</option>
+<option value="Roll 3">Roll 3</option>
+<option value="Roll 4">Roll 4</option>
+<option value="Save">Save</option>
+<option value="Save Success">Save Success</option>
+<option value="School">School</option>
+<option value="Secondary Damage">Secondary Damage</option>
+<option value="Secondary Damage Type">Secondary Damage Type</option>
+<option value="Secondary Higher Spell Slot Dice">Secondary Higher Spell Slot Dice</option>
+<option value="Secondary Higher Spell Slot Die">Secondary Higher Spell Slot Die</option>
+<option value="Senses">Senses</option>
+<option value="Size">Size</option>
+<option value="Skills">Skills</option>
+<option value="Speed">Speed</option>
+<option value="Spell Attack">Spell Attack</option>
+<option value="Spell Book">Spell Book</option>
+<option value="Spell to Hit">Spell to Hit</option>
+<option value="Spellcasting Ability">Spellcasting Ability</option>
+<option value="Spellcasting Level">Spellcasting Level</option>
+<option value="Spellcasting Save DC">Spellcasting Save DC</option>
+<option value="Stealth">Stealth</option>
+<option value="STR">STR</option>
+<option value="Target">Target</option>
+<option value="Token">Token</option>
+<option value="Token Size">Token Size</option>
+<option value="Type">Type</option>
+<option value="Vulnerabilities">Vulnerabilities</option>
+<option value="Weight">Weight</option>
+<option value="WIS">WIS</option></select>
+<input class='newAttrKey' placeholder='Attr Name' style='display: none; margin-top: 5px;' type='text'>
+<input class='dataAttrCheck' type='checkbox'>
+<span class='dataAttrText'>is data attribute?</span>
+</div>
+<div class='col-md-7 attrValue'>
+<textarea></textarea>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doDelete pictos'>#</div>
+</div>
+</div>
+</div>
+</script>
+<div class='pull-right'>
+<a class='showPageAttributes' href='javascript:void(0);' style='position: relative; top: 5px;'>Show Attribute List</a>
+</div>
+<a name='attributes'></a>
+<h1>
+Attributes
+</h1>
+<div class='col-md-12 attrList' id='pageAttrs'>
+<div class='attrListItem hiddenAttribute row'>
+<div class='col-md-3 attrName'>Category</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>Classes</div>
+<div class='edit'>
+<textarea>Classes</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem row'>
+<div class='col-md-3 attrName'>Hit Dice</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>d12</div>
+<div class='edit'>
+<textarea>d12</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem row'>
+<div class='col-md-3 attrName'>Saving Throws</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>Strength, Constitution</div>
+<div class='edit'>
+<textarea>Strength, Constitution</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='attrListItem hiddenAttribute row'>
+<div class='col-md-3 attrName'>Source</div>
+<div class='col-md-7 attrValue'>
+<div class='value'>5th Edition SRD</div>
+<div class='edit'>
+<textarea>5th Edition SRD</textarea>
+</div>
+</div>
+<div class='col-md-2'>
+<div class='editListAttr'>
+<div class='doEdit pictos'>p</div>
+<div class='undoEdit pictos'>*</div>
+<div class='doDelete pictos'>#</div>
+<div class='undoDelete pictos'>8</div>
+</div>
+</div>
+</div>
+<div class='row newAttrListItem hiddenAttribute'>
+<div class='col-md-12 newAttrButton' data-template='tmpl_newAttrItem'>+ New Search Attribute</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-8">
+		<div class="content-text page-links">
+			<div class="pull-right">
+				
+			</div>
+			<div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<div class='row'>
+  <div class='col-md-8'>
+    <div class='content-text'>
+      <hr>
+      <div class='pagefooter' style='font-size: 0.9em;'>
+        <div class='pull-right'>
+          <a href='/compendium/dnd5e/Index:Classes'>View All Classes &raquo;</a>
+          <br>
+          <br>
+          <a class='deleteThisPage' href='javascript:void(0);' style='font-size: 0.9em; color: red;'>Delete This Page</a>
+        </div>
+        Source: <a href="/compendium/dnd5e#content/License">5th Edition SRD</a>
+        <a class='flagthispage' href='javascript:void(0);' style='font-size: 0.9em;'>Flag This Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript'>
+if(window.location.hash === "") window.location.hash = "content";
+$(".editPageContent, .editPageAttributes, .deleteThisPage, .editBookTemplate, .hiddenAttribute, .uploadpageslot").remove();
+if($("#pageAttrs").find(".row").not(".hiddenAttribute").not(".newAttrListItem").length === 0) {
+$("#pageAttrs").prev("h1").remove();
+$("#pageAttrs, .showPageAttributes").remove();
+$("a[href=\"#attributes\"]").remove();
+}
+$(".flagthispage").remove();
+$("#tableofcontents").show().tableofcontents();
+</script>
+<script type='text/javascript'>
+$(".uploadslot").on("uploadcomplete", function(e, json) {
+if(!json) return;
+$.post("/account/update_avatar/me", {newavatar: json.base + "?" + new Date().getTime()});
+});
+$(".uploadslot").on("uploadremoved", function() {
+$.post("/account/update_avatar/me", {newavatar: ""});
+});
+</script>
+
+
+	</div>
+
+	<div class="container globalfooter">
+
+		<div class="row" style="padding-bottom: 20px; padding-top: 60px;">
+
+			<div class="col-md-12">
+
+				<div class="footerborder1"></div>
+				<div class="footerborder2"></div>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-12 copyrightnotice">
+
+				<p style="border-top: none; padding-top: 0px;">&copy; The Orr Group, LLC &middot; <a href="https://wiki.roll20.net/Acknowledgements">Acknowledgements</a> &middot; <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy">Terms of Service & Privacy Policy</a> &middot; <a href="https://wiki.roll20.net/Terms_of_Service_and_Privacy_Policy#Notification_of_Copyright_Infringement_.28DMCA_Policy.29">DMCA</a> &middot; Need Help? <a href="https://wiki.roll20.net/Customer_Support_FAQ">Visit our FAQ!</a> &middot; On Social Media: 
+					<a href="https://www.facebook.com/pages/Roll20/439774126041559"><img src="/v2/images/social-fb.png" alt="Roll20 on Facebook" /></a>
+					<a href="https://twitter.com/roll20app"><img src="/v2/images/social-twitter.png" alt="Roll20 on Twitter" /></a>
+					<a href="https://plus.google.com/+Roll20Net/"><img src="/v2/images/social-gplus.png" alt="Roll20 on Google Plus" /></a>
+					<a href="https://www.youtube.com/user/MsRoll20"><img style="margin-right:+5px;" src="/v2/images/social-youtube.png" alt="Roll20 on YouTube" /></a>
+					<a href="http://www.reddit.com/r/roll20"><img style="margin-right:+5px;" src="/v2/images/social-reddit.png" alt="Roll20 on Reddit" /></a>
+					<a href="http://twitch.tv/roll20app"><img src="/v2/images/social-twitch.png" alt="Roll20 on Twitch" /></a>
+				</p>
+				<p style="border-top: none; padding-top: 0px;">Roll20<sup>&reg;</sup> is a Registered Trademark of The Orr Group, LLC. All rights reserved. 
+
+				
+				</p>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<script type="text/javascript">
+      $(function() {
+        var cookieName = 'roll20tempauth';
+        var cookieValue = Math.floor(Math.random()*100);
+        var myDate = new Date();
+        myDate.setMonth(myDate.getMonth() + 1);
+        var cookieinfo = cookieName +"=" + cookieValue + ";expires=" + myDate 
+                          + ";domain=.roll20.net;path=/";
+        document.cookie = cookieinfo;
+        var s = document.createElement('script');
+        s.type = 'text/javascript';
+        s.src = 'https://app.roll20.net/sessions/topbar/'+cookieValue;
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      });
+    </script>
+
+	<script id="tmpl_campaigntag" type="text/html">
+		<div class="tag"><$=this.model.get("tag")$></div>
+	</script>
+
+	<script id="tmpl_campaigntags" type="text/html">
+		<div class="tags tagset">
+			<div class="tagslabel">
+				<span class="pictos">z</span>
+				Tags:
+			</div>
+			<input>
+			<$ if(this.editable == "true") { $>
+			<div class="add">
+				<em>
+					<span class="pictos">p</span>
+					Edit Tags
+				</em>
+			</div>
+			<$ } $>
+		</div>
+		<div class="clear"></div>
+	</script>
+
+	<script id="tmpl_uploadslot" type="text/html">
+		<div class="avatar dropbox <$! (this != "" ? "filled" : "empty") $>">
+		<div class="status"></div>
+		<div class="inner">
+		<$ if(this == "") { $>
+		<h4 style="padding-bottom: 0px; marigin-bottom: 0px; color: #777;">Drop a File<small>(JPG, PNG, GIF)</small></h4>
+		<div style="margin-top: -5px; margin-bottom: 5px;">or</div>
+		<a href="javascript:void(0);" class="btn btn-info" style="margin-bottom: 10px;">Choose a File...</a>
+		<input class="manual" type="file" />
+		<$ } else { $>
+		<img src="<$!this$>" />
+		<div class='remove'><a href='javascript:void(0);'>Change Image</a></div>
+		<$ } $>
+		</div>
+		</div>
+	</script>
+
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	
+		ga('create', 'UA-31040388-1', {'cookieDomain': 'auto'});
+	
+	ga('send', 'pageview');
+
+	</script>
+
+</body>
+
+</html>
