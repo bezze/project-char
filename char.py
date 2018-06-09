@@ -2,8 +2,7 @@ import random
 import rolls
 import races as races
 import classes as classes
-# from raza import *
-# from clase import *
+import spellbook as spellbook
 
 def CharGen(name, Race_, Class_, **kwargs):
 
@@ -22,6 +21,12 @@ def CharGen(name, Race_, Class_, **kwargs):
             self.attr = races.AttrSet( raw_attr_values )
             for dummy_attr in self.mod:
                 self.attr[dummy_attr] += self.mod[dummy_attr]
+            try:
+                casterType = kwargs["MAGIC"][0]
+                spellList = kwargs["MAGIC"][1]
+                self.spellbook = spellbook.CharacterSpellbook(casterType, spellList)
+            except KeyError:
+                print("Not caster")
 
         def roll_npc(self):
             for attr in self.attr:
@@ -47,8 +52,9 @@ def CharGen(name, Race_, Class_, **kwargs):
 ski=["Athletics","Acrobatics"]
 lang=["Gnomish"]
 attr=["STR", "CON"]
+spelllist_id = [7, 13, 15, 18, 37, 38, 45, 52, 53, 56, 57, 58, 93, 94]
 Player_1 = CharGen("Alejandro", races.WoodElf, classes.Fighter, SKILL=ski, ATTR=attr, LANG=lang)
-Player_2 = CharGen("Jeronimo", races.Tiefling, classes.Fighter, SKILL=ski, ATTR=attr, LANG=lang)
+Player_2 = CharGen("Jeronimo", races.Tiefling, classes.Fighter, SKILL=ski, ATTR=attr, LANG=lang, MAGIC=(spelllist_id,'wizard'))
 for Player in [ Player_1, Player_2]:
     for el in Player.__dict__:
         print( el,"=", Player.__dict__[el] )
